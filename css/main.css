@@ -1,0 +1,317 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
+
+
+:root {
+  --dark-color: #0C0E1A;
+  --light-color: #ABBEC7;
+  --red-color: #94272B;
+  font-family: "Nunito", sans-serif;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body {
+  background-color: var(--light-color);
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--light-color);
+  text-transform: uppercase;
+}
+
+
+header {
+  background-color: var(--dark-color);
+  width: 100%;
+  position: relative;
+
+}
+
+header::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image:url(/assets/tic-tac-toe-1.png);
+  opacity: 0.5;
+
+}
+nav section {
+  display: flex;
+}
+
+header nav {
+  position: relative;
+  margin: 0 auto;
+  max-width: 1200px;
+  height: 508px;
+  padding: 0 10px;
+}
+
+.upper {
+  padding: 40px 0 0 0;
+  position: relative;
+}
+
+.upperNav {
+  padding: 0 0 0 50px;
+  display: flex;
+  align-items: center;
+}
+
+.firstItem {
+  margin-left: auto;
+}
+
+.lower {
+  position: absolute;
+  bottom: 130px;
+  width: 100%;
+}
+.lower div {
+  display: flex;
+
+}
+.lowerNav {
+  padding: 0 50px 0 0;
+}
+
+.lastItem {
+  margin-right: auto;
+}
+
+/*----------MAIN CONTENT-------------*/
+
+main {
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 10px;
+}
+.primary {
+  position: relative;
+  top: -100px;
+  height: 360px;
+  display: grid;
+  gap: 20px;
+
+  grid-template-areas: 
+    "a b"
+    "a d"
+}
+.primaryCards {
+  display: flex;
+
+  
+}
+.primaryCards:first-child {
+  grid-area: a;
+}
+.spacewar {
+  background-image: url(/Assets/GameHub_covers6.jpg);
+
+}
+.pos {
+  background-position: center;
+  background-size: cover;
+  border-radius: 5px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+ }
+.racing {
+  background-image: url(/Assets/GameHub_covers7.jpg);
+
+}
+.pingpong {
+  background-image: url(/Assets/GameHub_covers.jpg);
+
+}
+
+.basicBtn {
+  display: flex;
+  margin: 0 auto;
+  padding-top: 10px;
+}
+.basicBtn-follow {
+  position: relative;
+  top: -100px;
+}
+.styleBtn {
+  position: relative;
+  background-color: #0C0E1A;
+  height: 35px;
+  width: 30px;
+  margin: 5px;
+
+}
+.BtnFirstandLast {
+  border-radius: 50%;
+
+}
+.BtnFirstandLast::before {
+  content: "";
+  position: absolute;
+  height: 35px;
+  width: 15px;
+  background-color: var(--dark-color);
+}
+.BtnFirst::before {
+  right: 0;
+}
+
+/* FIRST SECTION */
+
+.dividingContent {
+  display: grid;
+  grid-template-columns: 60% 20% 20%;
+}
+.games {
+  display: grid;
+  grid-template-rows: repeat(5 2fr);
+  position: relative;
+  z-index: 1;
+}
+.games::before {
+  content: "";
+  position: absolute;
+  height: 95%;
+  width: 120%;
+  background-color: var(--red-color);
+  z-index: -1;
+  top: 145px;
+  left: -75px;
+}
+.secondary {
+  display: grid; 
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  height: 309px;
+  gap: 20px;
+}
+.black {
+  background-image: url(/Assets/GameHub_covers3.jpg);
+}
+.furious {
+  background-image: url(/Assets/GameHub_covers4.jpg);
+}
+.assassin {
+  background-image: url(/Assets/GameHub_covers5.jpg);
+}
+.cyber {
+  background-image: url(/Assets/GameHub_covers9.jpg);
+}
+
+/* COMMUNITY SECTION */
+
+.community {
+  display: grid;
+  grid-template-areas: 
+  "g1 g2 g3"
+  "g4 g5 g6"
+  ;
+  height: 380px;
+  gap: 20px;
+  padding-top: 100px;
+}
+.forge {
+  background-image: url(/Assets/GameHub_covers3.jpg);
+}
+.boxer {
+  background-image: url(/Assets/GameHub_covers4.jpg);
+}
+
+/* -----------ASIDE------------ */
+
+.info {
+  grid-column: 3 / 4;
+  background-color: #1B203D;
+  height: 111.1%;
+  color: var(--light-color);
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+}
+.info-place {
+  width: 100%;
+  height: 60%;
+  background-size: cover;
+  background-position: center;
+}
+.img-info-1 {
+  background-image: url(/Assets/pexels-cottonbro-1.png);
+}
+.img-info-2 {
+  background-image: url(/Assets/pexels-andrea-piacquadio-1.png);
+}
+.img-info-3 {
+  background-image: url(/Assets/pexels-cottonbro-2.png);
+}
+.infoPost h1, .infoPost p {
+  padding: 0 10px;
+  margin: 10px 0;
+  font-size: 0.85rem;
+}
+
+/* FOOTER */
+
+footer {
+  background-color: var(--dark-color);
+  height: 444px;
+  margin-top: 100px;
+}
+.containing-footer {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  height: 444px;
+  padding: 0 10px;
+}
+div section {
+  padding: 130px 0;
+}
+/*GRID SETUP*/
+.linksAndSocials {
+  
+  max-width: 600px;
+  margin-right: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas: 
+    "soc-1 soc-2 soc-3 soc-4"
+    "site_1 . site_2 ."
+    "site_1 . site_2 ."
+    "copy copy copy copy"
+  ;
+}
+
+
+.soc_1 {
+  grid-area: soc-1;
+}
+.soc_2 {
+  grid-area: soc-2;
+}
+.soc_3 {
+  grid-area: soc-3;
+}
+.soc_4 {
+  grid-area: soc-4;
+}
+.site_1 {
+  grid-area: site_1;
+}
+.site_2 {
+  grid-area: site_2;
+}
+.copyWright {
+  grid-area: copy;
+}
+
+
+
+.copyWright {
+  color: var(--light-color)
+}
