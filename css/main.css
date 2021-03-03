@@ -27,7 +27,6 @@ header {
   background-color: var(--dark-color);
   width: 100%;
   position: relative;
-
 }
 
 header::after {
@@ -37,8 +36,9 @@ header::after {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image:url(/assets/tic-tac-toe-1.png);
+  background-image:url(/Assets/tic-tac-toe-1.png);
   opacity: 0.5;
+  z-index: 1;
 
 }
 nav section {
@@ -51,6 +51,7 @@ header nav {
   max-width: 1200px;
   height: 508px;
   padding: 0 10px;
+  z-index: 10;
 }
 
 .upper {
@@ -115,7 +116,7 @@ main {
 }
 .spacewar {
   background-image: url(/Assets/GameHub_covers6.jpg);
-
+  
 }
 .pos {
   background-position: center;
