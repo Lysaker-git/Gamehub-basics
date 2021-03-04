@@ -22,7 +22,10 @@ a {
   text-transform: uppercase;
 }
 
-
+a img {
+  height: 0.8em;
+  padding: 0 5px;
+}
 header {
   background-color: var(--dark-color);
   width: 100%;
@@ -73,6 +76,7 @@ header nav {
   position: absolute;
   bottom: 130px;
   width: 100%;
+  max-width: 1200px;
 }
 .lower div {
   display: flex;
@@ -84,6 +88,11 @@ header nav {
 
 .lastItem {
   margin-right: auto;
+}
+.search-field input {
+  border: none;
+  padding: 0 20px;
+  margin-right: 10px;
 }
 
 /*----------MAIN CONTENT-------------*/
@@ -101,15 +110,14 @@ main {
   height: 360px;
   display: grid;
   gap: 20px;
-
+  z-index: 150;
   grid-template-areas: 
     "a b"
     "a d"
 }
-.primaryCards {
-  display: flex;
-
-  
+.primaryCards, .secondaryCards, .communityCards {
+  display: grid;
+  position: relative;
 }
 .primaryCards:first-child {
   grid-area: a;
@@ -131,6 +139,18 @@ main {
 .pingpong {
   background-image: url(/Assets/GameHub_covers.jpg);
 
+}
+.title, .titleSecondary, .titleCommunity {
+  height: 2rem;
+  align-self: end;
+  text-align: end;
+  border-radius: 5px;
+  padding: 10px 30px;
+  margin: 0;
+  font-weight: 1100;
+  color: white;
+  background: rgb(0,0,0);
+  background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0, 0, 0, 0.712) 35%, rgba(0, 213, 255, 0) 100%);
 }
 
 .basicBtn {
