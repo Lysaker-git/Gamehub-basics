@@ -187,6 +187,8 @@ main {
 
 /* FIRST SECTION */
 
+
+
 .dividingContent {
   display: grid;
   grid-template-columns: 60% 20% 20%;
@@ -207,6 +209,21 @@ main {
   top: 145px;
   left: -75px;
 }
+.Bigtype {
+  position: absolute;
+  font-size: 2rem;
+  margin: 0;
+  top: -40px;
+}
+.bigStyle::before {
+  content:'Popular';
+  position: absolute;
+  opacity: 0.1;
+  font-size: 4rem;
+  top: -2.2rem;
+  font-weight: 100;
+}
+
 .secondary {
   display: grid; 
   grid-template-columns: 1fr 1fr 1fr 1fr;
