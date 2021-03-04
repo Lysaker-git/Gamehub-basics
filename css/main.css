@@ -209,14 +209,17 @@ main {
   top: 145px;
   left: -75px;
 }
-.Bigtype {
+.bigStyle {
   position: absolute;
   font-size: 2rem;
   margin: 0;
   top: -40px;
 }
-.bigStyle::before {
+.Bigtype::before {
   content:'Popular';
+}
+
+.bigStyle::before {
   position: absolute;
   opacity: 0.1;
   font-size: 4rem;
@@ -255,6 +258,7 @@ main {
   gap: 20px;
   padding-top: 100px;
 }
+
 .forge {
   background-image: url(/Assets/GameHub_covers3.jpg);
 }
