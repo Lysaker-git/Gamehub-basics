@@ -1,238 +1,150 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
 
 :root {
   --dark-color: #0C0E1A;
   --light-color: #ABBEC7;
   --red-color: #94272B;
-  font-family: "Nunito", sans-serif;
-  margin: 0;
-  padding: 0;
-  border: 0;
+  --light-red-color: #D8FFE1;
+
 }
 
+
+
+/* MAIN SETUP */
 body {
   background-color: var(--light-color);
   margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: 'Nunito';
 }
-
 a {
   text-decoration: none;
-  color: var(--light-color);
-  text-transform: uppercase;
+  color: var(--light-color)
 }
-
-a img {
-  height: 0.8em;
-  padding: 0 5px;
-}
+/*HEADER AND NAV FOR MOBILE
+  Using flex to posistion and have the menu
+  almost ready on the side. But i need JS to
+  implement*/
 header {
-  background-color: var(--dark-color);
-  width: 100%;
+  background: var(--dark-color);
+  height: 217px;
   position: relative;
 }
-
-header::after {
-  position: absolute;
-  content: "";
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image:url(/Assets/tic-tac-toe-1.png);
-  opacity: 0.5;
-  z-index: 1;
-
+.nav_Fullsite  {
+  display: none;
 }
-nav section {
+.nav_Mobile {
   display: flex;
-}
-
-header nav {
-  position: relative;
-  margin: 0 auto;
-  max-width: 1200px;
-  height: 508px;
-  padding: 0 10px;
-  z-index: 10;
-}
-
-.upper {
-  padding: 40px 0 0 0;
-  position: relative;
-}
-
-.upperNav {
-  padding: 0 0 0 50px;
-  display: flex;
+  color: var(--light-color);
+  padding: 50px;
+  justify-content: space-between;
   align-items: center;
 }
+#mobile-menu {
+  display: none;
+}
+.logo_Mobile {
+  height: 50px;
+  width: 80px;
+}
+label {
+  font-size: 4em;
+}
+label:hover {
+  cursor: pointer;
+}
+.nav_Links {
+  position: absolute;
+  display: none;
+  top: 50px;
+  left: 50px;
+  background-color: var(--dark-color);
+  width: 60%;
+}
+.ul_Links {
+  position: relative;
+  padding: 0;
+  font-family: "Nunito";
+  list-style-type: none;
+}
+.ul_Links li {
+  padding: 10px 0 20px 0;
+}
 
-.firstItem {
+.ul_Links li img {
+  height: 20px;
+  padding-right: 5px;
+}
+
+.nav_Btns {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.sign_Up {
   margin-left: auto;
 }
 
-.lower {
-  position: absolute;
-  bottom: 130px;
-  width: 100%;
-  max-width: 1200px;
-}
-.lower div {
-  display: flex;
+/*Setting up grid for main content to
+  easily change in increased sizes. i dont want to
+  define new layouts in media query. Only change the
+  ones i have*/
 
-}
-.lowerNav {
-  padding: 0 50px 0 0;
-}
-
-.lastItem {
-  margin-right: auto;
-}
-.search-field input {
-  border: none;
-  padding: 0 20px;
-  margin-right: 10px;
-}
-
-/*----------MAIN CONTENT-------------*/
-
-main {
-  display: flex;
-  flex-direction: column;
-  max-width: 1200px;
-  margin: auto;
-  padding: 0 10px;
-}
 .primary {
-  position: relative;
-  top: -100px;
-  height: 360px;
   display: grid;
-  gap: 20px;
-  z-index: 150;
-  grid-template-areas: 
-    "a b"
-    "a d"
+  grid-template-columns: 1fr;
 }
-.primaryCards, .secondaryCards, .communityCards {
-  display: grid;
+.second_Card, .third_Card {
+  display: none;
+}
+.main_Card {
   position: relative;
-}
-.primaryCards:first-child {
-  grid-area: a;
-}
-.spacewar {
-  background-image: url(/Assets/GameHub_covers6.jpg);
-  
-}
-.pos {
-  background-position: center;
-  background-size: cover;
-  border-radius: 5px;
+  top: -60px;
+  margin: 0 50px;
+  height: 475px;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
- }
-.racing {
-  background-image: url(/Assets/GameHub_covers7.jpg);
-
 }
-.pingpong {
-  background-image: url(/Assets/GameHub_covers.jpg);
-
-}
-.title, .titleSecondary, .titleCommunity {
-  height: 2rem;
-  align-self: end;
-  text-align: end;
-  border-radius: 5px;
-  padding: 10px 30px;
-  margin: 0;
-  font-weight: 1100;
+.price {
+  position: relative;
   color: white;
-  background: rgb(0,0,0);
-  background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0, 0, 0, 0.712) 35%, rgba(0, 213, 255, 0) 100%);
-}
-
-.basicBtn {
-  display: flex;
-  margin: 0 auto;
-  padding-top: 10px;
-}
-.basicBtn-follow {
-  position: relative;
-  top: -100px;
-}
-.styleBtn {
-  position: relative;
-  background-color: #0C0E1A;
-  height: 35px;
-  width: 30px;
-  margin: 5px;
-
-}
-.BtnFirstandLast {
-  border-radius: 50%;
-
-}
-.BtnFirstandLast::before {
-  content: "";
-  position: absolute;
-  height: 35px;
-  width: 15px;
-  background-color: var(--dark-color);
-}
-.BtnFirst::before {
-  right: 0;
-}
-
-/* FIRST SECTION */
-
-
-
-.dividingContent {
-  display: grid;
-  grid-template-columns: 60% 20% 20%;
-}
-.games {
-  display: grid;
-  grid-template-rows: repeat(5 2fr);
-  position: relative;
-  z-index: 1;
-}
-.games::before {
-  content: "";
-  position: absolute;
-  height: 95%;
-  width: 120%;
-  background-color: var(--red-color);
-  z-index: -1;
-  top: 145px;
-  left: -75px;
-}
-.bigStyle {
-  position: absolute;
-  font-size: 2rem;
+  font-family: 'Lato';
+  font-size: 2em;
   margin: 0;
-  top: -40px;
-}
-.Bigtype::before {
-  content:'Popular';
+  text-align: end;
+  height: 340px;
+  background-size: cover;
+  background-size: 130%;
+  background-position: center;
+  padding: 15px;
+  border-radius: 5px;
 }
 
-.bigStyle::before {
+.price::before {
+  content: '';
   position: absolute;
-  opacity: 0.1;
-  font-size: 4rem;
-  top: -2.2rem;
-  font-weight: 100;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
-.secondary {
-  display: grid; 
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  height: 309px;
-  gap: 20px;
+.main_Card div p {
+  margin: 0;
+  padding: 20px;
 }
+.main_Card button {
+  width: 100%;
+  height: 40.5px;
+  background-color: var(--dark-color);
+  bordeR: none;
+  color: var(--light-color);
+  border-radius: 0 0 5px 5px;
+}
+/* GAME CARDS BACKGROUND SO I CAN EASILY CHANGE CLASSES WITH JS */
+
 .black {
   background-image: url(/Assets/GameHub_covers3.jpg);
 }
@@ -245,115 +157,270 @@ main {
 .cyber {
   background-image: url(/Assets/GameHub_covers9.jpg);
 }
-
-/* COMMUNITY SECTION */
-
-.community {
-  display: grid;
-  grid-template-areas: 
-  "g1 g2 g3"
-  "g4 g5 g6"
-  ;
-  height: 380px;
-  gap: 20px;
-  padding-top: 100px;
-}
-
 .forge {
   background-image: url(/Assets/GameHub_covers3.jpg);
 }
 .boxer {
-  background-image: url(/Assets/GameHub_covers4.jpg);
+  background-image: url(/Assets/GameHub_covers8.jpg);
+}
+.racing {
+  background-image: url(/Assets/GameHub_covers7.jpg);
+}
+.pingpong {
+  background-image: url(/Assets/GameHub_covers.jpg);
+}
+.spacewar {
+  background-image: url(/Assets/GameHub_covers6.jpg); 
 }
 
-/* -----------ASIDE------------ */
-
-.info {
-  grid-column: 3 / 4;
-  background-color: #1B203D;
-  height: 111.1%;
-  color: var(--light-color);
+/*Again setting up grid so i can modify the content flow
+  for smaller sizes into larger. Instance:
+  I want info to appear first in smaller sizes for
+  marketing purposes and pushing community down
+  but for larger i am using info on the side.*/
+.dividingContent {
   display: grid;
-  grid-template-rows: repeat(3, 1fr);
-}
-.info-place {
-  width: 100%;
-  height: 60%;
-  background-size: cover;
-  background-position: center;
-}
-.img-info-1 {
-  background-image: url(/Assets/pexels-cottonbro-1.png);
-}
-.img-info-2 {
-  background-image: url(/Assets/pexels-andrea-piacquadio-1.png);
-}
-.img-info-3 {
-  background-image: url(/Assets/pexels-cottonbro-2.png);
-}
-.infoPost h1, .infoPost p {
-  padding: 0 10px;
-  margin: 10px 0;
-  font-size: 0.85rem;
-}
-
-/* FOOTER */
-
-footer {
-  background-color: var(--dark-color);
-  height: 444px;
-  margin-top: 100px;
-}
-.containing-footer {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  height: 444px;
-  padding: 0 10px;
-}
-div section {
-  padding: 130px 0;
-}
-/*GRID SETUP*/
-.linksAndSocials {
-  
-  max-width: 600px;
-  margin-right: auto;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
   grid-template-areas: 
-    "soc-1 soc-2 soc-3 soc-4"
-    "site_1 . site_2 ."
-    "site_1 . site_2 ."
-    "copy copy copy copy"
+  "secondary"
+  "info"
+  "community"
   ;
 }
 
+.secondary {
+  grid-area: secondary;
+  margin: 0 50px;
+  display: grid;
+  grid-template-areas:
+  "head head"
+  "g1 g2"
+  "g3 g4"
+  ;
+  gap: 15px;
+}
+.head {
+  position: relative;
+  grid-area: head;
+  font-size: 1.4em;
+  margin: 20px 0 5px 0;
+}
+.head::before {
+  position: absolute;
+  content: 'Popular';
+  font-size: 2.5em;
+  font-family: 'Lato';
+  font-weight: 900;
+  top: -32px;
+  left: -3px;
+  opacity: 0.1;
+  
+}
+.imgcont_Popular {
+  height: 206px;
+  width: 100%;
+  background-size: cover;
+  background-size: 150%;
+  background-position: center;
+  border-radius: 5px;
+  box-shadow: 3px 3px 4px rgba(0,0,0,0.3);
+}
+.under_style h1 {
+  font-family: 'Lato', sans-serif;
+  margin-top: 10px;
+}
+.under_style button {
+  width: 100%;
+  border: none;
+  height: 46px;
+  margin-bottom: 40px;
+  background-color: var(--dark-color);
+  color: var(--light-color);
+  border-radius: 5px;
+}
+/*Grids, grids, grids  - i find them easier to work with
+  placing content on my site.*/
+.community {
+  position: relative;
+  grid-area: community;
+  display: grid;
+  grid-template-rows: repeat(6, auto);
+  gap: 20px;
+  margin: 50px;
+}
+.community::before {
+  position: absolute;
+  content: '';
+  height: auto;
+  width: 900px;
+  left: -75px; 
+  top: 40px;
+  bottom: 40px;
+  background-color: var(--red-color);
+  z-index: -2;
+  box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.3);
+}
+.watermark {
+  position: absolute;
+  font-family: 'Lato', sans-serif;
+  transform: rotate(-90deg);
+  font-size: 4em;
+  left: 25px;
+  bottom: -40px;
+  top: -40px;
+  z-index: -1;
+  text-transform: uppercase;
+  opacity: 0.2;
+  color: var(--light-red-color);
+}
+.community_Style {
+  background-color: var(--light-red-color);
+  box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  
+}
+.imgcont_Community {
+  height: 60px;
+  background: url(/Assets/GameHub_covers6.jpg) center;
+  background-size: cover;
 
-.soc_1 {
-  grid-area: soc-1;
 }
-.soc_2 {
-  grid-area: soc-2;
+.community_Style h1 {
+  margin: 5px 0;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  padding-left: 20px;
 }
-.soc_3 {
-  grid-area: soc-3;
+/*puttin info below community even though smaller sizes this
+  is wrong. But for larger sizes and the flow of the site
+  info should be below.*/
+.info {
+  grid-area: info;
+  background-color: var(--dark-color);
+  color: var(--light-color);
 }
-.soc_4 {
-  grid-area: soc-4;
+.info_Post div{
+  height: 130px;
+  width: 100%;
+  background-image: url(/Assets/pexels-cottonbro-1.png);
+  background-size: cover;
+  background-position-y: -30px;
 }
-.site_1 {
-  grid-area: site_1;
+.info_Post h1 {
+  font-size: 1.3em;
 }
-.site_2 {
-  grid-area: site_2;
+.info_Post h1,
+.info_Post p {
+  padding: 0 50px;
 }
-.copyWright {
-  grid-area: copy;
+.info_Post {
+  padding-bottom: 20px;
 }
 
+footer {
+  height: 670px;
+  background-color: var(--dark-color);
+}
+.containing-footer {
+  padding: 50px;
+  display: grid;
+  grid-template-areas:
+  "Sub"
+  "Socials"
+  ;
+}
+.links_Socials {
+  grid-area: Socials;
+  display: grid;
+  grid-template-columns: repeat(4 1fr);
+  grid-template-areas:
+  "icon1 icon2 icon3 icon4"
+  "link1 link1 link2 link2"
+  "copy_R copy_R copy_R copy_R";
+  gap: 10px;
+}
+.icon1 {
+  grid-area: icon1;
+}
+.icon2 {
+  grid-area: icon2;
+}
+.icon3 {
+  grid-area: icon3;
+}
+.icon4 {
+  grid-area: icon4;
+}
+.link1 {
+  grid-area: link1;
+}
+.link2 {
+  grid-area: link2;
+}
+.copy_Right {
+  grid-area: copy_R;
+  color: var(--light-color);
+}
 
+/*Moving sign up to the above position with grid
+  for easier manipulation with bigger sizes.*/
 
-.copyWright {
-  color: var(--light-color)
+.sub_Contact {
+  color: var(--light-color);
+  padding-bottom: 100px;
+}
+.sub_Contact button {
+  width: 100%;
+  height: 40px;
+  border:none; 
+  border-radius: 5px;
+  background-color: var(--red-color);
+  color: var(--light-red-color);
+  margin: 5px 0;
+}
+.sub_Contact input {
+  width: calc(100% - 30px);
+  height: 40px;
+  background-color: var(--light-color);
+  border-radius: 5px;
+  padding: 5px 15px;
+  border: none;
+  font-size: 1.3em;
+}
+.sub_Contact label {
+  font-size: 1em;
+}
+ /*Starting media for tablet-sizes*/
+@media only screen and (min-width: 750px) {
+
+  header {
+    height: 330px;
+  }
+  .nav_Mobile {
+    display: none;
+  }
+  .nav_Fullsite {
+    display: block;
+    padding: 50px;
+    height: calc(100% - 100px);
+  }
+  .upper, .lower, .lower div {
+    display: flex;
+    align-items: center;
+  }
+  .upper img {
+    margin-right: auto;
+    height: 1.5em;
+  }
+  .upper a {
+    margin: 0 0 0 30px;
+  }
+  .nav_Fullsite a img {
+    height: 1em;
+  }
+  .lower {
+    padding-top: 150px;
+  }
+  .lower div {
+    margin-left: auto;
+  }
 }
