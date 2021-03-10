@@ -502,4 +502,22 @@ footer {
   .info_Post {
     padding: 0;
   }
+
+  /*SETTING UP COMMUNITY CARDS*/
+
+  .community {
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: auto;
+    height: 450px;
+    gap: 70px 20px;
+  }
+  .imgcont_Community {
+    height: 150px;  
+  }
+  .watermark {
+    transform: rotate(0deg);
+    top: 70px;
+    width: 100%;
+    font-size: 6em;
+  }
 }
