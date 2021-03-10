@@ -315,6 +315,7 @@ label:hover {
 .info_Post {
   padding-bottom: 20px;
 }
+/*SETTING UP FOOTER*/
 
 footer {
   height: 670px;
@@ -403,6 +404,7 @@ footer {
     padding: 50px;
     height: calc(100% - 100px);
   }
+  /* UPPER PART OF NAV */
   .upper, .lower, .lower div {
     display: flex;
     align-items: center;
@@ -417,10 +419,87 @@ footer {
   .nav_Fullsite a img {
     height: 1em;
   }
+  /*LOWER PART OF NAV*/
   .lower {
     padding-top: 150px;
   }
   .lower div {
     margin-left: auto;
+    display: flex;
+    height: 22px;
+    align-items: center;
+  }
+  .lower a {
+    padding-right: 30px;
+  }
+  .lower label {
+    height: 1em;
+    font-size: 1em;
+  }
+  .lower input {
+    margin-right: 5px;
+    width: 100px;
+    border:none;
+    padding: 8px;
+  }
+
+  /*MAIN CONTENT FOR TABLET - 2 COLUMNS*/
+  .primary {
+    grid-template-columns: 1fr 1fr;
+    margin: 0 50px;
+    gap: 20px;
+  }
+  
+  .main_Card {
+    margin: 0;
+  }
+  .second_Card {
+    display: block;
+    position: relative;
+    top: -60px;
+    height: 475px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  .second_Card div p {
+    margin: 0;
+    padding: 20px;
+  }
+  .second_Card button {
+    width: 100%;
+    height: 40.5px;
+    background-color: var(--dark-color);
+    bordeR: none;
+    color: var(--light-color);
+    border-radius: 0 0 5px 5px;
+  }
+  /*Popular games does not need to change
+  on with info
+  Using Float for easy setup*/
+
+  .info_Post div {
+    width: 50%;
+    height: 250px;
+    float: left;
+  }
+  .info_Post .pic2 {
+    float: right;
+  }
+  .info_Post section h1, .info_Post section p {
+    margin: 0;
+  }
+  .info_Post section .right_S {
+    padding: 50px 50px 10px 53%;
+  }
+  .info_Post section .right_p {
+    padding: 0px 50px 10px 53%;
+  }
+  .info_Post section .left_S {
+    padding: 50px 53% 10px 50px;
+  }
+  .info_Post section {
+    height: 250px;
+  }
+  .info_Post {
+    padding: 0;
   }
 }
