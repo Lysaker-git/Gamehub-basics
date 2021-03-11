@@ -447,7 +447,7 @@ footer {
     height: 1.5em;
   }
   .upper a {
-    margin: 0 0 0 30px;
+    margin: 0 0 0 60px;
   }
   .nav_Fullsite a img {
     height: 1em;
@@ -478,7 +478,7 @@ footer {
     align-items: center;
   }
   .lower a {
-    padding-right: 30px;
+    padding-right: 60px;
   }
   /*Will expand search when adding JS*/
   .lower label {
@@ -594,6 +594,6 @@ footer {
     margin-top: 0;
   }
 }
-@media only screen and (min-width: 1400px) {
+/*@media only screen and (min-width: 1400px) {
 
 }
