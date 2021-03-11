@@ -452,9 +452,10 @@ footer {
   .nav_Fullsite a img {
     height: 1em;
   }
-  .sign_Up {
+  .upper .sign_Up {
     position: relative;
     z-index: 10;
+    margin: 0 14px 0 60px;
   }
   .sign_Up::before {
     position: absolute;
