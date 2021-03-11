@@ -103,7 +103,8 @@ label:hover {
   position: relative;
   top: -60px;
   margin: 0 50px;
-  height: 475px;
+  height: auto;
+  border-radius: 5px;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 .price {
@@ -251,8 +252,8 @@ label:hover {
   position: absolute;
   content: '';
   height: auto;
-  width: 900px;
-  left: -75px; 
+  width: calc(100% + 100px);
+  left: -50px; 
   top: 40px;
   bottom: 40px;
   background-color: var(--red-color);
