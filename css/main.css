@@ -436,6 +436,7 @@ footer {
   .lower a {
     padding-right: 30px;
   }
+  /*Will expand search when adding JS*/
   .lower label {
     height: 1em;
     font-size: 1em;
@@ -443,7 +444,8 @@ footer {
   .lower input {
     margin-right: 5px;
     width: 100px;
-    border:none;
+    border: none;
+    border-radius: 5px;
     padding: 8px;
   }
 
@@ -528,5 +530,23 @@ footer {
     transform: translate(-50%, -50%);
     font-size: 6em;
     
+  }
+}
+@media only screen and (min-width: 1020px) {
+  .lower input {
+    width: 250px;
+  }
+  footer {
+    height: auto;
+  }
+  .containing-footer {
+    grid-template-areas: 
+    "Socials Sub"
+    ;
+    gap: 250px;
+    padding-bottom: 0;
+  }
+  .sub_Contact div h1 {
+    margin-top: 0;
   }
 }
