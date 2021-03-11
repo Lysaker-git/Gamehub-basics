@@ -6,14 +6,14 @@
   --light-color: #ABBEC7;
   --red-color: #94272B;
   --light-red-color: #D8FFE1;
-
+  --light-background: #e6e6e6;
 }
 
 
 
 /* MAIN SETUP */
 body {
-  background-color: var(--light-color);
+  background-color: whitesmoke;
   margin: 0;
   padding: 0;
   border: 0;
@@ -29,63 +29,55 @@ a {
   implement*/
 header {
   background: var(--dark-color);
-  height: 217px;
+  height: 375px;
   position: relative;
 }
-.nav_Fullsite  {
+.header_cont {
+  padding: 50px;
+}
+.logo2 {
   display: none;
 }
-.nav_Mobile {
+.user_Navigation, .site_Navigation {
+  display: none;
+}
+.upper {
   display: flex;
+}
+.mobile_checkbox {
+  margin-left: auto;
+  font-size: 3em;
+  color: var(--light-color)
+}
+h1 {
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2vw;
   color: var(--light-color);
-  padding: 50px;
-  justify-content: space-between;
-  align-items: center;
+  font-family: 'lato', sans-serif;
+  font-weight: 400;
+  padding-top: 1em;
+}
+.searchbar {
+  display: flex;
+  padding-top: 2em;
+  height: 2em;
+}
+#search {
+  width: 90%;
+  margin-right: 5%;
+  padding: 10px;
+  font-family: 'nunito', sans-serif;
+  border-radius: 5px;
+}
+.searchbar label {
+  margin-top: 6px;
 }
 #mobile-menu {
   display: none;
 }
-.logo_Mobile {
-  height: 50px;
-  width: 80px;
-}
-label {
-  font-size: 4em;
-}
-label:hover {
-  cursor: pointer;
-}
-.nav_Links {
-  position: absolute;
-  display: none;
-  top: 50px;
-  left: 50px;
-  background-color: var(--dark-color);
-  width: 60%;
-}
-.ul_Links {
-  position: relative;
-  padding: 0;
-  font-family: "Nunito";
-  list-style-type: none;
-}
-.ul_Links li {
-  padding: 10px 0 20px 0;
-}
 
-.ul_Links li img {
-  height: 20px;
-  padding-right: 5px;
-}
-
-.nav_Btns {
-  display: flex;
-  align-items: center;
-  width: 100%;
-}
-.sign_Up {
-  margin-left: auto;
-}
 
 /*Setting up grid for main content to
   easily change in increased sizes. i dont want to
@@ -225,7 +217,7 @@ label:hover {
   border-radius: 5px;
   box-shadow: 3px 3px 4px rgba(0,0,0,0.3);
 }
-.under_style h1 {
+.under_style h2 {
   font-family: 'Lato', sans-serif;
   margin-top: 10px;
 }
@@ -265,9 +257,9 @@ label:hover {
   font-family: 'Lato', sans-serif;
   transform: rotate(-90deg);
   font-size: 4em;
-  left: 25px;
-  bottom: -40px;
-  top: -40px;
+  left: 120px;
+  bottom: 0;
+  top: 0;
   z-index: -1;
   text-transform: uppercase;
   opacity: 0.2;
@@ -280,12 +272,12 @@ label:hover {
   
 }
 .imgcont_Community {
-  height: 60px;
+  height: 100px;
   background: url(/Assets/GameHub_covers6.jpg) center;
   background-size: cover;
 
 }
-.community_Style h1 {
+.community_Style h3 {
   margin: 5px 0;
   text-transform: uppercase;
   font-size: 0.9em;
@@ -297,8 +289,8 @@ label:hover {
 .info {
   padding: 75px 0 100px 0;
   grid-area: info;
-  background-color: var(--dark-color);
-  color: var(--light-color);
+  background-color: var(--light-background);
+  color: var(--dark-color);
 }
 .info_Post div{
   height: 130px;
@@ -307,7 +299,7 @@ label:hover {
   background-size: cover;
   background-position-y: 20%;
 }
-.info_Post h1 {
+.info_Post h2 {
   font-size: 1.3em;
 }
 .info_Post .bigger_info {
@@ -327,7 +319,8 @@ label:hover {
   background-color: var(--red-color);
   opacity: 0.4;
 }
-.info_Post h1,
+.info_Post h3,
+.info_Post h2,
 .info_Post p {
   padding: 0 50px;
 }
@@ -339,7 +332,7 @@ label:hover {
   position: absolute;
   content: '';
   z-index: -1;
-  background-color: var(--dark-color);
+  background-color: var(--light-background);
   bottom: -190px;
   height: 91px;
   width: 100%;
@@ -414,7 +407,7 @@ footer {
 .sub_Contact input {
   width: calc(100% - 30px);
   height: 40px;
-  background-color: var(--light-color);
+  background-color: var(--light-background);
   border-radius: 5px;
   padding: 5px 15px;
   border: none;
@@ -428,70 +421,6 @@ footer {
 
   header {
     height: 330px;
-  }
-  .nav_Mobile {
-    display: none;
-  }
-  .nav_Fullsite {
-    display: block;
-    padding: 50px;
-    height: calc(100% - 100px);
-  }
-  /* UPPER PART OF NAV */
-  .upper, .lower, .lower div {
-    display: flex;
-    align-items: center;
-  }
-  .upper img {
-    margin-right: auto;
-    height: 1.5em;
-  }
-  .upper a {
-    margin: 0 0 0 60px;
-  }
-  .nav_Fullsite a img {
-    height: 1em;
-  }
-  .upper .sign_Up {
-    position: relative;
-    z-index: 10;
-    margin: 0 14px 0 60px;
-  }
-  .sign_Up::before {
-    position: absolute;
-    z-index: -1;
-    content: '';
-    height: 150%;
-    width: 150%;
-    top: -25%;
-    left: -25%;
-    border-radius: 5px;
-    background-color: var(--red-color);
-  }
-  /*LOWER PART OF NAV*/
-  .lower {
-    padding-top: 150px;
-  }
-  .lower div {
-    margin-left: auto;
-    display: flex;
-    height: 22px;
-    align-items: center;
-  }
-  .lower a {
-    padding-right: 60px;
-  }
-  /*Will expand search when adding JS*/
-  .lower label {
-    height: 1em;
-    font-size: 1em;
-  }
-  .lower input {
-    margin-right: 5px;
-    width: 100px;
-    border: none;
-    border-radius: 5px;
-    padding: 8px;
   }
 
   /*MAIN CONTENT FOR TABLET - 2 COLUMNS*/
@@ -535,7 +464,7 @@ footer {
   .info_Post .pic2 {
     float: right;
   }
-  .info_Post section h1, .info_Post section p {
+  .info_Post section h2, .info_Post section p {
     margin: 0;
   }
   .info_Post section .right_S {
@@ -578,9 +507,6 @@ footer {
   }
 }
 @media only screen and (min-width: 1020px) {
-  .lower input {
-    width: 250px;
-  }
   footer {
     height: auto;
   }
@@ -591,7 +517,7 @@ footer {
     gap: 250px;
     padding-bottom: 0;
   }
-  .sub_Contact div h1 {
+  .sub_Contact div h2 {
     margin-top: 0;
   }
 }
