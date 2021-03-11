@@ -358,6 +358,9 @@ footer {
 .link2 {
   grid-area: link2;
 }
+.link1 a, .link2 a {
+  display: block;
+}
 .copy_Right {
   grid-area: copy_R;
   color: var(--light-color);
