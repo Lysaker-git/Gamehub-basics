@@ -586,7 +586,7 @@ footer {
   }
   .lower {
     display: flex;
-    margin-top: 45px;
+    margin-top: 39px;
   }
   .site_Navigation {
     margin: 4px 0;
@@ -595,6 +595,10 @@ footer {
     margin-left: auto;
     padding: 0;
   }
+  .searchbar label {
+    padding-left: 18%;
+  }
+  
   footer {
     height: auto;
   }
