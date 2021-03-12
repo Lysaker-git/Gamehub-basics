@@ -619,7 +619,74 @@ footer {
   .searchbar label {
     padding-left: 18%;
   }
-  
+  .primary {
+    position: relative;
+    grid-template-areas: 
+    "area1 area2"
+    "area1 area3"
+    ;
+    height: 300px;
+    margin-bottom: 50px;
+    top: -60px;
+  }
+  .main_Card {
+    grid-area: area1;
+    top: 0;
+  }
+  .main_Card .price {
+    height: 250px;
+    border-radius: 5px 5px 0 0 ;
+  }
+  .main_Card button,
+  .second_Card button {
+    height: 50px;
+  }
+  .second_Card {
+    grid-area: area2;
+    height: unset;
+    top: 0;
+  }
+  .third_Card {
+    grid-area: area3;
+    display: block;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  .second_Card .price {
+    height: 75px;
+    border-radius: 5px 5px 0 0 ;
+  }
+  .third_Card .price {
+    height: 75px;
+    border-radius: 5px 5px 0 0 ;
+  }
+  .price {
+    height: unset;
+  }
+  .price div {
+    position: relative;
+  }
+  .third_Card div p {
+    margin: 0;
+    padding: 20px;
+  }
+  .third_Card button {
+    width: 100%;
+    height: 50px;
+    background-color: var(--dark-color);
+    bordeR: none;
+    color: var(--light-color);
+    border-radius: 0 0 5px 5px;
+    z-index: 10;
+  }
+  .anim_primary {
+    display: none;
+  }
+  .secondary {
+    grid-template-areas:
+    "head head head head"
+    "g1 g2 g3 g4"
+    ;
+  }
   footer {
     height: auto;
   }
@@ -633,6 +700,7 @@ footer {
   .sub_Contact div h2 {
     margin-top: 0;
   }
+
 }
 /*@media only screen and (min-width: 1400px) {
 
