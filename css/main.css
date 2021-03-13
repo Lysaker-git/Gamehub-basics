@@ -230,6 +230,8 @@ h1 {
   grid-area: secondary;
   margin: 0 50px 100px 50px;
   display: grid;
+  grid-template-rows: 70px repeat(2, 350px);
+  grid-template-columns: repeat(2, 1fr);
   grid-template-areas:
   "head head"
   "g1 g2"
@@ -250,21 +252,38 @@ h1 {
   background-size: cover;
   background-size: 150%;
   background-position: center;
-  border-radius: 5px;
-  box-shadow: 3px 3px 4px rgba(0,0,0,0.3);
+  border-radius: 5px 5px 0 0;
+  box-shadow: 3px 3px 4px rgba(0,0,0,0.1);
 }
-.under_style h2 {
+.under_style {
+  position: relative;
+  border-radius: 5px;
+  margin-bottom: 30px; 
+  box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  background-color: whitesmoke;
+}
+
+.under_style h3,
+.under_style p {
+  padding: 0 10px 10px ;
+  margin: 0;
+}
+.under_style h3 {
   font-family: 'Lato', sans-serif;
-  margin-top: 10px;
+  padding-top: 10px;
 }
 .under_style button {
+  position: absolute;
+  left: 0;
+  bottom: 0;
   width: 100%;
   border: none;
   height: 46px;
-  margin-bottom: 40px;
   background-color: var(--dark-color);
   color: var(--light-color);
-  border-radius: 5px;
+  border-radius: 0 0 5px 5px;
+  cursor: pointer;
 }
 /*Grids, grids, grids  - i find them easier to work with
   placing content on my site.*/
@@ -686,6 +705,8 @@ footer {
     "head head head head"
     "g1 g2 g3 g4"
     ;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 70px 397px;
   }
   footer {
     height: auto;
