@@ -13,22 +13,36 @@
 
 /* MAIN SETUP */
 html {
-  width: 100%;
+  width: 100%;  
   overflow-x: hidden;
 }
 body {
+  position: relative;
   background-color: whitesmoke;
   margin: 0;
   padding: 0;
-  border: 0;
   font-family: 'Nunito';
+  height: 100%;
 }
+body::before {
+  position: absolute;
+  content: '';
+  background-image: url(/Assets/Background/Background-1.svg);
+  z-index: -3000;
+  width: 150%;
+  left: -15%; 
+  height: 100%;
+  background-size: 30%;
+  opacity: 0.03;
+
+}
+/*PROGRESSION SITE*/
 .section_prog {
   display: flex;
   justify-items: center;
   align-items: center;
   height: 100vh;
-  width: 100%;
+  width: 100vw;
   position: relative;
   background-color: var(--dark-color);
 }
@@ -114,14 +128,17 @@ h1 {
 }
 .second_Card, .third_Card {
   display: none;
+  cursor: pointer;
 }
-.main_Card {
+.main_Card,
+.second_Card {
   position: relative;
   top: -60px;
   margin: 0 50px;
   height: auto;
   border-radius: 5px;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
 }
 .price {
   position: relative;
@@ -135,7 +152,7 @@ h1 {
   background-size: 130%;
   background-position: center;
   padding: 15px;
-  border-radius: 5px;
+  border-radius: 5px 5px 0 0;
 }
 
 .price::before {
@@ -145,49 +162,54 @@ h1 {
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
-.main_Card div p {
+.main_Card div p,
+.second_Card div p {
   margin: 0;
   padding: 20px;
+  background-color: whitesmoke;
 }
-.main_Card button {
+.main_Card button,
+.second_Card button,
+.third_Card button {
   width: 100%;
   height: 40.5px;
   background-color: var(--dark-color);
-  bordeR: none;
+  border: none;
   color: var(--light-color);
   border-radius: 0 0 5px 5px;
+  cursor: pointer;
 }
 /* GAME CARDS BACKGROUND SO I CAN EASILY CHANGE CLASSES WITH JS */
 
 .black {
-  background-image: url(/Assets/GameHub_covers3.jpg);
+  background-image: url(/Assets/Game-covers/GameHub_covers3.jpg);
 }
 .furious {
-  background-image: url(/Assets/GameHub_covers4.jpg);
+  background-image: url(/Assets/Game-covers/GameHub_covers4.jpg);
 }
 .assassin {
-  background-image: url(/Assets/GameHub_covers5.jpg);
+  background-image: url(/Assets/Game-covers/GameHub_covers5.jpg);
 }
 .cyber {
-  background-image: url(/Assets/GameHub_covers9.jpg);
+  background-image: url(/Assets/Game-covers/GameHub_covers9.jpg);
 }
 .forge {
-  background-image: url(/Assets/GameHub_covers3.jpg);
+  background-image: url(/Assets/Game-covers/GameHub_covers10.jpg);
 }
 .boxer {
-  background-image: url(/Assets/GameHub_covers8.jpg);
+  background-image: url(/Assets/Game-covers/GameHub_covers8.jpg);
 }
 .racing {
-  background-image: url(/Assets/GameHub_covers7.jpg);
+  background-image: url(/Assets/Game-covers/GameHub_covers7.jpg);
 }
 .pingpong {
-  background-image: url(/Assets/GameHub_covers.jpg);
+  background-image: url(/Assets/Game-covers/GameHub_covers.jpg);
 }
 .spacewar {
-  background-image: url(/Assets/GameHub_covers6.jpg); 
+  background-image: url(/Assets/Game-covers/GameHub_covers6.jpg); 
 }
 
 /*Again setting up grid so i can modify the content flow
@@ -221,17 +243,7 @@ h1 {
   font-size: 1.4em;
   margin: 20px 0 5px 0;
 }
-.head::before {
-  position: absolute;
-  content: 'Popular';
-  font-size: 2.5em;
-  font-family: 'Lato';
-  font-weight: 900;
-  top: -32px;
-  left: -3px;
-  opacity: 0.1;
-  
-}
+
 .imgcont_Popular {
   height: 206px;
   width: 100%;
@@ -298,7 +310,7 @@ h1 {
 .imgcont_Community {
   height: 100px;
   border-radius: 5px 5px 0 0;
-  background: url(/Assets/GameHub_covers6.jpg) center;
+  background-position: center;
   background-size: cover;
 
 }
@@ -320,21 +332,23 @@ h1 {
 .info_Post div{
   height: 130px;
   width: 100%;
-  background-image: url(/Assets/pexels-cottonbro-1.png);
+  background-image: url(/Assets/News-pictures/pexels-cottonbro-1.png);
   background-size: cover;
-  background-position-y: 20%;
+  background-position-y: 20%;   
 }
 .info_Post h2 {
   font-size: 1.3em;
 }
-.info_Post .bigger_info {
+.info_Post .bigger_info,
+.head {
   text-transform: uppercase;
   font-family: 'Lato', sans-serif;
   font-size: 1.8em;
   position: relative;
   z-index: 1;
 }
-.info_Post .bigger_info::before {
+.info_Post .bigger_info::before,
+.head::before {
   position: absolute;
   content: '';
   bottom: 0;
@@ -343,6 +357,9 @@ h1 {
   width: 85px;
   background-color: var(--red-color);
   opacity: 0.4;
+}
+.head::before {
+  width: 135px;
 }
 .info_Post h3,
 .info_Post h2,
@@ -461,28 +478,15 @@ footer {
     gap: 20px;
   }
   
-  .main_Card {
+  .main_Card, 
+  .second_Card {
     margin: 0;
   }
   .second_Card {
     display: block;
-    position: relative;
-    top: -60px;
     height: 475px;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
   }
-  .second_Card div p {
-    margin: 0;
-    padding: 20px;
-  }
-  .second_Card button {
-    width: 100%;
-    height: 40.5px;
-    background-color: var(--dark-color);
-    bordeR: none;
-    color: var(--light-color);
-    border-radius: 0 0 5px 5px;
-  }
+
   /*Popular games does not need to change
   on with info
   Using Float for easy setup*/
@@ -562,19 +566,19 @@ footer {
     cursor: pointer;
   }
   .cart::before {
-    background-image: url(/Assets/shopping-cart.png);
+    background-image: url(/Assets/Menu-icons/shopping-cart.png);
   }
   .login::before {
-    background-image: url(/Assets/login.png);
+    background-image: url(/Assets/Menu-icons/login.png);
   }
   .enew::before {
-    background-image: url(/Assets/globe.png);
+    background-image: url(/Assets/Menu-icons/globe.png);
   }
   .eused::before {
-    background-image: url(/Assets/currency-dollar.png);
+    background-image: url(/Assets/Menu-icons/currency-dollar.png);
   }
   .forums::before {
-    background-image: url(/Assets/collection-1.png);
+    background-image: url(/Assets/Menu-icons/collection-1.png);
   }
   .icon::before {
     position: absolute;
@@ -611,13 +615,15 @@ footer {
   }
   .site_Navigation {
     margin: 4px 0;
+    padding-left: 0;
   }
   .searchbar {
     margin-left: auto;
+    width: 35vw;
     padding: 0;
   }
   .searchbar label {
-    padding-left: 18%;
+    padding-left: 5px;
   }
   .primary {
     position: relative;
@@ -629,16 +635,19 @@ footer {
     margin-bottom: 50px;
     top: -60px;
   }
+  .head {
+    height: 35px;
+  }
   .main_Card {
     grid-area: area1;
     top: 0;
   }
   .main_Card .price {
     height: 250px;
-    border-radius: 5px 5px 0 0 ;
   }
   .main_Card button,
-  .second_Card button {
+  .second_Card button,
+  .third_Card button {
     height: 50px;
   }
   .second_Card {
@@ -650,33 +659,24 @@ footer {
     grid-area: area3;
     display: block;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
   }
   .second_Card .price {
     height: 75px;
-    border-radius: 5px 5px 0 0 ;
   }
   .third_Card .price {
     height: 75px;
-    border-radius: 5px 5px 0 0 ;
   }
   .price {
     height: unset;
   }
   .price div {
     position: relative;
+    border-radius: 5px;
   }
   .third_Card div p {
     margin: 0;
     padding: 20px;
-  }
-  .third_Card button {
-    width: 100%;
-    height: 50px;
-    background-color: var(--dark-color);
-    bordeR: none;
-    color: var(--light-color);
-    border-radius: 0 0 5px 5px;
-    z-index: 10;
   }
   .anim_primary {
     display: none;
@@ -702,6 +702,60 @@ footer {
   }
 
 }
-/*@media only screen and (min-width: 1400px) {
+@media only screen and (min-width: 1400px) {
+  .header_cont,
+  main,
+  .containing-footer {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
 
+  .primary,
+  .secondary,
+  .community {
+    margin: 0;
+  }
+  .primary {
+    padding-bottom: 50px;
+  }
+  .dividingContent {
+    display: grid;
+    grid-template-areas: 
+    "secondary blank info"
+    "secondary blank info"
+    "community blank info"
+    ;
+    grid-template-columns: 1fr 300px 300px;
+    grid-template-rows: 70px 450px 500px;
+  }
+  .info {
+    padding: 0;
+  }
+  .info_Post .bigger_info {
+    padding: 0;
+    margin: 15px 0 39px 0;
+  }
+  .info_Post section .right_S,
+  .info_Post section .right_p,
+  .info_Post section .left_S,
+  .info_Post p  {
+    padding: 10px 10px 5px 10px;
+    margin: 0;
+  }
+  .info_Post section {
+    height: auto;
+    margin-bottom: 15px;
+  }
+  .info_Post {
+    display: block;
+  }
+  .info_Post div,
+  .info_Post .pic2 {
+    float: none;
+    width: 100%;
+    height: 150px;
+  }
+  h1 {
+    font-weight: bolder;
+  }
 }
