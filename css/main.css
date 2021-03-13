@@ -6,7 +6,7 @@
   --light-color: #ABBEC7;
   --red-color: #94272B;
   --light-red-color: #D8FFE1;
-  --light-background: #e6e6e6;
+  --light-background: #cccbcb;
 }
 
 
@@ -18,7 +18,7 @@ html {
 }
 body {
   position: relative;
-  background-color: whitesmoke;
+  background-color: rgb(235, 235, 235);
   margin: 0;
   padding: 0;
   font-family: 'Nunito';
@@ -68,7 +68,7 @@ a {
   implement*/
 header {
   background: var(--dark-color);
-  height: 375px;
+  height: 410px;
   position: relative;
 }
 .header_cont {
@@ -142,23 +142,77 @@ h1 {
   background-size: cover;
   background-size: 130%;
   background-position: center;
-}
-.price {
-  position: relative;
-  color: white;
-  font-family: 'Lato';
-  font-size: 3em;
-  margin: 0;
-  text-align: end;
   height: 340px;
-  padding: 15px;
+}
+.tag {
+  display: flex;
+  align-items: flex-end;
+  height: 100%;
+  z-index: 5;
+  transition: 1s;
+}
+.tag p,
+.tag h2{
+  display: flex;
+  background-color: whitesmoke;
+  height: 40px;
+  margin: 0;
+  align-items: center;
+  padding: 5px 15px;
+  z-index: 100;
+}
+.tag p {
+  width: 30%;
+  border-radius: 0 0 5px 0;
+  justify-content: center;
+  font-weight: 700;
+}
+.tag h2 {
+  width: 70%;
+  border-radius: 0 0 0 5px;
+}
+.tag a {
+  color: var(--dark-color);
 }
 
-.main_Card div p,
-.second_Card div p {
+.hidden_tag {
+  position: absolute;
+  display: flex;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  height: 0px;
+  background: var(--light-color);
   margin: 0;
-  padding: 20px;
-  background-color: whitesmoke;
+  border-radius: 0 0 5px 5px;
+  z-index: -1;
+  opacity: 0;
+}
+.tag:hover+ .hidden_tag,
+.tag:focus+ .hidden_tag,
+.hidden_tag:hover {
+  transition: ease-in-out 500ms;
+  z-index: 1;
+  bottom: 45px;
+  height: 100px;
+  opacity: .8;
+  overflow: hidden;
+}
+.hidden_tag a {
+  color: var(--light-color);
+  font-family: 'lato', sans-serif;
+  font-weight: 700;
+  margin-left: auto;
+  margin-top: 15px;
+  height: 20px;
+  padding: 10px;
+  background-color:var(--dark-color);
+  border-radius: 5px;
+}
+.hidden_tag p{
+  padding: 10px 40px 10px 10px;
+  margin: 0;
 }
 .main_Card button,
 .second_Card button,
@@ -481,7 +535,7 @@ footer {
 @media only screen and (min-width: 750px) {
 
   header {
-    height: 380px;
+    height: 410px;
   }
   
   /*MAIN CONTENT FOR TABLET - 2 COLUMNS*/
@@ -494,10 +548,8 @@ footer {
   .main_Card, 
   .second_Card {
     margin: 0;
-  }
-  .second_Card {
     display: block;
-    height: 475px;
+    height: 400px;
   }
 
   /*Popular games does not need to change
@@ -640,11 +692,13 @@ footer {
   }
   .primary {
     position: relative;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     grid-template-areas: 
     "area1 area2"
     "area1 area3"
     ;
-    height: 300px;
+    height: 400px;
     margin-bottom: 50px;
     top: -60px;
   }
@@ -655,17 +709,10 @@ footer {
     grid-area: area1;
     top: 0;
   }
-  .main_Card .price {
-    height: 250px;
-  }
-  .main_Card button,
-  .second_Card button,
-  .third_Card button {
-    height: 50px;
-  }
+
   .second_Card {
     grid-area: area2;
-    height: unset;
+    height: auto;
     top: 0;
   }
   .third_Card {
@@ -674,22 +721,8 @@ footer {
     top: 0;
     margin: 0;
   }
-  .second_Card .price {
-    height: 75px;
-  }
-  .third_Card .price {
-    height: 75px;
-  }
-  .price {
+  .cont {
     height: unset;
-  }
-  .price div {
-    position: relative;
-    border-radius: 5px;
-  }
-  .third_Card div p {
-    margin: 0;
-    padding: 20px;
   }
   .anim_primary {
     display: none;
