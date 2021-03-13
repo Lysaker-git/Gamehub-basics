@@ -131,38 +131,27 @@ h1 {
   cursor: pointer;
 }
 .main_Card,
-.second_Card {
+.second_Card,
+.third_Card {
   position: relative;
   top: -60px;
   margin: 0 50px;
-  height: auto;
   border-radius: 5px;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
   cursor: pointer;
+  background-size: cover;
+  background-size: 130%;
+  background-position: center;
 }
 .price {
   position: relative;
   color: white;
   font-family: 'Lato';
-  font-size: 2em;
+  font-size: 3em;
   margin: 0;
   text-align: end;
   height: 340px;
-  background-size: cover;
-  background-size: 130%;
-  background-position: center;
   padding: 15px;
-  border-radius: 5px 5px 0 0;
-}
-
-.price::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .main_Card div p,
@@ -417,6 +406,7 @@ footer {
   grid-area: Socials;
   display: grid;
   grid-template-columns: repeat(4 1fr);
+  grid-template-rows: 50px repeat(2, 1fr);
   grid-template-areas:
   "icon1 icon2 icon3 icon4"
   "link1 link1 link2 link2"
@@ -443,6 +433,7 @@ footer {
 }
 .link1 a, .link2 a {
   display: block;
+  padding-bottom: 20px;
 }
 .copy_Right {
   grid-area: copy_R;
@@ -455,6 +446,9 @@ footer {
 .sub_Contact {
   color: var(--light-color);
   padding-bottom: 100px;
+}
+.sub_Contact h2 {
+  padding-bottom: 20px;
 }
 .sub_Contact button {
   width: 100%;
@@ -677,8 +671,8 @@ footer {
   .third_Card {
     grid-area: area3;
     display: block;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-    border-radius: 5px;
+    top: 0;
+    margin: 0;
   }
   .second_Card .price {
     height: 75px;
@@ -724,6 +718,9 @@ footer {
 
 }
 @media only screen and (min-width: 1400px) {
+  main {
+    padding: 0 50px;
+  }
   .header_cont,
   main,
   .containing-footer {
@@ -735,6 +732,9 @@ footer {
   .secondary,
   .community {
     margin: 0;
+  }
+  .community {
+    margin-top: 10px;
   }
   .primary {
     padding-bottom: 50px;
