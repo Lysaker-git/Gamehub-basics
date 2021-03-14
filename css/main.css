@@ -218,31 +218,34 @@ h1 {
 /* GAME cardS BACKGROUND SO I CAN EASILY CHANGE CLASSES WITH JS */
 
 .black {
-  background-image: url(/Assets/Game-covers/GameHub_covers3.jpg);
+  background-image: url(/Assets/Game-covers/GameHub_black.jpg);
 }
 .furious {
-  background-image: url(/Assets/Game-covers/GameHub_covers4.jpg);
+  background-image: url(/Assets/Game-covers/GameHub_furious.jpg);
 }
 .assassin {
-  background-image: url(/Assets/Game-covers/GameHub_covers5.jpg);
+  background-image: url(/Assets/Game-covers/GameHub_assassin.jpg);
 }
 .cyber {
-  background-image: url(/Assets/Game-covers/GameHub_covers9.jpg);
+  background-image: url(/Assets/Game-covers/GameHub_cyber.jpg);
 }
 .forge {
-  background-image: url(/Assets/Game-covers/GameHub_covers10.jpg);
+  background-image: url(/Assets/Game-covers/GameHub_forge.jpg);
 }
 .boxer {
-  background-image: url(/Assets/Game-covers/GameHub_covers8.jpg);
+  background-image: url(/Assets/Game-covers/GameHub_boxxer.jpg);
 }
 .racing {
-  background-image: url(/Assets/Game-covers/GameHub_covers7.jpg);
+  background-image: url(/Assets/Game-covers/GameHub_racing.jpg);
 }
 .pingpong {
-  background-image: url(/Assets/Game-covers/GameHub_covers.jpg);
+  background-image: url(/Assets/Game-covers/GameHub_pingpong.jpg);
 }
 .spacewar {
-  background-image: url(/Assets/Game-covers/GameHub_covers6.jpg); 
+  background-image: url(/Assets/Game-covers/GameHub_space.jpg); 
+}
+.super {
+  background-image: url(/Assets/Game-covers/super.jpg); 
 }
 
 /*Again setting up grid so i can modify the content flow
@@ -640,13 +643,13 @@ footer {
     background-image: url(/Assets/Menu-icons/login.png);
   }
   .enew::before {
-    background-image: url(/Assets/Menu-icons/globe.png);
+    background-image: url(/Assets/Menu-icons/new.png);
   }
   .eused::before {
-    background-image: url(/Assets/Menu-icons/currency-dollar.png);
+    background-image: url(/Assets/Menu-icons/used.png);
   }
   .forums::before {
-    background-image: url(/Assets/Menu-icons/collection-1.png);
+    background-image: url(/Assets/Menu-icons/forum.png);
   }
   .icon::before {
     position: absolute;
