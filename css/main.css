@@ -203,8 +203,7 @@ h1 {
   color: var(--light-color);
   font-family: 'lato', sans-serif;
   font-weight: 700;
-  margin-left: auto;
-  margin-top: 15px;
+  margin: 15px 0 15px auto;
   height: 20px;
   padding: 10px;
   background-color:var(--dark-color);
