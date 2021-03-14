@@ -494,22 +494,22 @@ footer {
   grid-template-columns: repeat(4 1fr);
   grid-template-rows: 50px repeat(2, 1fr);
   grid-template-areas:
-  "icon1               icon2               icon3               icon4"
+  "icon_twitch         icon_youtube        icon_twitter        icon_facebook"
   "link_group_1_footer link_group_1_footer link_group_2_footer link_group_2_footer"
   "copy_R              copy_R              copy_R              copy_R";
   gap: 10px;
 }
-.icon1 {
-  grid-area: icon1;
+.icon_twitch {
+  grid-area: icon_twitch;
 }
-.icon2 {
-  grid-area: icon2;
+.icon_youtube {
+  grid-area: icon_youtube;
 }
-.icon3 {
-  grid-area: icon3;
+.icon_twitter {
+  grid-area: icon_twitter;
 }
-.icon4 {
-  grid-area: icon4;
+.icon_facebook {
+  grid-area: icon_facebook;
 }
 .link_group_1_footer {
   grid-area: link_group_1_footer;
