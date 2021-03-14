@@ -76,8 +76,8 @@ header {
   padding: 50px;
 }
 .logo2,
-.user_Navigation,
-.site_Navigation {
+.user_navigation,
+.site_navigation {
   display: none;
 }
 .upper {
@@ -131,12 +131,12 @@ h1 {
   margin: 0 50px;
   gap: 20px;
 }
-.second_Card, .third_Card {
+.second_card, .third_card {
   display: none;
 }
-.main_Card,
-.second_Card,
-.third_Card {
+.main_card,
+.second_card,
+.third_card {
   position: relative;
   border-radius: 5px;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
@@ -215,7 +215,7 @@ h1 {
   margin: 0;
 }
 
-/* GAME CARDS BACKGROUND SO I CAN EASILY CHANGE CLASSES WITH JS */
+/* GAME cardS BACKGROUND SO I CAN EASILY CHANGE CLASSES WITH JS */
 
 .black {
   background-image: url(/Assets/Game-covers/GameHub_covers3.jpg);
@@ -279,7 +279,7 @@ h1 {
   margin: 20px 0 5px 0;
 }
 
-.imgcont_Popular {
+.imgcont_popular {
   position: relative;
   height: 206px;
   width: 100%;
@@ -364,12 +364,12 @@ h1 {
   opacity: 0.2;
   color: var(--light-red-color);
 }
-.community_Style {
+.community_style {
   background-color: var(--light-red-color);
   box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
 }
-.imgcont_Community {
+.imgcont_community {
   position: relative;
   height: 150px;
   border-radius: 5px 5px 0 0;
@@ -377,7 +377,7 @@ h1 {
   background-size: cover;
 
 }
-.community_Style h3 {
+.community_style h3 {
   margin: 5px 0;
   text-transform: uppercase;
   font-size: 0.9em;
@@ -429,16 +429,16 @@ h1 {
   color: var(--dark-color);
   text-decoration: underline;
 }
-.info_Post div{
+.info_post div{
   height: 130px;
   width: 100%;
   background-size: cover;  
 }
-.info_Post h2 {
+.info_post h2 {
   font-size: 1.3em;
   padding: 0 50px;
 }
-.info_Post .bigger_info,
+.info_post .bigger_info,
 .head {
   text-transform: uppercase;
   font-family: 'Lato', sans-serif;
@@ -473,7 +473,7 @@ footer {
   height: auto;
   background-color: var(--dark-color);
 }
-.containing-footer {
+.containing_footer {
   padding: 50px;
   display: grid;
   grid-template-areas:
@@ -481,7 +481,7 @@ footer {
   "Socials"
   ;
 }
-.links_Socials {
+.links_socials {
   grid-area: Socials;
   display: grid;
   grid-template-columns: repeat(4 1fr);
@@ -522,14 +522,14 @@ footer {
 /*Moving sign up to the above position with grid
   for easier manipulation with bigger sizes.*/
 
-.sub_Contact {
+.sub_contact {
   color: var(--light-color);
   padding-bottom: 100px;
 }
-.sub_Contact h2 {
+.sub_contact h2 {
   padding-bottom: 20px;
 }
-.sub_Contact button {
+.sub_contact button {
   width: 100%;
   height: 40px;
   border:none; 
@@ -538,7 +538,7 @@ footer {
   color: var(--light-red-color);
   margin: 5px 0;
 }
-.sub_Contact input {
+.sub_contact input {
   width: calc(100% - 30px);
   height: 40px;
   background-color: var(--light-background);
@@ -547,7 +547,7 @@ footer {
   border: none;
   font-size: 1.3em;
 }
-.sub_Contact label {
+.sub_contact label {
   font-size: 1em;
 }
  /*Starting media for tablet-sizes*/
@@ -563,12 +563,12 @@ footer {
   .primary {
     grid-template-columns: 1fr 1fr;
   }
-  .second_Card {
+  .second_card {
     margin: 0;
     display: block;
   }
 
-  /*SETTING UP COMMUNITY CARDS*/
+  /*SETTING UP COMMUNITY cardS*/
 
   .community {
     grid-template-columns: repeat(3, auto);
@@ -585,32 +585,32 @@ footer {
     padding: 50px 0;
     transform: translate(-50%, -50%);
   }
-  .community_Style h3 {
+  .community_style h3 {
     margin: 10px 0;
   }
-  .community_Style a {
+  .community_style a {
     font-size: 0.7em;
   }
     /*Popular games does not need to change
   on with info
   Using Float for easy setup*/
 
-  .info_Post div {
+  .info_post div {
     width: 50%;
     height: 250px;
     float: left;
   }
-  .info_Post .pic2 {
+  .info_post .pic2 {
     float: right;
   }
-  .info_Post section {
+  .info_post section {
     height: 250px;
     padding: 0 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
-  .info_Post h3 {
+  .info_post h3 {
     margin: 0;
   }
 
@@ -667,10 +667,10 @@ footer {
     z-index: -1;
     background: var(--red-color)
   }
-  .user_Navigation{
+  .user_navigation{
     width: 100%;
   }
-  .user_Navigation li:first-child {
+  .user_navigation li:first-child {
     margin-left: auto;
   }
   h1 {
@@ -681,7 +681,7 @@ footer {
     display: flex;
     margin-top: 39px;
   }
-  .site_Navigation {
+  .site_navigation {
     margin: 4px 0;
     padding-left: 0;
   }
@@ -706,16 +706,16 @@ footer {
   .head {
     height: 35px;
   }
-  .main_Card {
+  .main_card {
     grid-area: area1;
     height: auto;
   }
 
-  .second_Card {
+  .second_card {
     grid-area: area2;
     height: auto;
   }
-  .third_Card {
+  .third_card {
     grid-area: area3;
     display: block;
     height: unset;
@@ -731,14 +731,14 @@ footer {
   footer {
     height: auto;
   }
-  .containing-footer {
+  .containing_footer {
     grid-template-areas: 
     "Socials Sub"
     ;
     gap: 250px;
     padding-bottom: 0;
   }
-  .sub_Contact div h2 {
+  .sub_contact div h2 {
     margin-top: 0;
   }
 
@@ -749,7 +749,7 @@ footer {
   }
   .header_cont,
   main,
-  .containing-footer {
+  .containing_footer {
     max-width: 1400px;
     margin: 0 auto;
   }
@@ -780,23 +780,23 @@ footer {
     padding: 0;
     border-radius: 5px 5px 0 0;
   }
-  .info_Post .bigger_info {
+  .info_post .bigger_info {
     padding: 0 0 0 10px;
     margin: 15px 0 39px 0;
   }
-  .info_Post a {
+  .info_post a {
     color: var(--dark-color);
     text-decoration: underline;
   }
-  .info_Post section {
+  .info_post section {
     height: auto;
     margin: 15px 0;
   }
-  .info_Post {
+  .info_post {
     display: block;
   }
-  .info_Post div,
-  .info_Post .pic2 {
+  .info_post div,
+  .info_post .pic2 {
     float: none;
     width: 100%;
     height: 150px;
