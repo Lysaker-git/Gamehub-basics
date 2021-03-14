@@ -435,6 +435,7 @@ h1 {
 .news_aside_section a {
   color: var(--dark-color);
   text-decoration: underline;
+  width: 100px;
 }
 .news_article_with_image div{
   height: 130px;
