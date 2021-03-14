@@ -446,8 +446,13 @@ h1 {
 }
 .info_Post h3,
 .info_Post h2,
-.info_Post p {
+.info_Post p,
+.info_Post a {
   padding: 0 50px;
+}
+.info_Post a {
+  color: var(--dark-color);
+  text-decoration: underline;
 }
 .info_Post {
   position: relative;
@@ -801,7 +806,8 @@ footer {
     "community blank info"
     ;
     grid-template-columns: 1fr 300px 300px;
-    grid-template-rows: 70px 450px 500px;
+    grid-template-rows: 70px 450px 580px;
+    gap: 40px 0;
   }
   .info {
     padding: 0;
@@ -814,13 +820,19 @@ footer {
   .info_Post section .right_S,
   .info_Post section .right_p,
   .info_Post section .left_S,
-  .info_Post p  {
+  .info_Post p,
+  .info_Post a  {
+    font-size: 1em;
     padding: 10px 10px 5px 10px;
     margin: 0;
   }
+  .info_Post a {
+    color: var(--dark-color);
+    text-decoration: underline;
+  }
   .info_Post section {
     height: auto;
-    margin-bottom: 15px;
+    margin-bottom: 30px;
   }
   .info_Post {
     display: block;
