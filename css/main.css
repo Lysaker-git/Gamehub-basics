@@ -19,7 +19,8 @@ body {
   padding: 0;
   font-family: 'Nunito';
   height: 100%;
-  width: 100%;  
+  width: 100%;
+  min-width: 450px;  
   overflow-x: hidden;
 }
 body::before {
