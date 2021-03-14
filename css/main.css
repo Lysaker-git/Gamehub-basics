@@ -126,6 +126,10 @@ h1 {
 .primary {
   display: grid;
   grid-template-columns: 1fr;
+  position: relative;
+  top: -60px;
+  margin: 0 50px;
+  gap: 20px;
 }
 .second_Card, .third_Card {
   display: none;
@@ -134,8 +138,6 @@ h1 {
 .second_Card,
 .third_Card {
   position: relative;
-  top: -60px;
-  margin: 0 50px;
   border-radius: 5px;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
   background-size: cover;
@@ -157,22 +159,20 @@ h1 {
   height: 40px;
   margin: 0;
   align-items: center;
-  padding: 5px 15px;
+  padding: 5px 0 5px 15px;
   z-index: 100;
 }
 .tag a {
   text-transform: uppercase;
-  width: 33%;
-  border-radius: 0 0 5px 0;
+  min-width: 155px;
+  border-bottom-right-radius: 5px;
   justify-content: center;
   font-weight: 700;
+  color: var(--dark-color);
 }
 .tag h2 {
-  width: 65%;
-  border-radius: 0 0 0 5px;
-}
-.tag a {
-  color: var(--dark-color);
+  width: 100%;
+  border-bottom-left-radius: 5px;
 }
 
 .hidden_tag {
@@ -263,14 +263,14 @@ h1 {
   grid-area: secondary;
   margin: 0 50px 100px 50px;
   display: grid;
-  grid-template-rows: 70px repeat(2, 350px);
+  grid-template-rows: 70px repeat(2, auto);
   grid-template-columns: repeat(2, 1fr);
   grid-template-areas:
   "head head"
   "g1 g2"
   "g3 g4"
   ;
-  gap: 15px;
+  gap: 20px;
 }
 .head {
   position: relative;
@@ -300,18 +300,17 @@ h1 {
 }
 .pop_absolute {
   position: absolute;
-  right: 0;
-  top: 218px;
+  right: 10px;
+  top: 201px;
 }
-
-.under_style h3,
-.under_style p {
-  padding: 0 10px 10px ;
+.pop_paragraf {
   margin: 0;
+  padding: 0 10px 46px;
 }
 .under_style h3 {
   font-family: 'Lato', sans-serif;
-  padding-top: 10px;
+  padding: 10px;
+  margin: 0;
 }
 .under_style a {
   position: absolute;
@@ -356,8 +355,8 @@ h1 {
   position: absolute;
   font-family: 'Lato', sans-serif;
   transform: rotate(-90deg);
-  font-size: 4em;
-  left: 155px;
+  font-size: 6em;
+  left: 150px;
   bottom: 0;
   top: 0;
   z-index: -1;
@@ -372,7 +371,7 @@ h1 {
 }
 .imgcont_Community {
   position: relative;
-  height: 100px;
+  height: 150px;
   border-radius: 5px 5px 0 0;
   background-position: center;
   background-size: cover;
@@ -389,7 +388,7 @@ h1 {
   align-items: center;
 }
 .comm_cont a{
-  margin: 0 0 0 auto;
+  margin-left: auto;
   padding: 10px 20px;
   text-transform: uppercase;
   color: var(--dark-color);
@@ -422,7 +421,7 @@ h1 {
   background-position-y: 45%; 
 }
 .info {
-  padding: 75px 0 100px 0;
+  padding: 75px 0 150px 0;
   grid-area: info;
   background-color: var(--light-background);
 }
@@ -447,7 +446,7 @@ h1 {
   position: relative;
   z-index: 1;
 }
-.info_Post .bigger_info::before,
+.bigger_info::before,
 .head::before {
   position: absolute;
   content: '';
@@ -460,10 +459,12 @@ h1 {
 }
 .head::before {
   width: 135px;
+  top: 30px;
+
 }
 .right_section, 
 .left_section {
-  padding: 0 50px 30px 50px;
+  padding: 0 50px 20px 50px;
 }
 
 /*SETTING UP FOOTER*/
@@ -557,26 +558,40 @@ footer {
   }
 }
 @media only screen and (min-width: 750px) {
-
-  header {
-    height: 410px;
-  }
   
   /*MAIN CONTENT FOR TABLET - 2 COLUMNS*/
   .primary {
     grid-template-columns: 1fr 1fr;
-    margin: 0 50px;
-    gap: 20px;
   }
-  
-  .main_Card, 
   .second_Card {
     margin: 0;
     display: block;
-    height: 400px;
   }
 
-  /*Popular games does not need to change
+  /*SETTING UP COMMUNITY CARDS*/
+
+  .community {
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: auto;
+    height: 450px;
+    gap: 70px 20px;
+  }
+  .watermark {
+    transform: rotate(0deg);
+    margin: 0;
+    bottom: 0;
+    top: 50%;
+    left: 50%;
+    padding: 50px 0;
+    transform: translate(-50%, -50%);
+  }
+  .community_Style h3 {
+    margin: 10px 0;
+  }
+  .community_Style a {
+    font-size: 0.7em;
+  }
+    /*Popular games does not need to change
   on with info
   Using Float for easy setup*/
 
@@ -599,36 +614,6 @@ footer {
     margin: 0;
   }
 
-  .info_Post {
-    padding: 0;
-  }
-
-
-  /*SETTING UP COMMUNITY CARDS*/
-
-  .community {
-    grid-template-columns: repeat(3, auto);
-    grid-template-rows: auto;
-    height: 450px;
-    gap: 70px 20px;
-  }
-  .imgcont_Community {
-    height: 150px;  
-  }
-  .watermark {
-    transform: rotate(0deg);
-    margin: 0;
-    bottom: 0;
-    top: 50%;
-    left: 50%;
-    padding: 50px 0;
-    transform: translate(-50%, -50%);
-    font-size: 6em;
-    
-  }
-  .community_Style h3 {
-    margin: 10px 0;
-  }
 }
 @media only screen and (min-width: 1020px) {
 
@@ -709,7 +694,6 @@ footer {
     padding-left: 5px;
   }
   .primary {
-    position: relative;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-template-areas: 
@@ -718,32 +702,23 @@ footer {
     ;
     height: 400px;
     margin-bottom: 50px;
-    top: -60px;
   }
   .head {
     height: 35px;
   }
   .main_Card {
     grid-area: area1;
-    top: 0;
+    height: auto;
   }
 
   .second_Card {
     grid-area: area2;
     height: auto;
-    top: 0;
   }
   .third_Card {
     grid-area: area3;
     display: block;
-    top: 0;
-    margin: 0;
-  }
-  .cont {
     height: unset;
-  }
-  .anim_primary {
-    display: none;
   }
   .secondary {
     grid-template-areas:
@@ -751,7 +726,7 @@ footer {
     "g1 g2 g3 g4"
     ;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 70px 397px;
+    grid-template-rows: 70px 370px;
   }
   footer {
     height: auto;
@@ -809,22 +784,13 @@ footer {
     padding: 0 0 0 10px;
     margin: 15px 0 39px 0;
   }
-  .info_Post section .right_S,
-  .info_Post section .right_p,
-  .info_Post section .left_S,
-  .info_Post p,
-  .info_Post a  {
-    font-size: 1em;
-    padding: 10px 10px 5px 10px;
-    margin: 0;
-  }
   .info_Post a {
     color: var(--dark-color);
     text-decoration: underline;
   }
   .info_Post section {
     height: auto;
-    margin-bottom: 30px;
+    margin: 15px 0;
   }
   .info_Post {
     display: block;
