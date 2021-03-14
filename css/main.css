@@ -12,6 +12,9 @@
 
 
 /* MAIN SETUP */
+html, body {
+  overflow-x: hidden;
+}
 body {
   position: relative;
   background-color: rgb(235, 235, 235);
@@ -20,8 +23,9 @@ body {
   font-family: 'Nunito';
   height: 100%;
   width: 100%;
-  min-width: 450px;  
-  overflow-x: hidden;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
 }
 body::before {
   position: absolute;
