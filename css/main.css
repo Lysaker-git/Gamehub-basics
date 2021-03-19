@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=lato:wght@400;700&display=swap');
 
 /*Setting up root colors so i can change in one location*/
 :root {
@@ -10,7 +10,7 @@
   --light-background: #cccbcb;
   --card-background: whitesmoke;
 }
-/* Main setup for body and html for screen sizes */
+/* main setup for body and html for screen sizes */
 html, body {
   overflow-x: hidden;
 }
@@ -28,7 +28,7 @@ body {
 body::before {
   position: absolute;
   content: '';
-  background-image: url(/Assets/Background/Background-1.svg);
+  background-image: url(/assets/background/background-1.svg);
   z-index: -3000;
   width: 100%;
   height: 100%;
@@ -36,7 +36,7 @@ body::before {
   opacity: 0.03;
 
 }
-/*PROGRESSION SITE - for unfullfilled pages (placeholder site)*/
+/*PROgRESSION SITE - for unfullfilled pages (placeholder site)*/
 .section_prog {
   display: flex;
   justify-items: center;
@@ -63,7 +63,7 @@ a {
   text-decoration: none;
   color: var(--light-color)
 }
-/*HEADER AND NAV FOR MOBILE
+/*hEADER AND NAV FOR mOBIlE
   Using flex to posistion and have the menu
   almost ready on the side. But i need JS to
   implement - was planning on the checkbox method but i will rather use JS*/
@@ -218,37 +218,37 @@ h1 {
 /* All game card backgrounds so i have them grouped in my CSS */
 
 .black {
-  background-image: url(/Assets/Game-covers/GameHub_black.jpg);
+  background-image: url(/assets/game-covers/gamehub_black.jpg);
 }
 .furious {
-  background-image: url(/Assets/Game-covers/GameHub_furious.jpg);
+  background-image: url(/assets/game-covers/gamehub_furious.jpg);
 }
 .assassin {
-  background-image: url(/Assets/Game-covers/GameHub_assassin.jpg);
+  background-image: url(/assets/game-covers/gamehub_assassin.jpg);
 }
 .cyber {
-  background-image: url(/Assets/Game-covers/GameHub_cyber.jpg);
+  background-image: url(/assets/game-covers/gamehub_cyber.jpg);
 }
 .forge {
-  background-image: url(/Assets/Game-covers/GameHub_forge.jpg);
+  background-image: url(/assets/game-covers/gamehub_forge.jpg);
 }
 .boxer {
-  background-image: url(/Assets/Game-covers/GameHub_boxxer.jpg);
+  background-image: url(/assets/game-covers/gamehub_boxxer.jpg);
 }
 .racing {
-  background-image: url(/Assets/Game-covers/GameHub_racing.jpg);
+  background-image: url(/assets/game-covers/gamehub_racing.jpg);
 }
 .pingpong {
-  background-image: url(/Assets/Game-covers/GameHub_pingpong.jpg);
+  background-image: url(/assets/game-covers/gamehub_pingpong.jpg);
 }
 .spacewar {
-  background-image: url(/Assets/Game-covers/GameHub_space.jpg); 
+  background-image: url(/assets/game-covers/gamehub_space.jpg); 
 }
 .super {
-  background-image: url(/Assets/Game-covers/super.jpg); 
+  background-image: url(/assets/game-covers/super.jpg); 
 }
 
-/*Grid for more layout reasons. I find grid to be one of the most
+/*grid for more layout reasons. I find grid to be one of the most
   helpful tools to place larger objects. And some small ones*/
 .grid_for_secondary_content {
   display: grid;
@@ -316,7 +316,7 @@ h1 {
   padding: 0 10px 46px;
 }
 .text_and_buttons_for_popular h3 {
-  font-family: 'Lato', sans-serif;
+  font-family: 'lato', sans-serif;
   margin: 0;
 }
 .text_and_buttons_for_popular a {
@@ -335,7 +335,7 @@ h1 {
   cursor: pointer;
 }
 
-/*Grids, grids, grids  - i find them easier to work with
+/*grids, grids, grids  - i find them easier to work with
   placing content on my site.*/
 .community_section{
   position: relative;
@@ -360,7 +360,7 @@ h1 {
 }
 .watermark_headline {
   position: absolute;
-  font-family: 'Lato', sans-serif;
+  font-family: 'lato', sans-serif;
   transform: rotate(-90deg);
   font-size: 6em;
   left: 100px;
@@ -417,15 +417,15 @@ h1 {
   is wrong. But for larger sizes and the flow of the site
   nfo should be below.*/
 .pic1 {
-  background-image: url(/Assets/News-pictures/pexels-cottonbro-1.png);
+  background-image: url(/assets/News-pictures/pexels-cottonbro-1.png);
   background-position-y: 20%; 
 }
 .pic2 {
-  background-image: url(/Assets/News-pictures/pexels-cottonbro-2.png);
+  background-image: url(/assets/News-pictures/pexels-cottonbro-2.png);
   background-position-y: 15%; 
 }
 .pic3 {
-  background-image: url(/Assets/News-pictures/pexels-andrea-piacquadio-1.png);
+  background-image: url(/assets/News-pictures/pexels-andrea-piacquadio-1.png);
   background-position-y: 45%; 
 }
 .news_aside_section {
@@ -453,7 +453,7 @@ h1 {
 .news_headline,
 .headline_popular_games {
   text-transform: uppercase;
-  font-family: 'Lato', sans-serif;
+  font-family: 'lato', sans-serif;
   font-size: 1.8em;
   position: relative;
   z-index: 1;
@@ -479,7 +479,7 @@ h1 {
   padding: 0 50px 20px 50px;
 }
 
-/*SETTING UP FOOTER*/
+/*SETTINg UP FOOTER*/
 
 footer {
   height: auto;
@@ -531,7 +531,7 @@ footer {
   color: var(--light-color);
 }
 
-/*Moving sign up to the above position with grid
+/*moving sign up to the above position with grid
   for easier manipulation with bigger sizes.*/
 
 .sub_contact {
@@ -572,7 +572,7 @@ footer {
 }
 @media only screen and (min-width: 750px) {
   
-  /*MAIN CONTENT FOR TABLET - 2 COLUMNS*/
+  /*mAIN CONTENT FOR TABlET - 2 COlUmNS*/
   .primary_game_cards {
     grid-template-columns: 1fr 1fr;
   }
@@ -581,7 +581,7 @@ footer {
     display: block;
   }
 
-  /*SETTING UP COMMUNITY cardS*/
+  /*SETTINg UP COmmUNITY cardS*/
 
   .community_section{
     grid-template-columns: repeat(3, auto);
@@ -647,19 +647,19 @@ footer {
     cursor: pointer;
   }
   .cart::before {
-    background-image: url(/Assets/Menu-icons/shopping-cart.png);
+    background-image: url(/assets/menu-icons/shopping-cart.png);
   }
   .login::before {
-    background-image: url(/Assets/Menu-icons/login.png);
+    background-image: url(/assets/menu-icons/login.png);
   }
   .explore_new::before {
-    background-image: url(/Assets/Menu-icons/new.png);
+    background-image: url(/assets/menu-icons/new.png);
   }
   .explore_used::before {
-    background-image: url(/Assets/Menu-icons/used.png);
+    background-image: url(/assets/menu-icons/used.png);
   }
   .forums::before {
-    background-image: url(/Assets/Menu-icons/forum.png);
+    background-image: url(/assets/menu-icons/forum.png);
   }
   .icon_placement::before {
     position: absolute;
