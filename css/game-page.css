@@ -1,0 +1,103 @@
+:root {
+    --dark-color: #0C0E1A;
+    --light-color: #ABBEC7;
+    --red-color: #94272B;
+    --light-red-color: #D8FFE1;
+    --light-background: #cccbcb;
+    --card-background: whitesmoke;
+  }
+main {
+    position: relative;
+    top: -60px;
+}
+
+.carousel {
+    height: 350px;
+    background: rgba(91, 82, 18, 0.2)
+    
+}
+.main_grid_games {
+    background-color: whitesmoke;
+    display: grid;
+    grid-template-areas: 
+    "main aside"
+    "main aside"
+    "rec rec"
+    ;
+    padding: 30px;
+    gap: 50px 150px;
+    z-index: 3;
+}
+.main_info_and_specs {
+    grid-area: main;
+}
+.rating_and_buttons {
+    grid-area: aside;
+}
+.recommends {
+    position: relative;
+    grid-area: rec;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    z-index: 1;
+}
+.recommends::before {
+    position: absolute;
+    content: '';
+    right: 50px;
+    left: 50px;
+    top: -30px;
+    bottom: -30px;
+    background-color: var(--red-color);
+    z-index: -1;
+}
+.text_and_button {
+    display: flex;
+    align-items: center;
+}
+.game_name {
+    position: relative;
+    margin: 0;
+    padding: 50px 0 20px 0;
+    text-align: left;
+    letter-spacing: 5px;
+}
+.game_name::before {
+    content: 'assassin';
+    position: absolute;
+    left: 0;
+    top: 20px;
+    opacity: 0.2;
+    font-size: 2em;
+}
+.main_info_and_specs p {
+    font-size: 0.9em;
+}
+main ul, li {
+    padding: 0;
+    cursor: default;
+}
+main li {
+    margin: 20px 0;
+    color: black;
+}
+.game_choices {
+    height: 360px;
+}
+.game_choices li {
+    display: flex;
+    align-items: center;
+
+}
+.game_choices li a {
+    margin-left: auto;
+    padding: 10px 15px;
+    background: var(--dark-color);
+    border-radius: 5px;
+}
+.backdrop {
+    height: 190px;
+    width: 150px;
+    background-color: rgba(91, 82, 18);
+}
