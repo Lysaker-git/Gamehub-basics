@@ -11,69 +11,71 @@
 </head>
 <body>
     <header>
-        <section class="header_container">
-            <section class="upper_part_of_header">
-                <div class="logos">
-                    <a href="../index.html" class="logo1 mobile_header">
-                        <img class ="logo_Mobile" src="../Assets/Site-logo/GameHub_Logo-rev.png" alt="GameHub Logo">
-                    </a>
-                    <a href="../index.html" class="logo2 desktop_header">
-                        <img class ="logo" src="../Assets/Site-logo/GameHub_Logo-rev-txt-withlog.png" alt="Game Hub logo">
-                    </a>
-                </div>
-                <div class="mobile_checkbox mobile_header">
-                    <label for="mobile-menu" alt="Menu">&equiv;</label>
-                    <input type="checkbox" id="mobile-menu">
-                </div>
-                <ul class="user_navigation desktop_header">
-                    <li class="cart icon_placement">
-                        <a href="../cart-checkout.html">
-                            Cart
+        <header>
+            <section class="header_container">
+                <div class="upper_part_of_header">
+                    <div class="logos">
+                        <a href="../index.html" class="logo1 mobile_header">
+                            <img class ="logo_Mobile" src="../Assets/Site-logo/GameHub_Logo-rev.png" alt="GameHub Logo">
                         </a>
-                    </li>
-                    <li class="login icon_placement">
-                        <a href="../sign-in-up.html">
-                            Login
+                        <a href="../index.html" class="logo2 desktop_header">
+                            <img class ="logo" src="../Assets/Site-logo/GameHub_Logo-rev-txt-withlog.png" alt="Game Hub logo">
                         </a>
-                    </li>
-                    <li class="sign_up_container">
-                        <a href="../sign-in-up.html">
-                            Sign Up
-                        </a>
-                    </li>
-                </ul>
-            </section>
-            <h1>
-                The universe of games
-            </h1>
-            <section class="lower_part_of_header">
-                <nav>
-                    <ul class="site_navigation desktop_header">
-                        <li class="explore_new icon_placement">
-                            <a href="../in-progress.html">
-                                Experience New
+                    </div>
+                    <div class="mobile_checkbox mobile_header">
+                        <label for="mobile-menu" >&equiv;</label>
+                        <input type="checkbox" id="mobile-menu">
+                    </div>
+                    <ul class="user_navigation desktop_header">
+                        <li class="cart icon_placement">
+                            <a href="../cart-checkout.html">
+                                Cart
                             </a>
                         </li>
-                        <li class="explore_used icon_placement">
-                            <a href="../in-progress.html">
-                                Experience Used
+                        <li class="login icon_placement">
+                            <a href="../sign-in-up.html">
+                                Login
                             </a>
                         </li>
-                        <li class="forums icon_placement">
-                            <a href="../forum-threads/forum.html">
-                                Forums
+                        <li class="sign_up_container">
+                            <a href="../sign-in-up.html">
+                                Sign Up
                             </a>
                         </li>
                     </ul>
-                </nav>
-                <div class="searchbar">
-                    <input type="text" id="search" class="search" aria-label="Search Games" required>
-                    <a href="../search.html">
-                        <img src="../assets/menu-icons/search.png" alt="search button">
-                    </a>
+                </div>
+                <h1>
+                    The universe of games
+                </h1>
+                <div class="lower_part_of_header">
+                    <nav>
+                        <ul class="site_navigation desktop_header">
+                            <li class="explore_new icon_placement">
+                                <a href="../in-progress.html">
+                                    Experience New
+                                </a>
+                            </li>
+                            <li class="explore_used icon_placement">
+                                <a href="../in-progress.html">
+                                    Experience Used
+                                </a>
+                            </li>
+                            <li class="forums icon_placement">
+                                <a href="forum.html">
+                                    Forums
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="searchbar">
+                        <input type="text" id="search" class="search" aria-label="Search Games" required>
+                        <a href="../search.html">
+                            <img src="../assets/menu-icons/search.png" alt="search button">
+                        </a>
+                    </div>
                 </div>
             </section>
-        </section>
+        </header>
     </header>
     <main>
         <div class="carousel">
@@ -179,7 +181,7 @@
     </main>
     <footer>
         <div class="container_for_footer">
-        <section class="links_socials">
+        <div class="links_socials">
             <!--NOROFF TEACHERS; I went accesabillity hunting and wanted to add a confirmation on opening in a new tab.
             I tried this to not include JS.-->    
             <a href="https://www.twitch.com" target="_blank" class="icon_twitch" onclick="return confirm('This will open Twitch in a new tab, do you want to proceed?')">
@@ -206,8 +208,8 @@
             © Game Hub Corp 2020. All rights preserved Noroff Academy FEU, Design 1. 
             Granting the template to create opportunity to make this project come true. 
             </p>
-        </section>
-        <section class="sub_contact">
+        </div>
+        <div class="sub_contact">
             <div>
                 <h2>Sign up for new deals!</h2>
             </div>
@@ -217,7 +219,7 @@
                 <button>INFORM ME</button>
 
             </div>
-        </section>
+        </div>
         </div>
     </footer>
 </body>
