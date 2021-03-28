@@ -9,6 +9,7 @@
 main {
     position: relative;
     top: -60px;
+    padding: 0 50px;
 }
 
 .carousel {
@@ -74,11 +75,12 @@ main {
 .main_info_and_specs p {
     font-size: 0.9em;
 }
-main ul, li {
+.games_li ul,
+.games_li li {
     padding: 0;
     cursor: default;
 }
-main li {
+.games_li li {
     margin: 20px 0;
     color: black;
 }

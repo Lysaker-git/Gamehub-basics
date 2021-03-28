@@ -7,16 +7,17 @@
     <meta name="Gamehub | The store for your gaming needs!" 
     content="We sell games that you want! Preoder? Yes! New Games? Yes! Used games? Yes!">
     <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/game-page.css">
 </head>
 <body>
     <header>
         <section class="header_container">
             <section class="upper_part_of_header">
                 <div class="logos">
-                    <a href="index.html" class="logo1 mobile_header">
+                    <a href="../index.html" class="logo1 mobile_header">
                         <img class ="logo_Mobile" src="../Assets/Site-logo/GameHub_Logo-rev.png" alt="GameHub Logo">
                     </a>
-                    <a href="index.html" class="logo2 desktop_header">
+                    <a href="../index.html" class="logo2 desktop_header">
                         <img class ="logo" src="../Assets/Site-logo/GameHub_Logo-rev-txt-withlog.png" alt="Game Hub logo">
                     </a>
                 </div>
@@ -26,17 +27,17 @@
                 </div>
                 <ul class="user_navigation desktop_header">
                     <li class="cart icon_placement">
-                        <a href="in-progress.html">
+                        <a href="../cart-checkout.html">
                             Cart
                         </a>
                     </li>
                     <li class="login icon_placement">
-                        <a href="in-progress.html">
+                        <a href="../sign-in-up.html">
                             Login
                         </a>
                     </li>
                     <li class="sign_up_container">
-                        <a href="in-progress.html">
+                        <a href="../sign-in-up.html">
                             Sign Up
                         </a>
                     </li>
@@ -49,30 +50,132 @@
                 <nav>
                     <ul class="site_navigation desktop_header">
                         <li class="explore_new icon_placement">
-                            <a href="in-progress.html">
+                            <a href="../in-progress.html">
                                 Experience New
                             </a>
                         </li>
                         <li class="explore_used icon_placement">
-                            <a href="in-progress.html">
+                            <a href="../in-progress.html">
                                 Experience Used
                             </a>
                         </li>
                         <li class="forums icon_placement">
-                            <a href="in-progress.html">
+                            <a href="../forum-threads/forum.html">
                                 Forums
                             </a>
                         </li>
                     </ul>
                 </nav>
                 <div class="searchbar">
-                    <input type="text" id="search" class="search" aria-label="Search Games">
-                    <label for="search"><img src="../Assets\Menu-icons\search.png" alt="search button"></label>
+                    <input type="text" id="search" class="search" aria-label="Search Games" required>
+                    <a href="../search.html">
+                        <img src="../assets/menu-icons/search.png" alt="search button">
+                    </a>
                 </div>
             </section>
         </section>
     </header>
     <main>
+        <div class="carousel">
+            <div class="img-1"></div>
+            <div class="img-2"></div>
+            <div class="img-3"></div>
+            <div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+        <section class="main_grid_games games_li">
+            <div class="main_info_and_specs">
+                <h1 class="game_name">Assassin</h1>
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet…</p>
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet…</p>
+                <ul>
+                    <li class="req_1">CPU:	Intel Core i7-4790 or AMD Ryzen 3 3200G</li>
+                    <li class="req_2">RAM:	8 GB</li>
+                    <li class="req_3">GPU:	VRAM: 3 GB, NVIDIA GTX 780 or AMD Radeon RX 470</li>
+                    <li class="req_4">DX:	DirectX 12</li>
+                    <li class="req_5">OS:	64-bit Windows 7 or 64-bit Windows 10</li>
+                </ul>
+            </div>
+            <aside class="rating_and_buttons games_li">
+                <p>Stars</p>
+                <ul>
+                    <li class="review_1">
+                        Amazing game for your imagination - 3/4 FL magazine
+                    </li>
+                    <li class="review_2">
+                        Emotions beyond comprehend! If you are looking to be taken back this is the game for you! - 4/4
+                    </li>
+                    <li class="review_3">
+                        What more do you want in a game? It has everything! - 3/4
+                    </li>
+                    <li class="review_4">
+                        Already a good game, that will become better when they include their rumored update with VR. Your imagination is the limit! - 3/4
+                    </li>
+                </ul>
+                <ul class="game_choices">
+                    <li>
+                        <p>Standard</p>
+                        <a href="#">399$</a>
+                    </li>
+                    <li>
+                        <p>Gold</p>
+                        <a href="#">599$</a>
+                    </li>
+                    <li>
+                        <p>Premium</p>
+                        <a href="#">799$</a>
+                    </li>
+                </ul>
+            </aside>
+            <div class="recommends">
+                <div class="card_games">
+                    <div class="backdrop"></div>
+                    <div class="text_and_button">
+                        <h2>150$</h2>
+                        <a href="#">view more</a>
+                    </div>
+                </div>
+                <div class="card_games">
+                    <div class="backdrop"></div>
+                    <div class="text_and_button">
+                        <h2>150$</h2>
+                        <a href="#">view more</a>
+                    </div>
+                </div>
+                <div class="card_games">
+                    <div class="backdrop"></div>
+                    <div class="text_and_button">
+                        <h2>150$</h2>
+                        <a href="#">view more</a>
+                    </div>
+                </div>
+                <div class="card_games">
+                    <div class="backdrop"></div>
+                    <div class="text_and_button">
+                        <h2>150$</h2>
+                        <a href="#">view more</a>
+                    </div>
+                </div>
+                <div class="card_games">
+                    <div class="backdrop"></div>
+                    <div class="text_and_button">
+                        <h2>150$</h2>
+                        <a href="#">view more</a>
+                    </div>
+                </div>
+                <div class="card_games">
+                    <div class="backdrop"></div>
+                    <div class="text_and_button">
+                        <h2>150$</h2>
+                        <a href="#">view more</a>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
     <footer>
         <div class="container_for_footer">
