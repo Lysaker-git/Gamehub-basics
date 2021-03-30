@@ -776,13 +776,22 @@ footer {
   }
 
   /*SIGN UP - LOGIN PAGE*/
+  .form_container {
+    display: flex;
+  }
   .right_container {
-    max-width: 40%;
+    width: 40%;
+    padding: 20px 35px;
   }
   .left_container {
-    background-image: 
+    background-image: url(../assets/background/background_log-sign.jpg);
+    background-size: cover;
+    opacity: .6;
+    height: auto;
+    width: 50%;
+    top: 0;
+    left: 0;
   }
-
 }
 @media only screen and (min-width: 1020px) {
 
@@ -911,6 +920,9 @@ footer {
   .sub_contact div h2 {
     margin-top: 0;
   }
+  .left_container {
+    background-position-y: -50px;
+  }
 
 }
 @media only screen and (min-width: 1400px) {
@@ -979,5 +991,11 @@ footer {
     grid-template-areas: 
     "Socials blank Sub";
     grid-gap: 0;
+  }
+  .form_container {
+    margin: 0;
+  }
+  .left_container {
+    background-position-y: -180px;
   }
 }
