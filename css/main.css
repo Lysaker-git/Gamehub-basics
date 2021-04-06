@@ -805,6 +805,34 @@ footer {
   padding: 18px 0;
 }
 
+/*Decided to add forum because i wanted to complete my vision
+  this project is getting bigger then what i need i think, but
+  when in rome..*/
+
+.forum_container {
+  background: var(--card-background);
+  padding: 20px;
+  box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.2);
+  position: relative;
+  top: -60px;
+  border-radius: 5px;
+}
+
+.thread_dividers {
+  position: relative;
+  z-index: 1;
+}
+.thread_dividers::after {
+  position: absolute;
+  content: '';
+  left: -20px;
+  right: -20px;
+  top: 0;
+  bottom: 0;
+  background: var(--light-background);
+  z-index: -1;
+}
+
  /*Starting media for tablet-sizes*/
 @media only screen and (min-width: 670px) {
   h1 {
