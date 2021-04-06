@@ -704,13 +704,72 @@ footer {
   text-transform: uppercase;
   margin-bottom: 20px;
 }
-/*LOGIN will come with JS, as i want it to modify what is hidden and not,
-  but it will follow the same design as sign in. (In future i want the site
-  to have this form coming out from the sign in and log in buttons respectively  */
+/*with JS the login and sign in will be integrated with the index page, so these are temporary.  */
 
 .reduce_space {
   margin-bottom: -80px;
 }
+
+/*Setting up game pages*/
+
+.carousel {
+  height: 290px;
+  width: 100%;
+}
+.carousel_img_1 {
+  background: cover;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+  box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.2);
+}
+.game_main {
+  position: relative;
+  top: -60px;
+  margin: 0 50px;
+}
+.game_name {
+  color: var(--dark-color);
+  font-weight: 700;
+  font-size: 2.5em;
+  padding: 0;
+  text-align: left;
+}
+.main_info_and_specs p {
+  line-height: 2em;
+}
+.main_info_and_specs h2 {
+  margin-top: 50px;
+}
+.boxing_in_reviews,
+.boxing_in_prices {
+  margin: 50px 0;
+}
+.prices_for_games{
+  display: flex;
+  align-items: center;
+}
+.prices_for_games :first-child {
+  margin-right: auto;
+  font-weight: 900;
+}
+.prices_for_games :last-child {
+  background-color: var(--red-color);
+  color: var(--light-red-color);
+  padding: 5px 20px;
+  border-radius: 5px;
+}
+.recommends {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: 1fr 1fr;
+}
+.recommend-headline {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
  /*Starting media for tablet-sizes*/
 @media only screen and (min-width: 670px) {
   h1 {
