@@ -7,7 +7,7 @@
     <meta name="Gamehub | The store for your gaming needs!" 
     content="We sell games that you want! Preoder? Yes! New Games? Yes! Used games? Yes!">
     <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/game-page.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 </head>
 <body>
     <header>
@@ -75,11 +75,11 @@
             </div>
         </section>
     </header>
-    <main>
+    <main class="game_main margin_sides">
         <div class="carousel">
-            <div class="img-1"></div>
-            <div class="img-2"></div>
-            <div class="img-3"></div>
+            <div class="carousel_img_1 boxer"></div>
+            <div class="carousel_img_2"></div>
+            <div class="carousel_img_3"></div>
             <div>
                 <div></div>
                 <div></div>
@@ -89,9 +89,10 @@
         </div>
         <section class="main_grid_games games_li">
             <div class="main_info_and_specs">
-                <h1 class="game_name">Assassin</h1>
+                <h1 class="game_name">Boxxer</h1>
                 <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet…</p>
                 <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet…</p>
+                <h2>Specs</h2>
                 <ul>
                     <li class="req_1">CPU:	Intel Core i7-4790 or AMD Ryzen 3 3200G</li>
                     <li class="req_2">RAM:	8 GB</li>
@@ -101,78 +102,83 @@
                 </ul>
             </div>
             <aside class="rating_and_buttons games_li">
-                <p>Stars</p>
-                <ul>
-                    <li class="review_1">
-                        Amazing game for your imagination - 3/4 FL magazine
-                    </li>
-                    <li class="review_2">
-                        Emotions beyond comprehend! If you are looking to be taken back this is the game for you! - 4/4
-                    </li>
-                    <li class="review_3">
-                        What more do you want in a game? It has everything! - 3/4
-                    </li>
-                    <li class="review_4">
-                        Already a good game, that will become better when they include their rumored update with VR. Your imagination is the limit! - 3/4
-                    </li>
-                </ul>
-                <ul class="game_choices">
-                    <li>
+                <div class="boxing_in_reviews">
+                    <h2>Stars</h2>
+                    <ul>
+                        <li class="review_1">
+                            Amazing game for your imagination - 3/4 FL magazine
+                        </li>
+                        <li class="review_2">
+                            Emotions beyond comprehend! If you are looking to be taken back this is the game for you! - 4/4
+                        </li>
+                        <li class="review_3">
+                            What more do you want in a game? It has everything! - 3/4
+                        </li>
+                        <li class="review_4">
+                            Already a good game, that will become better when they include their rumored update with VR. Your imagination is the limit! - 3/4
+                        </li>
+                    </ul>
+                </div>
+                <div class="boxing_in_prices">
+                    <div class="prices_for_games">
                         <p>Standard</p>
                         <a href="#">399$</a>
-                    </li>
-                    <li>
+                    </div>
+                    <div class="prices_for_games">
                         <p>Gold</p>
                         <a href="#">599$</a>
-                    </li>
-                    <li>
+                    </div>
+                    <div class="prices_for_games">
                         <p>Premium</p>
                         <a href="#">799$</a>
-                    </li>
-                </ul>
+                    </div>
+                </div>
             </aside>
+            <h2 class="recommend-headline">similar games</h2>
             <div class="recommends">
-                <div class="card_games">
-                    <div class="backdrop"></div>
-                    <div class="text_and_button">
-                        <h2>150$</h2>
-                        <a href="#">view more</a>
+                <div class="text_and_buttons_for_popular">
+                    <div class="imgage_container_popular boxer"></div>
+                    <div class="title_and_price">
+                        <h3 class="">Boxxer</h3>
+                        <p class="">299 $</p> 
                     </div>
+                    <p class="popular_paragraf">
+                        Lorem ipsum dolor sit amet consectetur.
+                    </p>
+                    <a href="games-pages/boxxer.html"  tabindex="0">View more</a>
                 </div>
-                <div class="card_games">
-                    <div class="backdrop"></div>
-                    <div class="text_and_button">
-                        <h2>150$</h2>
-                        <a href="#">view more</a>
+                <div class="text_and_buttons_for_popular">
+                    <div class="imgage_container_popular furious"></div>
+                    <div class="title_and_price">
+                        <h3 class="">Furious</h3>
+                        <p class="">299 $</p> 
                     </div>
+                    <p class="popular_paragraf">
+                        Lorem ipsum dolor sit amet consectetur.
+                    </p>
+                    <a href="games-pages/furious.html"  tabindex="0">View more</a>
                 </div>
-                <div class="card_games">
-                    <div class="backdrop"></div>
-                    <div class="text_and_button">
-                        <h2>150$</h2>
-                        <a href="#">view more</a>
+                <div class="text_and_buttons_for_popular">
+                    <div class="imgage_container_popular cyber"></div>
+                    <div class="title_and_price">
+                        <h3 class="">Cyberpunch</h3>
+                        <p class="">299 $</p> 
                     </div>
+                    <p class="popular_paragraf">
+                        Lorem ipsum dolor sit amet consectetur.
+                    </p>
+                    <a href="games-pages/cyber.html"  tabindex="0">View more</a>
                 </div>
-                <div class="card_games">
-                    <div class="backdrop"></div>
-                    <div class="text_and_button">
-                        <h2>150$</h2>
-                        <a href="#">view more</a>
+                <div class="text_and_buttons_for_popular">
+                    <div class="imgage_container_popular assassin"></div>
+                    <div class="title_and_price">
+                        <h3 class="">Assassin</h3>
+                        <p class="">299 $</p> 
                     </div>
-                </div>
-                <div class="card_games">
-                    <div class="backdrop"></div>
-                    <div class="text_and_button">
-                        <h2>150$</h2>
-                        <a href="#">view more</a>
-                    </div>
-                </div>
-                <div class="card_games">
-                    <div class="backdrop"></div>
-                    <div class="text_and_button">
-                        <h2>150$</h2>
-                        <a href="#">view more</a>
-                    </div>
+                    <p class="popular_paragraf">
+                        Lorem ipsum dolor sit amet consectetur.
+                    </p>
+                    <a href="games-pages/assassin.html"  tabindex="0">View more</a>
                 </div>
             </div>
         </section>

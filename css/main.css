@@ -726,6 +726,23 @@ footer {
   border-radius: 5px;
   box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.2);
 }
+.carousel_img_1.black,
+.carousel_img_1.boxer,
+.carousel_img_1.cyber,
+.carousel_img_1.furious {
+  background-position-y: -200px;
+  background-repeat: no-repeat;
+}
+.carousel_img_1.furious {
+  background-size: 35em;
+}
+.carousel_img_1.pingpong,
+.carousel_img_1.racing,
+.carousel_img_1.spacewar {
+  background-position-y: -160px;
+  background-repeat: no-repeat;
+  background-size: 30em;
+}
 .game_main {
   position: relative;
   top: -60px;
