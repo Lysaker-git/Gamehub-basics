@@ -63,6 +63,10 @@ a {
   text-decoration: none;
   color: var(--light-color)
 }
+a:hover {
+  color:#cccbcb;
+  text-decoration: underline;
+}
 /*universal position*/
 
 .pos_content {
@@ -344,7 +348,9 @@ h1 {
   border-radius: 0 0 5px 5px;
   cursor: pointer;
 }
-
+.text_and_buttons_for_popular a:hover {
+  background-color: #13172e;
+}
 /*grids, grids, grids  - i find them easier to work with
   placing content on my site.*/
 .community_section{
@@ -558,6 +564,10 @@ footer {
   background-color: var(--red-color);
   color: var(--light-red-color);
   margin: 5px 0;
+  cursor: pointer;
+}
+.sub_contact button:hover {
+  background-color: #b6393d;
 }
 .sub_contact input {
   width: calc(100% - 30px);
@@ -636,16 +646,17 @@ footer {
   justify-content: space-between;
   padding: 10px 10px;
   background: white;
+  align-items: center;
 }
-.search_p {
-  position: absolute;
-  top: 0;
-  right: 0;
-  margin: 0 30px;
-  padding: 10px;
-  background: var(--light-red-color);
+.search_bar a {
+  text-transform: uppercase;
+  color: var(--dark-color);
 }
 
+.search_bar a:hover {
+  text-decoration: underline;
+  color: var(--light-color);
+}
 /* CSS for sign in */
 
 .form_container {
@@ -701,6 +712,11 @@ footer {
   color: var(--light-red-color);
   font-size: 1.5em;
   border-radius: 5px;
+}
+.right_container button:hover,
+.left_contact button:hover {
+  background-color: #b6393d;
+  cursor: pointer;
 }
 .right_container a {
   text-decoration: underline;
@@ -774,6 +790,9 @@ footer {
   color: var(--light-red-color);
   padding: 5px 20px;
   border-radius: 5px;
+}
+.prices_for_games :last-child:hover {
+  background-color: #b6393d;
 }
 .recommends {
   display: grid;
@@ -896,7 +915,58 @@ footer {
 .right_form_payement {
   display: none;
 }
- /*Starting media for tablet-sizes*/
+
+/*Profile page*/
+
+.mini_cards_profile {
+  display: flex;
+  height: 150px;
+  width: 100%;
+}
+.game_selection {
+  position: relative;
+  width: 20%; 
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: -12px;
+  z-index: 1;
+}
+.game_selection:before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.3;
+  z-index: -1;
+}
+.game_selection:hover {
+  cursor: pointer;
+  opacity: 0.9;
+}
+.game_presentation {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+.game_presentation:before {
+  position: absolute;
+  content: '';
+  height: 200%;
+  width: 200%;
+  background-image: url(../Assets/Game-covers/GameHub_assassin.jpg);
+  background-size: cover;
+  z-index: -1;
+  background-position-y: -350px;
+  background-position-x: -200px;
+  opacity: 0.1;
+  border-radius: 5px 5px 0 0;
+}
+.your_games {
+  background-color: var(--card-background);
+  border-radius: 5px;
+}
+/*Starting media for tablet-sizes*/
 @media only screen and (min-width: 670px) {
   h1 {
     letter-spacing: 1.5vw;
