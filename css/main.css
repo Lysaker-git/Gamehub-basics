@@ -844,13 +844,58 @@ footer {
 }
 
 /*cart page*/
-
+.left_cart h2,
+.right_cart h3 {
+  margin: 0;
+}
+.your_cart {
+  box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
 .left_cart {
   background-color: lightgray;
   height: 250px;
-  position: relative;
+  padding: 10px;
+  border-radius: 5px 5px 0 0;
 }
-
+.right_cart {
+  background-color: var(--card-background);
+  border-radius: 0 0 5px 5px;
+  padding: 10px;
+}
+.checkout_items {
+  display: flex;
+  justify-content: space-between;
+}
+.checkout_items p {
+  font-size: 0.8em;
+}
+.left_form_payement form{
+  display: flex;
+  flex-direction: column;
+}
+.left_form_payement form label {
+  font-size: 0.8em;
+  margin-top: 10px;
+}
+.left_form_payement form input {
+  border:none;
+  border-bottom: solid 3px lightgrey;
+  appearance: textfield;
+  padding: 10px;
+  font-family: 'nunito', sans-serif;
+}
+.left_form_payement form button {
+  padding: 10px;
+  margin: 10px 0;
+  border:none;
+  background-color: var(--red-color);
+  color: var(--light-red-color);
+  text-transform: uppercase;
+}
+.right_form_payement {
+  display: none;
+}
  /*Starting media for tablet-sizes*/
 @media only screen and (min-width: 670px) {
   h1 {
