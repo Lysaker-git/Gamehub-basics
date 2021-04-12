@@ -595,6 +595,7 @@ footer {
   letter-spacing: 5px;
 }
 .search_cards {
+  position: relative;
   display: grid;
   grid-template-columns: 120px 1fr;
   grid-template-areas: 
@@ -604,6 +605,35 @@ footer {
   border-radius: 5px;
   background-color: var(--card-background);
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+.icon-star {
+  height: auto;
+  width: auto;
+}
+.stars {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  z-index: 2;
+  background-color: var(--card-background);
+  left: 10px;
+  width: 40px;
+  justify-content: center;
+  border-radius: 0 0 5px 5px;
+}
+.icon-star + .icon-star,
+.icon-star-empty {
+  display: none !important;
+}
+.small_number {
+  padding-left: 5px;
+}
+.icon-star {
+  padding: 5px;
+}
+.hidden_content_small {
+  display: none;
 }
 .search_image {
   grid-area: image;
@@ -735,7 +765,7 @@ footer {
   width: 100%;
 }
 .carousel_img_1 {
-  background: cover;
+  background-size: cover;
   background-position: center;
   height: 100%;
   width: 100%;
@@ -1046,7 +1076,21 @@ footer {
     width: 50%;
     top: 0;
     left: 0;
+    border-radius: 5px 0 0 5px;
   }
+  .stars {
+    background: none;
+    left: unset;
+    width: auto;
+    right: 10px;
+  }
+  .icon-star + .icon-star,
+  .icon-star-empty,
+  .small_number {
+  display: block !important;
+  padding: 5px;
+  }
+  
 }
 @media only screen and (min-width: 1020px) {
 
@@ -1179,18 +1223,41 @@ footer {
     background-position-y: -50px;
   }
 
+  /*Media for search*/
+  .search_cards {
+    grid-template-rows: 180px auto;
+    grid-template-columns: 240px 1fr;
+    grid-template-areas: 
+    "image info"
+    "image bar";
+  }
+  .search_image {
+    width: auto;
+    left: 0;
+    background-position-y: -25px;
+  }
+  .hidden_content_small {
+    display: block;
+  }
+  .search_info p {
+    max-width: 700px;
+  }
 }
 @media only screen and (min-width: 1400px) {
+  .header_container,
+  main,
+  .container_for_footer,
+  .form_container {
+    max-width: 1400px;
+    margin: 0 auto !important;
+  }
+  .header_container,
+  .container_for_footer {
+    padding: 50px;
+  }
   main {
     padding: 0 50px;
   }
-  .header_container,
-  main,
-  .container_for_footer {
-    max-width: 1400px;
-    margin: 0 auto;
-  }
-
   .primary_game_cards,
   .secondary_game_cards,
   .community_section{
@@ -1246,9 +1313,6 @@ footer {
     grid-template-areas: 
     "Socials blank Sub";
     grid-gap: 0;
-  }
-  .form_container {
-    margin: 0;
   }
   .left_container {
     background-position-y: -180px;
