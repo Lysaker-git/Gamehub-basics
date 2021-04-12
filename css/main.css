@@ -1084,9 +1084,11 @@ footer {
     width: auto;
     right: 10px;
   }
-  .icon-star + .icon-star,
-  .icon-star-empty,
   .small_number {
+    display: none;
+  }
+  .icon-star + .icon-star,
+  .icon-star-empty {
   display: block !important;
   padding: 5px;
   }
