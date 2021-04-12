@@ -1092,7 +1092,8 @@ footer {
   display: block !important;
   padding: 5px;
   }
-  
+
+
 }
 @media only screen and (min-width: 1020px) {
 
@@ -1244,12 +1245,47 @@ footer {
   .search_info p {
     max-width: 700px;
   }
+  /*Contact page*/
+  .contact_container {
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    grid-template-areas: 
+    "header location"
+    "forms location"
+    ;
+  }
+  .contact_container h2 {
+    grid-area: header;
+  }
+  .left_contact {
+    grid-area: forms;
+  }
+  .right_contact {
+    grid-area: location;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 70px;
+    justify-content: space-between;
+  }
+  .right_contact > div {
+    width: 100%;
+  }
+  .logo_gamehub {
+    position: relative;
+  }
+  .right_contact img {
+    margin-left: 0;
+  }
+  #your_question {
+    height: 100px;
+  }
 }
 @media only screen and (min-width: 1400px) {
   .header_container,
   main,
   .container_for_footer,
-  .form_container {
+  .form_container,
+  .contact_container {
     max-width: 1400px;
     margin: 0 auto !important;
   }
@@ -1318,5 +1354,29 @@ footer {
   }
   .left_container {
     background-position-y: -180px;
+  }
+  .contact_container {
+    grid-template-columns: 1fr 1fr 340px;
+    grid-template-areas: 
+    "header location img"
+    "forms location img"
+    ;
+    overflow: hidden;
+  }
+  .left_contact {
+    z-index: 2;
+  }
+  .large_scale_img {  
+    position: relative;
+    grid-area: img;
+    background-image: url(/Assets/Background/contact\ us.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 150%;
+    left: -220px;
+    top: 110px;    
+    opacity: 0.2;
+    z-index: 1;
+    transform: rotate(-10deg);
   }
 }
