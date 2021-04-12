@@ -1079,6 +1079,7 @@ footer {
     border-radius: 5px 0 0 5px;
   }
   .stars {
+    padding: 10px 10px;
     background: none;
     left: unset;
     width: auto;
