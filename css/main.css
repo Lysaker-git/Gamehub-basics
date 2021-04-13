@@ -765,29 +765,37 @@ footer {
   width: 100%;
 }
 .carousel_img_1 {
-  background-size: cover;
-  background-position: center;
+  position: relative;
+  background-repeat: no-repeat;
+  top: 0;
+  left: 0;
   height: 100%;
   width: 100%;
   border-radius: 5px;
   box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.2);
 }
+.carousel_img_1.boxer {
+  background-position: -60px -120px;
+}
+.carousel_img_1.assassin,
 .carousel_img_1.black,
-.carousel_img_1.boxer,
-.carousel_img_1.cyber,
-.carousel_img_1.furious {
-  background-position-y: -200px;
-  background-repeat: no-repeat;
+.carousel_img_1.cyber {
+  background-size: 45em;
+  background-position: -40px -150px;
 }
 .carousel_img_1.furious {
-  background-size: 35em;
+  background-size: 45em;
+  background-position: -100px -250px;
 }
-.carousel_img_1.pingpong,
+.carousel_img_1.pingpong {
+  background-size: cover;
+  background-position: 0px -43px;
+}
 .carousel_img_1.racing,
-.carousel_img_1.spacewar {
+.carousel_img_1.spacewar,
+.carousel_img_1.forge {
   background-position-y: -160px;
-  background-repeat: no-repeat;
-  background-size: 30em;
+  background-size: 36em;
 }
 
 .game_name {
@@ -797,11 +805,11 @@ footer {
   padding: 0;
   text-align: left;
 }
-.main_info_and_specs p {
+.game_info_page p {
   line-height: 2em;
 }
-.main_info_and_specs h2 {
-  margin-top: 50px;
+.game_info_page h2 {
+  margin: 50px 0 0 0;
 }
 .boxing_in_reviews,
 .boxing_in_prices {
@@ -826,14 +834,37 @@ footer {
 }
 .recommends {
   display: grid;
+  grid-template-areas: 
+  "header header"
+  "game1 game2"
+  "game3 game4";
   gap: 30px;
   grid-template-columns: 1fr 1fr;
 }
 .recommend-headline {
   text-transform: uppercase;
   letter-spacing: 5px;
+  grid-area: header;
+  margin-bottom: 0;
 }
-
+.main_game_section li {
+  list-style: none;
+  padding: 0;
+}
+.main_game_section ul {
+  padding: 0;
+}
+.stars_games {
+  display: flex;
+}
+.stars_games .icon-star,
+.stars_games .icon-star-empty {
+  display: block !important;
+  padding: 5px;
+}
+.recommends h3 {
+  width: 100%;
+}
 /*contact us page - placeholder for integrated JS style in footer*/
 .contact_container {
   padding: 20px;
@@ -896,21 +927,44 @@ footer {
 .left_cart h2,
 .right_cart h3 {
   margin: 0;
+  font-weight: 700;
+}
+.left_cart h2 {
+  font-weight: bolder;
+  margin: 0;
 }
 .your_cart {
   box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
 }
 .left_cart {
-  background-color: lightgray;
+  position: relative;
+  background-color: rgb(238, 238, 238);
   height: 250px;
-  padding: 10px;
+  padding: 20px;
   border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  z-index: 1;
 }
 .right_cart {
+  padding: 20px;
   background-color: var(--card-background);
   border-radius: 0 0 5px 5px;
-  padding: 10px;
+}
+.left_cart::before {
+  position: absolute;
+  content: '';
+  background-image: url(../Assets/Background/purchase.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: .3;
+  height: 150%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
 }
 .checkout_items {
   display: flex;
@@ -936,7 +990,7 @@ footer {
 }
 .left_form_payement form button {
   padding: 10px;
-  margin: 10px 0;
+  margin: 10px 0 0 0;
   border:none;
   background-color: var(--red-color);
   color: var(--light-red-color);
@@ -1001,6 +1055,23 @@ footer {
   h1 {
     letter-spacing: 1.5vw;
     padding-bottom: 30px;
+  }
+  .left_cart::before {
+    top: -40px;
+  }
+  .carousel_img_1.spacewar {
+    background-size: 43em;
+  }
+  .carousel_img_1.furious {
+    background-size: 50em;
+  }
+  .carousel_img_1.forge,
+  .carousel_img_1.racing {
+    background-size: 43em;
+    background-position-y: -230px;
+  }
+  .carousel_img_1.pingpong {
+    background-position-y: -230px;
   }
 }
 @media only screen and (min-width: 750px) {
@@ -1093,8 +1164,13 @@ footer {
   display: block !important;
   padding: 5px;
   }
-
-
+  .left_cart::before {
+    top: -60px;
+  }
+  .carousel_img_1.assassin {
+    background-size: cover;
+    background-position: 0 -240px;
+  }
 }
 @media only screen and (min-width: 1020px) {
 
@@ -1220,7 +1296,7 @@ footer {
     gap: 250px;
     padding-bottom: 0;
   }
-  .sub_contact div h2 {
+  .sub_contact div h3 {
     margin-top: 0;
   }
   .left_container {
@@ -1280,6 +1356,96 @@ footer {
   #your_question {
     height: 100px;
   }
+  /*Contact page*/
+  .your_cart {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 5px;
+  }
+  .left_cart {
+    height: 500.5px;
+    padding: 20px 0 0 20px;
+    border-radius: 5px 0 0 5px;
+  }
+  .right_cart {
+    padding: 20px;
+    border-radius: 0 5px 5px 0;
+  }
+  .right_cart h3:last-of-type {
+    margin-top: 20px;
+  }
+  /*Media game pages*/
+  .carousel {
+    display: flex;
+    align-items: center;
+  }
+  .carousel_img_2,
+  .carousel_img_3 {
+    background-color: var(--card-background);
+    width: 30%;
+    height: 90%;
+  }
+  .carousel_img_1 {
+    margin: 0 20px; 
+  }
+  .main_grid_games {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    grid-template-areas: 
+    "main stars"
+    "specs buttons"
+    "rec rec";
+    gap: 20px 200px;
+  }
+  .game_info_page {
+    grid-area: main;
+  }
+  .specs {
+    grid-area: specs;
+  }
+  .boxing_in_reviews {
+    grid-area:stars;
+  }
+  .boxing_in_prices {
+    grid-area: buttons;
+    margin: 0;
+  }
+  .prices_for_games:not(:last-of-type) {
+    margin-bottom: 26px;
+  }
+  .recommends {
+    grid-area: rec;
+  }
+  .main_grid_games li {
+    color: var(--dark-color);
+    cursor: unset;
+  }
+  .stars_games {
+    display: flex;
+    justify-content: flex-end;
+    padding: 13px 0;
+  }
+  .boxing_in_reviews li {
+    line-height: 2em;
+  }
+  .recommends {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: 
+    "header header header header"
+    "game1 game2 game3 game4";
+  }
+  .recommend-headline {
+    width: 100%;
+  }
+  .game_grid_recommend {
+    width: auto;
+    height: auto;
+  }
+  .game_grid_recommend .popular_paragraf {
+    padding-bottom: 60px;
+  }
+  /*Placing carousel img*/
+
 }
 @media only screen and (min-width: 1400px) {
   .header_container,
