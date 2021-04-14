@@ -7,7 +7,6 @@
     <meta name="Gamehub | The store for your gaming needs!" 
     content="We sell games that you want! Preoder? Yes! New Games? Yes! Used games? Yes!">
     <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 </head>
 <body>
     <header>
@@ -75,11 +74,15 @@
             </div>
         </section>
     </header>
-    <main class="pos_content margin_sides">
+    <main class="main_game_section margin_sides pos_content">
         <div class="carousel">
+            <div class="carousel_img_2">
+                <p>coming</p>
+            </div>
             <div class="carousel_img_1 black"></div>
-            <div class="carousel_img_2"></div>
-            <div class="carousel_img_3"></div>
+            <div class="carousel_img_3">
+                <p>coming</p>
+            </div>
             <div>
                 <div></div>
                 <div></div>
@@ -88,10 +91,12 @@
             </div>
         </div>
         <section class="main_grid_games games_li">
-            <div class="main_info_and_specs">
+            <div class="game_info_page">
                 <h2 class="game_name">Black</h2>
                 <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet…</p>
                 <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet…</p>
+            </div>
+            <div class="specs">
                 <h3>Specs</h3>
                 <ul>
                     <li class="req_1">CPU:	Intel Core i7-4790 or AMD Ryzen 3 3200G</li>
@@ -101,42 +106,46 @@
                     <li class="req_5">OS:	64-bit Windows 7 or 64-bit Windows 10</li>
                 </ul>
             </div>
-            <aside class="rating_and_buttons games_li">
-                <div class="boxing_in_reviews">
-                    <h3>Stars</h3>
-                    <ul>
-                        <li class="review_1">
-                            Amazing game for your imagination - 3/4 FL magazine
-                        </li>
-                        <li class="review_2">
-                            Emotions beyond comprehend! If you are looking to be taken back this is the game for you! - 4/4
-                        </li>
-                        <li class="review_3">
-                            What more do you want in a game? It has everything! - 3/4
-                        </li>
-                        <li class="review_4">
-                            Already a good game, that will become better when they include their rumored update with VR. Your imagination is the limit! - 3/4
-                        </li>
-                    </ul>
+            <div class="boxing_in_reviews">
+                <div class="stars_games">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
                 </div>
-                <div class="boxing_in_prices">
-                    <div class="prices_for_games">
-                        <p>Standard</p>
-                        <a href="../cart-checkout.html">399$</a>
-                    </div>
-                    <div class="prices_for_games">
-                        <p>Gold</p>
-                        <a href="../cart-checkout.html">599$</a>
-                    </div>
-                    <div class="prices_for_games">
-                        <p>Premium</p>
-                        <a href="../cart-checkout.html">799$</a>
-                    </div>
+                <ul>
+                    <li class="review_1">
+                        Amazing game for your imagination - 3/4 FL magazine
+                    </li>
+                    <li class="review_2">
+                        Emotions beyond comprehend! If you are looking to be taken back this is the game for you! - 4/4
+                    </li>
+                    <li class="review_3">
+                        What more do you want in a game? It has everything! - 3/4
+                    </li>
+                    <li class="review_4">
+                        Already a good game, that will become better when they include their rumored update with VR. Your imagination is the limit! - 3/4
+                    </li>
+                </ul>
+            </div>
+            <div class="boxing_in_prices">
+                <div class="prices_for_games">
+                    <p>Standard</p>
+                    <a href="../cart-checkout.html">399$</a>
                 </div>
-            </aside>
-            <h3 class="recommend-headline">similar games</h3>
+                <div class="prices_for_games">
+                    <p>Gold</p>
+                    <a href="../cart-checkout.html">599$</a>
+                </div>
+                <div class="prices_for_games">
+                    <p>Premium</p>
+                    <a href="../cart-checkout.html">799$</a>
+                </div>
+            </div>
             <div class="recommends">
-                <div class="text_and_buttons_for_popular">
+                <h3 class="recommend-headline">similar games</h3>
+                <div class="game_grid_recommend text_and_buttons_for_popular">
                     <div class="imgage_container_popular boxer"></div>
                     <div class="title_and_price">
                         <h4 class="">Boxxer</h4>
@@ -147,7 +156,7 @@
                     </p>
                     <a href="boxxer.html"  tabindex="0">View more</a>
                 </div>
-                <div class="text_and_buttons_for_popular">
+                <div class="game_grid_recommend text_and_buttons_for_popular">
                     <div class="imgage_container_popular furious"></div>
                     <div class="title_and_price">
                         <h4 class="">Furious</h4>
@@ -158,7 +167,7 @@
                     </p>
                     <a href="furious.html"  tabindex="0">View more</a>
                 </div>
-                <div class="text_and_buttons_for_popular">
+                <div class="game_grid_recommend text_and_buttons_for_popular">
                     <div class="imgage_container_popular cyber"></div>
                     <div class="title_and_price">
                         <h4 class="">Cyberpunch</h4>
@@ -169,7 +178,7 @@
                     </p>
                     <a href="cyber.html"  tabindex="0">View more</a>
                 </div>
-                <div class="text_and_buttons_for_popular">
+                <div class="game_grid_recommend text_and_buttons_for_popular">
                     <div class="imgage_container_popular assassin"></div>
                     <div class="title_and_price">
                         <h4 class="">Assassin</h4>
@@ -227,4 +236,5 @@
         </div>
     </footer>
 </body>
+<script src="https://kit.fontawesome.com/a0fe2bdd56.js" crossorigin="anonymous"></script>
 </html>
