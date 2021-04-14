@@ -796,7 +796,10 @@ footer {
   background-position-y: -160px;
   background-size: 36em;
 }
-
+.carousel_img_2,
+.carousel_img_3 {
+  display: none;
+}
 .game_name {
   color: var(--dark-color);
   font-weight: 700;
@@ -1000,19 +1003,44 @@ footer {
 }
 
 /*Profile page*/
-
-.mini_cards_profile {
+.online_friends {
   display: flex;
+}
+.profile_img {
+  position: relative;
+  background-image: url(/Assets/profile-icons/profile-placeholder.svg);
+  background-size: cover;
+  height: 50px;
+  width: 50px;
+  left: -5px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+.profile_container {
+  position: relative;
+}
+.profile_container h2 {
+  position: absolute;
+  top: -100px;
+  color: var(--light-color);
+  font-weight: 700;
+  text-transform: capitalize;
+  letter-spacing: 4px;
+}
+.mini_cards_profile {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
   height: 150px;
-  width: 100%;
+  box-shadow: 3px 0px 4px rgba(0, 0, 0, 0.2);
 }
 .game_selection {
-  position: relative;
-  width: 20%; 
+  position: relative; 
   background-size: cover;
   background-repeat: no-repeat;
-  background-position-x: -12px;
   z-index: 1;
+}
+.game_selection:not(:first-of-type) {
+  box-shadow: -3px 0 4px rgba(0, 0, 0, 0.4);
 }
 .game_selection:before {
   position: absolute;
@@ -1031,6 +1059,8 @@ footer {
   position: relative;
   z-index: 1;
   overflow: hidden;
+  border-radius: 0 0 5px 5px;
+  box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.2);
 }
 .game_presentation:before {
   position: absolute;
@@ -1045,9 +1075,115 @@ footer {
   opacity: 0.1;
   border-radius: 5px 5px 0 0;
 }
-.your_games {
+.mini_cards_profile {
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+}
+.left_slide {
+  padding: 10px;
+}
+.left_slide h3 {
+  margin-bottom: 0;
+}
+.left_slide p {
+  margin-top: 5px; 
+}
+.right_slide {
+  display: flex;
+  align-items: center;
+}
+.right_slide p {
+  margin: 0;
+  background: var(--dark-color);
+  color: var(--light-color);
+  padding: 10px;
+}
+.right_slide a {
+  text-align: center;
+  margin: 0;
+  background-color: var(--red-color);
+  color: var(--light-red-color);
+  padding: 10px;
+  width: 100%;
+  text-transform: uppercase;
+}
+.right_slide a:last-of-type {
+  border-left: solid 3px var(--dark-color);
+}
+.your_posts {
+  margin-top: 50px;
+}
+.your_posts div {
+  background-color: var(--card-background);
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.2);
+  overflow: hidden; 
+}
+.your_posts div h4 {
+  margin: 0;
+  position: relative;
+}
+.your_posts div h4:before {
+  position: absolute;
+  content: '';
+  height: 1px;
+  background-color: var(--dark-color);
+  bottom: 0;
+  width: 100%;
+}
+.your_posts div:not(:last-of-type) {
+  margin-bottom: 20px;
+}
+.your_posts a {
+  font-size: 0.8em;
+  text-transform: uppercase;
+  color: var(--dark-color);
+  text-decoration: underline;
+}
+.your_posts a:hover {
+  color: var(--red-color);
+}
+.tiny_header {
+  font-size: 1.1em;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+.tiny_header:not(:first-of-type) {
+  margin-top: 15px;
+}
+.tiny_info {
+  margin: 0;
+}
+.info_container {
+  padding: 10px;
   background-color: var(--card-background);
   border-radius: 5px;
+  box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.2);
+  margin-bottom: 10px;
+}
+.info_container p {
+  margin-top: 0;
+}
+.profile_info a {
+  display: block;
+  padding: 10px 0;
+  margin-bottom: 40px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.2);
+  color: var(--light-red-color);
+  width: 100%;
+  text-align: center;
+  background-color: var(--red-color);
+}
+.profile_info a:hover,
+.right_slide a:hover {
+  background-color: #b6393d;
+  text-decoration: none;
+}
+.profile_info h3 {
+  margin-top: 40px;
 }
 /*Starting media for tablet-sizes*/
 @media only screen and (min-width: 670px) {
@@ -1183,6 +1319,9 @@ footer {
   .carousel_img_1.spacewar {
     background-size: cover;
     background-position: 0 -340px;
+  }
+  .game_selection {
+    background-position-y: -20px;
   }
 }
 @media only screen and (min-width: 1020px) {
@@ -1391,6 +1530,7 @@ footer {
   }
   .carousel_img_2,
   .carousel_img_3 {
+    display: block;
     position: relative;
     background-color: var(--card-background);
     width: 30%;
@@ -1470,15 +1610,84 @@ footer {
   .game_grid_recommend .popular_paragraf {
     padding-bottom: 60px;
   }
-  /*Placing carousel img*/
-
+  .profile_container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas:
+    "games profile" 
+    "forum profile"
+    "forum friends";
+    margin-bottom: 50px;
+  }
+  .your_games {
+    grid-area: games;
+  }
+  .profile_info {
+    display: block;
+    grid-area: profile;
+    margin-left: 100px;
+  }
+  .your_posts {
+    grid-area: forum;
+  }
+  .friends_online {
+    grid-area: friends;
+  }
+  .your_games h3,
+  .profile_info h3 {
+    margin-top: 20px;
+  }
+  .friends_online {
+    margin-left: 100px;
+  }
+  .profile_img {
+    box-shadow: 0 -10px 3px -10px rgba(0, 0, 0, 0.4) inset;
+  }
+  .game_selection {
+    background-position-y: unset;
+  }
+  .game_presentation {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 250px;
+    background-color: var(--card-background);
+  }
+  .game_presentation:before {
+    background-image: unset;
+  }
+  .left_slide {
+    margin: auto 0;
+  }
+  .left_slide h3 {
+    margin: 0 0 10px 0;
+  }
+  .left_slide p:last-of-type {
+    margin-bottom: 0;
+  }
+  .right_slide {
+    position: relative;
+    align-items: flex-end;
+    z-index: 1;
+  }
+  .right_slide::before {
+    position: absolute;
+    content: '';
+    z-index: -1;
+    height: 200%;
+    width: 200%;
+    background-image: url(../Assets/Game-covers/GameHub_assassin.jpg);
+    background-size: cover;
+    opacity: 1;
+    background-position: -150px 0;
+  }
 }
 @media only screen and (min-width: 1400px) {
   .header_container,
   main,
   .container_for_footer,
   .form_container,
-  .contact_container {
+  .contact_container,
+  .profile_container {
     max-width: 1400px;
     margin: 0 auto !important;
   }
@@ -1569,5 +1778,14 @@ footer {
     opacity: 0.2;
     z-index: 1;
     transform: rotate(-10deg);
+  }
+  .right_slide::before {
+    background-position-y: -100px;;
+  }
+  .game_selection {
+    background-position-y: -40px;
+  }
+  .profile_container {
+    margin-bottom: 50px !important;
   }
 }
