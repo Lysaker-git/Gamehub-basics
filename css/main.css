@@ -101,14 +101,20 @@ header {
 }
 .mobile_checkbox ul {
   position: absolute;
-  z-index: 1;
+  z-index: 200;
   background-color: var(--dark-color-hover);
   top: 0;
-  left: -41%;
+  left: -30%;
   right: 100%;
-  bottom: 0;
+  height: auto;
   list-style: none;
   box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.4);
+  padding-left: 0;
+  border-radius: 0 5px 5px 0;
+  overflow: hidden;
+}
+.mobile_checkbox ul li {
+  height: 80px;
 }
 .upper_part_of_header {
   display: flex;
@@ -120,12 +126,28 @@ header {
   z-index: 10;
 }
 #mobile-menu:checked + ul {
+  position: fixed;
   left: 0;
   right: 70%;
-  transition: all 1s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 .mobile_checkbox ul li a {
   font-size: 0.5em;
+  padding-left: 40px;
+}
+.mobile_checkbox ul li:not(:last-of-type):hover {
+  background-color: var(--dark-color-hover);
+}
+.mobile_checkbox .sign_up_container {
+  background: var(--red-color);
+  box-shadow: 0 -3px 3px rgba(0, 0, 0, 0.2);
+}
+.mobile_checkbox .sign_up_container:hover {
+  background-color: var(--red-color-hover);
+}
+.mobile_checkbox .sign_up_container a:hover {
+  color: var(--light-color);
+  text-decoration: none;
 }
 h1 {
   width: 100%;
@@ -200,7 +222,7 @@ h1 {
   margin: 0;
   align-items: center;
   padding: 5px 0 5px 15px;
-  z-index: 100;
+  z-index: 10;
 }
 .tag a {
   text-transform: uppercase;
