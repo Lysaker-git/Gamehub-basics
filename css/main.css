@@ -121,7 +121,7 @@ header {
 }
 #mobile-menu:checked + ul {
   left: 0;
-  right: 60%;
+  right: 70%;
   transition: all 1s ease-in-out;
 }
 .mobile_checkbox ul li a {
