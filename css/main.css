@@ -988,6 +988,7 @@ footer {
   padding: 20px;
   background-color: var(--card-background);
   border-radius: 0 0 5px 5px;
+  overflow: hidden;
 }
 .left_cart::before {
   position: absolute;
@@ -1045,15 +1046,20 @@ footer {
   display: none;
 }
 .complete_order {
-  display: none;
+  display: block;
   position: absolute;
   background-color: var(--card-background);
   width: 100%;
-  bottom: 0;
+  top: 330px;
+  height: 0;
+  overflow: hidden;
+  transition: all 1s ease-in-out;
 }
 #submit-order:checked + .complete_order {
   display: block;
   top: -150px;
+  height: auto;
+  transition: all 1s ease-in-out;
 }
 .complete_order h4 {
   text-align: center;
@@ -1070,7 +1076,7 @@ footer {
   flex-direction: column;
   text-align: center;
   align-items: center;
-  margin: 75px 0;
+  margin: 70px 0;
   z-index: 1;
 }
 .order_box a, 
@@ -1094,21 +1100,28 @@ footer {
   margin-bottom: 75px;
 }
 .downloaded_game {
-  display: none;
-  position: absolute;
-  z-index: 2;
-  background-color: black;
-  color: white;
-  bottom: 0;
-}
-#download_game:checked + .downloaded_game {
   display: block;
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+  overflow: hidden;
+  transition: all 1s ease-in-out;
 }
 .downloaded_game p {
+  position: relative;
+  bottom: -40px;
   margin: 0;
   padding: 8px 25px;
   width: 30vw;
-  background-color: var(--red-color);
+  background-color: var(--red-color-hover);
+  color: var(--light-red-color);
+  transition: all 1s ease-in-out;
+}
+#download_game:checked + .downloaded_game p,
+#download_game:checked + .downloaded_game {
+  bottom: 0;
+  z-index: 2;
+  transition: all 1s ease-in-out;
 }
 /*Profile page*/
 .online_friends {
