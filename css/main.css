@@ -114,6 +114,7 @@ header {
   box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.4);
   padding-left: 0;
   border-radius: 0 5px 5px 0;
+  overflow: hidden;
   transition: all 0.4s ease-in-out;
 }
 .mobile_checkbox ul li {
