@@ -100,12 +100,14 @@ header {
   display: none;
 }
 .mobile_checkbox ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: auto;
   position: absolute;
   z-index: 200;
   background-color: var(--dark-color-hover);
   top: 0;
-  left: -30%;
-  right: 100%;
   height: auto;
   list-style: none;
   box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.4);
@@ -115,6 +117,8 @@ header {
 }
 .mobile_checkbox ul li {
   height: 80px;
+  width: 100%;
+  text-align: center;
 }
 .upper_part_of_header {
   display: flex;
@@ -126,14 +130,13 @@ header {
   z-index: 10;
 }
 #mobile-menu:checked + ul {
-  position: fixed;
+  position: absolute;
   left: 0;
   right: 70%;
   transition: all 0.4s ease-in-out;
 }
 .mobile_checkbox ul li a {
   font-size: 0.5em;
-  padding-left: 40px;
 }
 .mobile_checkbox ul li:not(:last-of-type):hover {
   background-color: var(--dark-color-hover);
@@ -1007,6 +1010,7 @@ footer {
   font-size: 0.8em;
 }
 .left_form_payement form{
+  position: relative;
   display: flex;
   flex-direction: column;
 }
@@ -1021,18 +1025,89 @@ footer {
   padding: 10px;
   font-family: 'nunito', sans-serif;
 }
-.left_form_payement form button {
+.submit_order {
   padding: 10px;
   margin: 10px 0 0 0;
+  text-align: center;
+  border-radius: 5px;
   border:none;
   background-color: var(--red-color);
   color: var(--light-red-color);
   text-transform: uppercase;
 }
+#submit-order,
+#download_game {
+  display: none;
+}
 .right_form_payement {
   display: none;
 }
-
+.complete_order {
+  display: none;
+  position: absolute;
+  background-color: var(--card-background);
+  width: 100%;
+  bottom: 0;
+}
+#submit-order:checked + .complete_order {
+  display: block;
+  top: -150px;
+}
+.complete_order h4 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.1em;
+  margin-bottom: -10px;
+}
+.complete_order > p:first-of-type {
+  text-align: center;
+}
+.order_box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  margin: 75px 0;
+  z-index: 1;
+}
+.order_box a, 
+.order_box label {
+  display: block;
+  background-color: var(--red-color);
+  padding: 10px 25px;
+  color: var(--light-red-color);
+  cursor: pointer;
+  width: 30vw;
+}
+.order_box a:hover,
+.order_box label:hover,
+.submit_order:hover,
+.downloaded_game p:hover {
+  text-decoration: none;
+  background-color: var(--red-color-hover);
+}
+.order_box a,
+.order_box p {
+  margin-bottom: 75px;
+}
+.downloaded_game {
+  display: none;
+  position: absolute;
+  z-index: 2;
+  background-color: black;
+  color: white;
+  bottom: 0;
+}
+#download_game:checked + .downloaded_game {
+  display: block;
+}
+.downloaded_game p {
+  margin: 0;
+  padding: 8px 25px;
+  width: 30vw;
+  background-color: var(--red-color);
+}
 /*Profile page*/
 .online_friends {
   display: flex;
@@ -1529,14 +1604,14 @@ footer {
   #your_question {
     height: 100px;
   }
-  /*Contact page*/
+  /*Cart page*/
   .your_cart {
     display: grid;
     grid-template-columns: 1fr 1fr;
     border-radius: 5px;
   }
   .left_cart {
-    height: 500.5px;
+    height: 503px;
     padding: 20px 0 0 20px;
     border-radius: 5px 0 0 5px;
   }
@@ -1546,6 +1621,9 @@ footer {
   }
   .right_cart h3:last-of-type {
     margin-top: 20px;
+  }
+  #submit-order:checked + .complete_order {
+    top: -155px;
   }
   /*Media game pages*/
   .carousel {

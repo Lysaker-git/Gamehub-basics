@@ -23,6 +23,21 @@
                 <div class="mobile_checkbox mobile_header">
                     <label for="mobile-menu">&equiv;</label>
                     <input type="checkbox" id="mobile-menu">
+                    <!-- placeholder menu for mobile -->
+                    <ul>
+                        <li class="cart icon_placement">
+                            <a href="cart-checkout.html">Cart</a>
+                        </li>
+                        <li class="">
+                            <a href="in-progress.html">Forums</a>
+                        </li>
+                        <li class="login icon_placement">
+                            <a href="log-in.html">Login</a>
+                        </li>
+                        <li class="sign_up_container">
+                            <a href="sign-in-up.html">Sign Up</a>
+                        </li>
+                    </ul>
                 </div>
                 <ul class="user_navigation desktop_header">
                     <li class="cart icon_placement">
@@ -59,7 +74,7 @@
                             </a>
                         </li>
                         <li class="forums icon_placement">
-                            <a href="forum-threads/forum.html">
+                            <a href="in-progress.html">
                                 Forums
                             </a>
                         </li>
@@ -95,7 +110,8 @@
                 </div>
                 <h3>Payment info</h3>
                 <div class="left_form_payement">
-                    <form action="" method="post">
+                    <!-- replaced button for a nested label elements to add a checkbox hack since the submit is not working -->
+                    <form action="#" method="post">
                         <label for="purchase_name">Card-Holders Name</label>
                         <input type="text" name="purchase_name" id="purchase_name">
                         <label for="card_information">Card-Number</label>
@@ -104,7 +120,21 @@
                         <input type="number" name="expire_date" id="expire_date">
                         <label for="cvc_number">CVC</label>
                         <input type="number" name="cvc_number" id="cvc_number">
-                        <button type="submit">Complete Order</button>
+                        <label class="submit_order" for="submit-order">Complete Order</label>
+                        <input type="checkbox" id="submit-order">
+                        <div class="complete_order">
+                            <h4>Thank you for your order!</h4>
+                            <p>Enjoy your experience</p>
+                            <div class="order_box">
+                                <a class="border-rad shade"href="profile.html">Go to Account</a>
+                                <p>or..</p>
+                                <label class="border-rad shade" for="download_game">Download Games</label>
+                                <input type="checkbox" id="download_game">
+                                <div class="downloaded_game border-rad">
+                                    <p class="border-rad">Downloaded</p>
+                                </div>
+                            </div>
+                        </div>
                     </form>
                 </div>
                 <div class="right_form_payement">
