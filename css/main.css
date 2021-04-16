@@ -103,17 +103,18 @@ header {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: auto;
+  width: 0;
   position: absolute;
   z-index: 200;
   background-color: var(--dark-color-hover);
   top: 0;
+  left: -120px;
   height: auto;
   list-style: none;
   box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.4);
   padding-left: 0;
   border-radius: 0 5px 5px 0;
-  overflow: hidden;
+  transition: all 0.4s ease-in-out;
 }
 .mobile_checkbox ul li {
   height: 80px;
@@ -129,10 +130,13 @@ header {
   color: var(--light-color);
   z-index: 10;
 }
+#mobile-menu {
+  display: none;
+}
 #mobile-menu:checked + ul {
   position: absolute;
   left: 0;
-  right: 70%;
+  width: 200px;
   transition: all 0.4s ease-in-out;
 }
 .mobile_checkbox ul li a {
@@ -181,9 +185,7 @@ h1 {
   background-color: var(--red-color);
   border-radius: 0 5px 5px 0;
 }
-#mobile-menu {
-  display: none;
-}
+
 .margin_sides {
   margin: 0 50px;
 }
