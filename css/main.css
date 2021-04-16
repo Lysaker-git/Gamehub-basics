@@ -131,6 +131,9 @@ header {
   color: var(--light-color);
   z-index: 10;
 }
+.mobile_checkbox label {
+  cursor:pointer;
+}
 #mobile-menu {
   display: none;
 }
@@ -1114,7 +1117,7 @@ footer {
   margin: 0;
   padding: 8px 25px;
   width: 30vw;
-  background-color: var(--red-color-hover);
+  background-color: var(--red-color);
   color: var(--light-red-color);
   transition: all 1s ease-in-out;
 }
@@ -1123,6 +1126,7 @@ footer {
   bottom: 0;
   z-index: 2;
   transition: all 1s ease-in-out;
+  background-color: var(--dark-color);
 }
 /*Profile page*/
 .online_friends {
