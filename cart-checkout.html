@@ -113,13 +113,13 @@
                     <!-- replaced button for a nested label elements to add a checkbox hack since the submit is not working -->
                     <form action="#" method="post">
                         <label for="purchase_name">Card-Holders Name</label>
-                        <input type="text" name="purchase_name" id="purchase_name">
+                        <input type="text" name="purchase_name" id="purchase_name" required>
                         <label for="card_information">Card-Number</label>
-                        <input type="number" name="card_information" id="card_information">
+                        <input type="number" name="card_information" id="card_information" required>
                         <label for="expire_date">Exprires</label>
-                        <input type="number" name="expire_date" id="expire_date">
+                        <input type="number" name="expire_date" id="expire_date" required>
                         <label for="cvc_number">CVC</label>
-                        <input type="number" name="cvc_number" id="cvc_number">
+                        <input type="number" name="cvc_number" id="cvc_number" required>
                         <label class="submit_order" for="submit-order">Complete Order</label>
                         <input type="checkbox" id="submit-order">
                         <div class="complete_order">
@@ -179,10 +179,11 @@
                 <h2>Sign up for new deals!</h2>
             </div>
             <div>
-                <label for="email">E-mail:</label>
-                <input id="email" type="text" aria-label="input E-mail">
-                <button>INFORM ME</button>
-
+                <form action="#" method="POST">
+                    <label for="email">E-mail:</label>
+                    <input id="email" type="text" aria-label="input E-mail" required>
+                    <button>INFORM ME</button>
+                </form>
             </div>
         </section>
         </div>

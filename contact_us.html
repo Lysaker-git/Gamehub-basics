@@ -96,11 +96,11 @@
             <div class="left_contact">
                 <form action="" method="POST">
                     <label for="name_contact">Name</label>
-                    <input id="name_contact" type="text">
+                    <input id="name_contact" type="text" required>
                     <label for="e_mail_contact">E-mail:</label>
-                    <input id="e_mail_contact" type="email">
+                    <input id="e_mail_contact" type="email" required>
                     <label for="your_question">Your Question</label>
-                    <textarea name="your_question" id="your_question" cols="30" rows="10"></textarea>
+                    <textarea name="your_question" id="your_question" cols="30" rows="10" required></textarea>
                     <button type="submit">Send Form</button>
                 </form>
             </div>
@@ -150,10 +150,11 @@
                 <h2>Sign up for new deals!</h2>
             </div>
             <div>
-                <label for="email">E-mail:</label>
-                <input id="email" type="text" aria-label="input E-mail">
-                <button>INFORM ME</button>
-
+                <form action="#" method="POST">
+                    <label for="email">E-mail:</label>
+                    <input id="email" type="text" aria-label="input E-mail" required>
+                    <button>INFORM ME</button>
+                </form>
             </div>
         </section>
         </div>
