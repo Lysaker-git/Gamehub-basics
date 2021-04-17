@@ -372,6 +372,9 @@ h1 {
   padding: 10px;
   height: 30px;
 }
+.title_and_price h3 {
+  width: auto;
+}
 .title_and_price p {
   margin: 0 0 0 auto;
   font-size: 0.9em;
@@ -510,6 +513,7 @@ h1 {
 .sub_contact h2 {
   font-size: 1.3em;
   padding: 0 50px 0 0;
+  margin-top: 0;
 }
 .news_headline {
   padding-left: 20px;
@@ -910,7 +914,7 @@ footer {
   display: block !important;
   padding: 5px;
 }
-.recommends h3 {
+.recommends h2 {
   width: 100%;
 }
 /*contact us page - placeholder for integrated JS style in footer*/
@@ -1274,6 +1278,9 @@ footer {
 }
 .tiny_header:not(:first-of-type) {
   margin-top: 15px;
+}
+.tiny_header:first-of-type {
+  margin-top: 0;
 }
 .tiny_info {
   margin: 0;
