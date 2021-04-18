@@ -25,7 +25,7 @@ body {
   height: 100%;
   width: 100%;
   box-sizing: border-box;
-
+  
 }
 body::before {
   position: absolute;
@@ -92,7 +92,7 @@ header {
   position: relative;
 }
 .header_container {
-  padding: 50px;
+  padding: 30px;
 }
 .logo2,
 .user_navigation,
@@ -130,6 +130,7 @@ header {
   font-size: 3em;
   color: var(--light-color);
   z-index: 10;
+  
 }
 .mobile_checkbox label {
   cursor:pointer;
@@ -139,6 +140,7 @@ header {
 }
 #mobile-menu:checked + ul {
   position: absolute;
+  top: -40px;
   left: 0;
   width: 200px;
   transition: all 0.4s ease-in-out;
@@ -191,7 +193,7 @@ h1 {
 }
 
 .margin_sides {
-  margin: 0 50px;
+  margin: 0 30px;
 }
 
 /*Setting up grid for main content to
@@ -212,8 +214,7 @@ h1 {
 .third_card {
   position: relative;
   background-size: cover;
-  background-size: 130%;
-  background-position: center;
+  background-position: left center;
   height: 340px;
 }
 .tag {
@@ -232,6 +233,7 @@ h1 {
   align-items: center;
   padding: 5px 0 5px 15px;
   z-index: 10;
+  text-align: center;
 }
 .tag a {
   text-transform: uppercase;
@@ -354,9 +356,7 @@ h1 {
   height: 206px;
   width: 100%;
   background-size: cover;
-  background-size: 150%;
-  background-position: center;
-  background-position-y: -70px;
+  background-position: left center;
   border-radius: 5px 5px 0 0;
 }
 .text_and_buttons_for_popular {
@@ -374,10 +374,11 @@ h1 {
 }
 .title_and_price h3 {
   width: auto;
+  font-size: 0.8em;
 }
 .title_and_price p {
   margin: 0 0 0 auto;
-  font-size: 0.9em;
+  font-size: 0.7em;
   font-family: 'lato', sans-serif;
 }
 
@@ -448,9 +449,10 @@ h1 {
   position: relative;
   height: 150px;
   border-radius: 5px 5px 0 0;
-  background-position: center;
+  background-position: left center;
+  background-repeat: no-repeat;
   background-size: cover;
-
+  background-position-y: -100px;
 }
 .community_game_cards h3 {
   margin: 5px 0;
@@ -562,7 +564,7 @@ footer {
   ;
 }
 .links_socials {
-  grid-area: Socials;
+  grid-area: Socials; 
   display: grid;
   grid-template-columns: repeat(4 1fr);
   grid-template-rows: 50px repeat(2, 1fr);
@@ -783,7 +785,11 @@ footer {
   border: none;
   border-bottom: 2px solid lightgray;
 }
-.right_container button,
+.right_container form a {
+  text-align: center;
+  text-decoration: none;
+}
+.right_container form a,
 .left_contact button {
   margin: 30px 0;
   padding: 15px;
@@ -794,7 +800,7 @@ footer {
   font-size: 1.5em;
   border-radius: 5px;
 }
-.right_container button:hover,
+.right_container form a:hover,
 .left_contact button:hover {
   background-color: var(--red-color-hover);
   cursor: pointer;
@@ -1312,10 +1318,37 @@ footer {
   margin-top: 40px;
 }
 /*Starting media for tablet-sizes*/
+@media only screen and (min-width: 500px) {
+  .imgage_container_community {
+    background-position-y: -180px;
+  }
+  .title_and_price h3 {
+    font-size: 1.1em;
+  }
+}
 @media only screen and (min-width: 670px) {
   h1 {
     letter-spacing: 1.5vw;
     padding-bottom: 30px;
+  }
+  .imgage_container_community.black {
+    background-position-y: -450px;
+  }
+  .imgage_container_community.cyber {
+    background-position-y: -430px;
+  }
+  .imgage_container_community.forge {
+    background-position-y: -510px;
+  }
+  .imgage_container_community.pingpong {
+    background-position-y: -360px;
+  }
+  .imgage_container_community.spacewar,
+  .main_card {
+    background-position-y: -200px;
+  }
+  .imgage_container_community.racing {
+    background-position-y: -300px;
   }
   .left_cart::before {
     top: -40px;
@@ -1345,7 +1378,16 @@ footer {
     margin: 0;
     display: block;
   }
-
+  .main_card {
+    background-position-y: -40px;
+  }
+  .imgage_container_popular.cyber {
+    background-position-y: -80px;
+  }
+  /* Using two classes to avoid !important */
+  .community_game_cards > .imgage_container_community {
+    background-position-y: -60px;
+  }
   /*SETTINg UP COmmUNITY cardS*/
 
   .community_section{
@@ -1452,6 +1494,25 @@ footer {
 }
 @media only screen and (min-width: 1020px) {
 
+  .main_card {
+    background-position-y: -90px;
+  }
+  .second_card,
+  .third_card {
+    background-position-y: -110px;
+  }
+  .imgage_container_popular.cyber {
+    background-position-y: -40px;
+  }
+  /* again using multiple classes to avoid !important */
+  .community_game_cards > .imgage_container_community {
+    background-position-y: -80px;
+  }
+  .community_game_cards > .imgage_container_community.spacewar,
+  .community_game_cards > .imgage_container_community.pingpong,
+  .community_game_cards > .imgage_container_community.racing {
+    background-position-y: -110px;
+  }
   .mobile_header {
     display: none;
   }
@@ -1822,6 +1883,13 @@ footer {
   .container_for_footer {
     padding: 50px;
   }
+  .main_card {
+    background-position-y: -210px;
+  }
+  .second_card,
+  .third_card {
+    background-position-y: -180px;
+  }
   main {
     padding: 0 50px;
   }
@@ -1832,6 +1900,19 @@ footer {
   }
   .community_section{
     margin-top: 10px;
+  }
+  .imgage_container_popular.cyber {
+    background-position-y: -15px;
+  }
+  .community_game_cards > .imgage_container_community.cyber,
+  .community_game_cards > .imgage_container_community.black,
+  .community_game_cards > .imgage_container_community.forge {
+    background-position-y: -50px;
+  }
+  .community_game_cards > .imgage_container_community.spacewar,
+  .community_game_cards > .imgage_container_community.pingpong,
+  .community_game_cards > .imgage_container_community.racing {
+    background-position-y: -80px;
   }
   .primary_game_cards {
     padding-bottom: 50px;
@@ -1915,4 +1996,5 @@ footer {
   .profile_container {
     margin-bottom: 50px !important;
   }
+  /* Adding random comment to get to 2000 lines of code! */
 }
