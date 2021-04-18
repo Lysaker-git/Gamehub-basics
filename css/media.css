@@ -1,0 +1,682 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=lato:wght@400;700&display=swap');
+
+@media only screen and (min-width: 500px) {
+    .imgage_container_community {
+      background-position-y: -180px;
+    }
+    .title_and_price h3 {
+      font-size: 1.1em;
+    }
+  }
+  @media only screen and (min-width: 670px) {
+    h1 {
+      letter-spacing: 1.5vw;
+      padding-bottom: 30px;
+    }
+    .imgage_container_community.black {
+      background-position-y: -450px;
+    }
+    .imgage_container_community.cyber {
+      background-position-y: -430px;
+    }
+    .imgage_container_community.forge {
+      background-position-y: -510px;
+    }
+    .imgage_container_community.pingpong {
+      background-position-y: -360px;
+    }
+    .imgage_container_community.spacewar,
+    .main_card {
+      background-position-y: -200px;
+    }
+    .imgage_container_community.racing {
+      background-position-y: -300px;
+    }
+    .left_cart::before {
+      top: -40px;
+    }
+    .carousel_img_1.spacewar {
+      background-size: 43em;
+    }
+    .carousel_img_1.furious {
+      background-size: 50em;
+    }
+    .carousel_img_1.forge,
+    .carousel_img_1.racing {
+      background-size: 43em;
+      background-position-y: -230px;
+    }
+    .carousel_img_1.pingpong {
+      background-position-y: -230px;
+    }
+  }
+  @media only screen and (min-width: 750px) {
+    
+    /*mAIN CONTENT FOR TABlET - 2 COlUmNS*/
+    .primary_game_cards {
+      grid-template-columns: 1fr 1fr;
+    }
+    .second_card {
+      margin: 0;
+      display: block;
+    }
+    .main_card {
+      background-position-y: -40px;
+    }
+    .imgage_container_popular.cyber {
+      background-position-y: -80px;
+    }
+    /* Using two classes to avoid !important */
+    .community_game_cards > .imgage_container_community {
+      background-position-y: -60px;
+    }
+    /*SETTINg UP COmmUNITY cardS*/
+  
+    .community_section{
+      grid-template-columns: repeat(3, auto);
+      grid-template-rows: auto;
+      height: 450px;
+      gap: 70px 20px;
+    }
+    .watermark_headline {
+      transform: rotate(0deg);
+      margin: 0;
+      bottom: 0;
+      top: 50%;
+      left: 50%;
+      padding: 50px 0;
+      transform: translate(-50%, -50%);
+    }
+    .community_game_cards h3 {
+      margin: 10px 0;
+    }
+    .community_game_cards a {
+      font-size: 0.7em;
+    }
+      /*Popular games does not need to change
+    on with
+    Using Float for easy setup*/
+  
+    .news_article_with_image div {
+      width: 50%;
+      height: 250px;
+      float: left;
+    }
+    .news_article_with_image .pic2 {
+      float: right;
+    }
+    .news_article_with_image section {
+      height: 250px;
+      padding: 0 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .news_article_with_image h3 {
+      margin: 0;
+    }
+  
+    /*SIGN UP - LOGIN PAGE*/
+    .form_container {
+      display: flex;
+    }
+    .right_container {
+      width: 40%;
+      padding: 20px 35px;
+    }
+    .left_container {
+      background-image: url(../assets/background/background_log-sign.jpg);
+      background-size: cover;
+      opacity: .6;
+      height: auto;
+      width: 50%;
+      top: 0;
+      left: 0;
+      border-radius: 5px 0 0 5px;
+    }
+    .stars {
+      padding: 10px 10px;
+      background: none;
+      left: unset;
+      width: auto;
+      right: 10px;
+    }
+    .small_number {
+      display: none;
+    }
+    .fas + .fas,
+    .far {
+    display: block !important;
+    padding: 5px;
+    }
+    .left_cart::before {
+      top: -60px;
+    }
+    .carousel_img_1.assassin,
+    .carousel_img_1.black,
+    .carousel_img_1.cyber {
+      background-size: cover;
+      background-position: 0 -240px;
+    }
+    .carousel_img_1.boxer {
+      background-size: cover;
+      background-position: 0 -140px;
+    }
+    .carousel_img_1.forge,
+    .carousel_img_1.furious,
+    .carousel_img_1.pingpong,
+    .carousel_img_1.racing,
+    .carousel_img_1.spacewar {
+      background-size: cover;
+      background-position: 0 -340px;
+    }
+    .game_selection {
+      background-position-y: -20px;
+    }
+  }
+  @media only screen and (min-width: 1020px) {
+  
+    .main_card {
+      background-position-y: -90px;
+    }
+    .second_card,
+    .third_card {
+      background-position-y: -110px;
+    }
+    .imgage_container_popular.cyber {
+      background-position-y: -40px;
+    }
+    /* again using multiple classes to avoid !important */
+    .community_game_cards > .imgage_container_community {
+      background-position-y: -80px;
+    }
+    .community_game_cards > .imgage_container_community.spacewar,
+    .community_game_cards > .imgage_container_community.pingpong,
+    .community_game_cards > .imgage_container_community.racing {
+      background-position-y: -110px;
+    }
+    .mobile_header {
+      display: none;
+    }
+    .desktop_header {
+      display: flex;
+    }
+    ul {
+      list-style-type: none;
+      color: var(--light-color);
+    }
+    li {
+      padding: 0 30px 2px 30px;
+      position: relative;
+      z-index: 1;
+      cursor: pointer;
+    }
+    .cart::before {
+      background-image: url(/assets/menu-icons/shopping-cart.png);
+    }
+    .login::before {
+      background-image: url(/assets/menu-icons/login.png);
+    }
+    .explore_new::before {
+      background-image: url(/assets/menu-icons/new.png);
+    }
+    .explore_used::before {
+      background-image: url(/assets/menu-icons/used.png);
+    }
+    .forums::before {
+      background-image: url(/assets/menu-icons/forum.png);
+    }
+    .icon_placement::before {
+      position: absolute;
+      content: '';
+      height: 100%;
+      width: 30px;
+      z-index: 10;
+      left: 0;
+      background-repeat: no-repeat;
+    }
+    .sign_up_container::before {
+      position: absolute;
+      content: '';
+      height: 130%;
+      width: 100%;
+      left: 0;
+      top: -3px;
+      z-index: -1;
+      background: var(--red-color);
+      border-radius: 5px;
+    }
+    .user_navigation{
+      width: 100%;
+    }
+    .user_navigation li:first-child {
+      margin-left: auto;
+    }
+    h1 {
+      letter-spacing: 2vw;
+      font-size: 2em;
+    }
+    .lower_part_of_header {
+      display: flex;
+      margin-top: 39px;
+    }
+    .site_navigation {
+      margin: 4px 0;
+      padding-left: 0;
+    }
+    .searchbar {
+      margin-left: auto;
+      width: 35vw;
+      padding: 0;
+    }
+    .searchbar label {
+      padding-left: 5px;
+    }
+    .primary_game_cards {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-template-areas: 
+      "area1 area2"
+      "area1 area3";
+      height: 400px;
+      margin-bottom: 50px;
+    }
+    .headline_popular_games {
+      height: 35px;
+    }
+    .main_card {
+      grid-area: area1;
+      height: auto;
+    }
+  
+    .second_card {
+      grid-area: area2;
+      height: auto;
+    }
+    .third_card {
+      grid-area: area3;
+      display: block;
+      height: unset;
+    }
+    .secondary_game_cards {
+      grid-template-areas:
+      "head head head head"
+      "g1 g2 g3 g4";
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: 70px 370px;
+    }
+    footer {
+      height: auto;
+    }
+    .container_for_footer {
+      grid-template-areas: 
+      "Socials Sub"
+      ;
+      gap: 250px;
+      padding-bottom: 0;
+    }
+    .sub_contact div h3 {
+      margin-top: 0;
+    }
+    .left_container {
+      background-position-y: -50px;
+    }
+  
+    /*Media for search*/
+    .search_cards {
+      grid-template-rows: 180px auto;
+      grid-template-columns: 240px 1fr;
+      grid-template-areas: 
+      "image info"
+      "image bar";
+    }
+    .search_image {
+      width: auto;
+      left: 0;
+      background-position-y: -25px;
+    }
+    .hidden_content_small {
+      display: block;
+    }
+    .search_info p {
+      max-width: 700px;
+    }
+    /*Contact page*/
+    .contact_container {
+      display: grid;
+      grid-template-columns: 1fr 340px;
+      grid-template-areas: 
+      "header location"
+      "forms location";
+    }
+    .contact_container h2 {
+      grid-area: header;
+    }
+    .left_contact {
+      grid-area: forms;
+    }
+    .right_contact {
+      grid-area: location;
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0 70px;
+      justify-content: space-between;
+    }
+    .right_contact > div {
+      width: 100%;
+    }
+    .logo_gamehub {
+      position: relative;
+    }
+    .right_contact img {
+      margin-left: 0;
+    }
+    #your_question {
+      height: 100px;
+    }
+    /*Cart page*/
+    .your_cart {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      border-radius: 5px;
+    }
+    .left_cart {
+      height: 503px;
+      padding: 20px 0 0 20px;
+      border-radius: 5px 0 0 5px;
+    }
+    .right_cart {
+      padding: 20px;
+      border-radius: 0 5px 5px 0;
+    }
+    .right_cart h3:last-of-type {
+      margin-top: 20px;
+    }
+    #submit-order:checked + .complete_order {
+      top: -155px;
+    }
+    /*Media game pages*/
+    .carousel {
+      display: flex;
+      align-items: center;
+    }
+    .carousel_img_2,
+    .carousel_img_3 {
+      display: block;
+      position: relative;
+      background-color: var(--card-background);
+      width: 30%;
+      height: 90%;
+      opacity: .8;
+      overflow: hidden;
+    }
+    .carousel_img_2 p,
+    .carousel_img_3 p {
+      position: relative;
+      text-transform: uppercase;
+      top: 10%;
+      left: 0;
+      transform: rotate(-45deg);
+      font-size: 4em;
+      font-weight: 700;
+      opacity: 0.8;
+    }
+    .carousel_img_1 {
+      margin: 0 20px; 
+    }
+    .main_grid_games {
+      display: grid;
+      grid-template-columns: 1fr 300px;
+      grid-template-areas: 
+      "main stars"
+      "specs buttons"
+      "rec rec";
+      gap: 20px 200px;
+    }
+    .game_info_page {
+      grid-area: main;
+    }
+    .specs {
+      grid-area: specs;
+    }
+    .boxing_in_reviews {
+      grid-area:stars;
+    }
+    .boxing_in_prices {
+      grid-area: buttons;
+      margin: 0;
+    }
+    .prices_for_games:not(:last-of-type) {
+      margin-bottom: 26px;
+    }
+    .recommends {
+      grid-area: rec;
+    }
+    .main_grid_games li {
+      color: var(--dark-color);
+      cursor: unset;
+    }
+    .stars_games {
+      display: flex;
+      justify-content: flex-end;
+      padding: 13px 0;
+    }
+    .boxing_in_reviews li {
+      line-height: 2em;
+    }
+    .recommends {
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-areas: 
+      "header header header header"
+      "game1 game2 game3 game4";
+    }
+    .recommend-headline {
+      width: 100%;
+    }
+    .game_grid_recommend {
+      width: auto;
+      height: auto;
+    }
+    .game_grid_recommend .popular_paragraf {
+      padding-bottom: 60px;
+    }
+    .profile_container {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      grid-template-areas:
+      "games profile" 
+      "forum profile"
+      "forum friends";
+      margin-bottom: 50px;
+    }
+    .your_games {
+      grid-area: games;
+    }
+    .profile_info {
+      display: block;
+      grid-area: profile;
+      margin-left: 100px;
+    }
+    .your_posts {
+      grid-area: forum;
+    }
+    .friends_online {
+      grid-area: friends;
+    }
+    .your_games h3,
+    .profile_info h3 {
+      margin-top: 20px;
+    }
+    .friends_online {
+      margin-left: 100px;
+    }
+    .profile_img {
+      box-shadow: 0 -10px 3px -10px rgba(0, 0, 0, 0.4) inset;
+    }
+    .game_selection {
+      background-position-y: unset;
+    }
+    .game_presentation {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 250px;
+      background-color: var(--card-background);
+    }
+    .game_presentation:before {
+      background-image: unset;
+    }
+    .left_slide {
+      margin: auto 0;
+    }
+    .left_slide h3 {
+      margin: 0 0 10px 0;
+    }
+    .left_slide p:last-of-type {
+      margin-bottom: 0;
+    }
+    .right_slide {
+      position: relative;
+      align-items: flex-end;
+      z-index: 1;
+    }
+    .right_slide::before {
+      position: absolute;
+      content: '';
+      z-index: -1;
+      height: 200%;
+      width: 200%;
+      background-image: url(../Assets/Game-covers/GameHub_assassin.jpg);
+      background-size: cover;
+      opacity: 1;
+      background-position: -150px 0;
+    }
+  }
+  @media only screen and (min-width: 1400px) {
+    .header_container,
+    main,
+    .container_for_footer,
+    .form_container,
+    .contact_container,
+    .profile_container {
+      max-width: 1400px;
+      margin: 0 auto !important;
+    }
+    .header_container,
+    .container_for_footer {
+      padding: 50px;
+    }
+    .main_card {
+      background-position-y: -210px;
+    }
+    .second_card,
+    .third_card {
+      background-position-y: -180px;
+    }
+    main {
+      padding: 0 50px;
+    }
+    .primary_game_cards,
+    .secondary_game_cards,
+    .community_section{
+      margin: 0;
+    }
+    .community_section{
+      margin-top: 10px;
+    }
+    .imgage_container_popular.cyber {
+      background-position-y: -15px;
+    }
+    .community_game_cards > .imgage_container_community.cyber,
+    .community_game_cards > .imgage_container_community.black,
+    .community_game_cards > .imgage_container_community.forge {
+      background-position-y: -50px;
+    }
+    .community_game_cards > .imgage_container_community.spacewar,
+    .community_game_cards > .imgage_container_community.pingpong,
+    .community_game_cards > .imgage_container_community.racing {
+      background-position-y: -80px;
+    }
+    .primary_game_cards {
+      padding-bottom: 50px;
+    }
+    .grid_for_secondary_content {
+      display: grid;
+      grid-template-areas: 
+      "secondary blank news"
+      "secondary blank news"
+      "community blank news";
+      grid-template-columns: 1fr 300px 300px;
+      grid-template-rows: 70px 450px 580px;
+      gap: 40px 0;
+    }
+    .news_aside_section {
+      padding: 0;
+      border-radius: 5px 5px 0 0;
+    }
+    .news_headline {
+      padding: 0 0 0 20px;
+      margin: 15px 0 39px 0;
+    }
+    .news_article_with_image a {
+      color: var(--dark-color);
+      text-decoration: underline;
+    }
+    .news_article_with_image section {
+      height: auto;
+      margin: 15px 0;
+    }
+    .news_article_with_image {
+      display: block;
+    }
+    .news_article_with_image div,
+    .news_article_with_image .pic2 {
+      float: none;
+      width: 100%;
+      height: 150px;
+    }
+    h1 {
+      font-weight: bolder;
+    }
+    .container_for_footer {
+      grid-template-columns: 1fr 1fr 300px;
+      grid-template-areas: 
+      "Socials blank Sub";
+      grid-gap: 0;
+    }
+    .left_container {
+      background-position-y: -180px;
+    }
+    .contact_container {
+      grid-template-columns: 1fr 1fr 340px;
+      grid-template-areas: 
+      "header location img"
+      "forms location img";
+      overflow: hidden;
+    }
+    .left_contact {
+      z-index: 2;
+    }
+    .large_scale_img {  
+      position: relative;
+      grid-area: img;
+      background-image: url(/Assets/Background/contact\ us.svg);
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 150%;
+      left: -220px;
+      top: 110px;    
+      opacity: 0.2;
+      z-index: 1;
+      transform: rotate(-10deg);
+    }
+    .right_slide::before {
+      background-position-y: -100px;;
+    }
+    .game_selection {
+      background-position-y: -40px;
+    }
+    .profile_container {
+      margin-bottom: 50px !important;
+    }
+  }
