@@ -126,16 +126,20 @@
                     <form id="cart-form" action="#" method="post">
                         <label for="purchase_name">Card-Holders Name</label>
                         <input type="text" name="purchase_name" id="purchase_name">
+                        <p class="hidden">Name must be longer then 3 letters</p>
                         <label for="card_information">Card-Number</label>
                         <input type="number" name="card_information" id="card_information">
+                        <p class="hidden">Please enter valid card (16 digits)</p>
                         <label for="expire_date">Exprires</label>
                         <div class="cvcContainter">
                             <input type="number" name="expire_date" id="expire_date">
                             <span>/</span>
                             <input type="number" name="expire_date2" id="expire_date2">
                         </div>
+                        <p class="hidden">Please enter valid format I.E 12/21</p>
                         <label for="cvc_number">CVC</label>
                         <input type="number" name="cvc_number" id="cvc_number">
+                        <p class="hidden">Please enter valid CVC I.E 123</p>
                         <label class="submit_order" for="submit-order">Complete Order</label>
                         <input type="checkbox" id="submit-order">
                         <div class="complete_order">

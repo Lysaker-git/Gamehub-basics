@@ -20,10 +20,6 @@ form.addEventListener("change", (event) => {
     if (elementID.includes("e_mail_contact")) {
         passingMail(checkingValue, selectedElement);
     };
-    if (counter === 3) {
-        form.reset();
-        alert("Thank you for your questions");
-    }
 });
 
 function passingData (value, number, element) {
@@ -38,10 +34,10 @@ function passingData (value, number, element) {
 }
 function passingMail (value, element) {
     if (validateMail(value)) {
-        hidden[3].style.display = "none";
+        hidden[1].style.display = "none";
         element.style.border = "none";
     } else {
-        hidden[3].style.display = "block";
+        hidden[1].style.display = "block";
         element.style.border = "solid red 2px";
     }
 }
