@@ -107,17 +107,20 @@
             <div class="right_container">
                 <h2>Enter our community</h2>
                     <div class="sign_up">
-                        <form action="" method="POST">
+                        <form class="signlog-form" action="" method="POST">
                             <label for="name_forms">Username:</label>
-                            <input type="text" name="name_forms" id="name_forms" required>
-                            <label for="e_mail">E-Mail:</label>
-                            <input type="email" name="e_mail" id="e_mail" required>
+                            <input type="text" name="name_forms" id="name_forms">
+                            <p class="hidden">Username must be longer then 3 letters</p>
                             <label for="password_signup">Password:</label>
-                            <input type="password" name="password_signup" id="password_signup" required>
+                            <input type="password" name="password_signup" id="password_signup">
+                            <p class="hidden">Password must be longer then 10 chars</p>
                             <label for="confirm_password">Confirm Password</label>
-                            <input type="password" name="confirm_password" id="confirm_password" required>
-                            <a href="profile.html">sign up</a>
-                            <!-- <button type="submit">sign up</button> -->
+                            <input type="password" name="confirm_password" id="confirm_password">
+                            <p class="hidden">Not same password</p>
+                            <label for="e_mail">E-Mail:</label>
+                            <input type="email" name="e_mail" id="e_mail">
+                            <p class="hidden">E-mail</p>
+                            <button type="submit">sign up</button>
                         </form>
                     </div>
                     <a href="log-in.html">..or log in</a>
@@ -168,5 +171,6 @@
         </section>
         </div>
     </footer>
+    <script src="js/log-sign_check.js"></script>
 </body>
 </html>

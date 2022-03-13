@@ -121,14 +121,14 @@
             <div class="right_container">
                 <h2>Enter our community</h2>
                     <div class="log_in">
-                        <!-- making button a for interactivity to the profile page -->
-                        <form target="_blank" action="profile.html" method="POST">
+                        <form class="signlog-form" action="profile.html" method="POST">
                             <label for="name_forms_login">Username:</label>
-                            <input type="text" name="name_forms_login" id="name_forms_login" required>
+                            <input type="text" name="name_forms_login" id="name_forms_login">
+                            <p class="hidden">Username must be longer then 3 letters</p>
                             <label for="password_login">Password:</label>
-                            <input type="password" name="password_login" id="password_login" required>
-                            <a href="profile.html" >log in</a>                   
-                            <!-- <button type="submit" >log in</button>                    -->
+                            <input type="password" name="password_login" id="password_login">
+                            <p class="hidden">Invalid password</p>                 
+                            <button type="submit" >log in</button>                   
                         </form>
                     </div>
                     <a href ="sign-in-up.html">..or sign up</a>
@@ -137,9 +137,7 @@
     </main>
     <footer>
         <div class="container_for_footer">
-        <div class="links_socials">
-            <!--NOROFF TEACHERS; I went accesabillity hunting and wanted to add a confirmation on opening in a new tab.
-            I tried this to not include JS.-->    
+        <div class="links_socials"> 
             <a href="https://www.twitch.com" target="_blank" class="icon_twitch" onclick="return confirm('This will open Twitch in a new tab, do you want to proceed?')">
                 <img src="assets/footer-icons/twitch.png" alt="Twitch">
             </a>
@@ -179,5 +177,6 @@
         </section>
         </div>
     </footer>
+    <script src="js/log-sign_check.js"></script>
 </body>
 </html>

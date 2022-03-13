@@ -123,15 +123,19 @@
                 <h3>Payment info</h3>
                 <div class="left_form_payement">
                     <!-- replaced button for a nested label elements to add a checkbox hack since the submit is not working -->
-                    <form action="#" method="post">
+                    <form id="cart-form" action="#" method="post">
                         <label for="purchase_name">Card-Holders Name</label>
-                        <input type="text" name="purchase_name" id="purchase_name" required>
+                        <input type="text" name="purchase_name" id="purchase_name">
                         <label for="card_information">Card-Number</label>
-                        <input type="number" name="card_information" id="card_information" required>
+                        <input type="number" name="card_information" id="card_information">
                         <label for="expire_date">Exprires</label>
-                        <input type="number" name="expire_date" id="expire_date" required>
+                        <div class="cvcContainter">
+                            <input type="number" name="expire_date" id="expire_date">
+                            <span>/</span>
+                            <input type="number" name="expire_date2" id="expire_date2">
+                        </div>
                         <label for="cvc_number">CVC</label>
-                        <input type="number" name="cvc_number" id="cvc_number" required>
+                        <input type="number" name="cvc_number" id="cvc_number">
                         <label class="submit_order" for="submit-order">Complete Order</label>
                         <input type="checkbox" id="submit-order">
                         <div class="complete_order">
@@ -200,5 +204,6 @@
         </section>
         </div>
     </footer>
+    <script src="js/cart.js"></script>
 </body>
 </html>
