@@ -12,7 +12,7 @@ form.addEventListener("change", (event) => {
 
     let counter = 0;
     console.log("hi")
-    if (validateData(contactName.value, 2)) {
+    if (validateData(contactName.value, 3)) {
         hidden[0].style.display = "block";
         contactName.style.border = "solid red 2px";
     }
