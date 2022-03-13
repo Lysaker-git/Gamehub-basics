@@ -7,7 +7,7 @@ const contactButton = document.querySelector("#btn_contact");
 const hidden = document.querySelectorAll(".hidden");
 
 
-form.addEventListener("submit", (event) => {
+form.addEventListener("change", (event) => {
     event.preventDefault();
 
     let counter = 0;
