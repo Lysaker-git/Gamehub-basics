@@ -37,6 +37,13 @@ body::before {
   opacity: 0.03;
 
 }
+*:focus,
+a:focus {
+  border: 3px solid red !important;
+}
+button:focus {
+  border: 3px solid var(--dark-color) !important;
+}
 /*PROgRESSION SITE - for unfullfilled pages (placeholder site)*/
 .section_prog {
   display: flex;
@@ -62,7 +69,7 @@ body::before {
 
 a {
   text-decoration: none;
-  color: var(--light-color)
+  color: white;
 }
 a:hover {
   color:var(--red-color-hover);
@@ -788,7 +795,8 @@ footer {
   text-align: center;
   text-decoration: none;
 }
-.right_container button {
+.right_container button,
+#btn_contact {
   margin: 30px 0;
   padding: 15px;
   border: none;

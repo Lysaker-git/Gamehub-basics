@@ -1,42 +1,39 @@
 const cartForm = document.querySelector("#cart-form");
-
 const cartFields = cartForm.querySelectorAll("input");
 
 cartForm.addEventListener("change", (event) => {
     event.preventDefault();
-    let selectedElement = event.target
-    let elementID = selectedElement.id
-    let counter = 0;
-    let checkingValue = selectedElement.value
+
+    let selectedElement = event.target;
+    let elementID = selectedElement.id;
+    let checkingValue = selectedElement.value;
 
     if(elementID.includes("purchase_name")) {
-        console.log(selectedElement)
-        if (checkingValue.length <= 3) {
-            selectedElement.style.border = "2px solid red"
-        } else {
-            selectedElement.style.border = "none"
-        }
+        checkString(checkingValue, 3, selectedElement);
     }
     if (elementID.includes("card_information")) {
-        if (checkingValue.length !== 16) {
-            selectedElement.style.border = "2px solid red"
-        } else {
-            selectedElement.style.border = "none"
-        }
+        checkNumbers(checkingValue, 16, selectedElement);
     }
-
     if (elementID.includes("expire")) {
-        if (checkingValue.length !== 2 && !isNaN(checkingValue)) {
-            selectedElement.style.border = "2px solid red"
-        } else {
-            selectedElement.style.border = "none"
-        }
+        checkNumbers(checkingValue, 2, selectedElement);
     }
     if (elementID.includes("cvc")) {
-        if (checkingValue.length !== 3 && !isNaN(checkingValue)) {
-            selectedElement.style.border = "2px solid red"
-        } else {
-            selectedElement.style.border = "none"
-        }
+        checkNumbers(checkingValue, 3, selectedElement);
     }
-})
+});
+
+function checkString (string, length, element) {
+    if (string.length <= length) {
+        element.style.border = "2px solid red";
+    } else {
+        element.style.border = "none";
+    };
+};
+
+function checkNumbers (value, number, element) {
+    if (value.length !== number && !isNaN(value)) {
+        element.style.border = "2px solid red";
+    } else {
+        element.style.border = "none";
+    };
+};

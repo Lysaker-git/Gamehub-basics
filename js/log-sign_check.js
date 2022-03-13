@@ -1,4 +1,4 @@
-const formElement = document.querySelector(".signlog-form");
+const formElement = document.querySelector(".form");
 const hidden = formElement.querySelectorAll(".hidden");
 const inputFields = formElement.querySelectorAll("input");
 console.log(inputFields)
@@ -6,10 +6,12 @@ console.log(inputFields)
 // trying to keep the nested statements in functions
 
 formElement.addEventListener("change", (event) => {
+    event.preventDefault();
+
     let selectedElement = event.target
     let elementID = selectedElement.id
-    let counter = 0;
     let checkingValue = selectedElement.value
+
     if (elementID.includes("name")) {
         passingData(checkingValue, 3, selectedElement);
     };
