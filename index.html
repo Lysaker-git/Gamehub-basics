@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/media.css"> 
     <!-- Hotjar Tracking Code for https://peaceful-ritchie-993224.netlify.app/ -->
-<script>
+<!-- <script>
     (function(h,o,t,j,a,r){
         h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
         h._hjSettings={hjid:2788160,hjsv:6};
@@ -18,7 +18,7 @@
         r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
         a.appendChild(r);
     })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-</script>
+</script> -->
     <script src="js/games.js"></script>
 </head>
 <body>
@@ -93,56 +93,16 @@
                         </li>
                     </ul>
                 </nav>
-                <div class="searchbar">
-                    <input type="text" id="search" class="search" aria-label="Search Games" required>
-                    <a href="search.html">
-                        <img src="assets/menu-icons/search.png" alt="search button">
-                    </a>
-                </div>
+                
+                <form class="searchbar" action="POST">
+                    <input type="text" id="search" class="search" aria-label="Search Games">
+                    <button type="submit"><img src="assets/menu-icons/search.png" alt="search button"></button>
+                </form>
             </div>
         </section>
     </header>
     <main>
         <section class="primary_game_cards margin_sides pos_content">
-            <div class="main_card shade border-rad spacewar">
-                <div class="tag">
-                    <h2>Spacewar</h2>
-                    <a href="games-pages/space.html"  tabindex="0">View more</a>
-                </div>
-                <div class="hidden_tag">
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, cum.
-                        Lorem ipsum, dolor sit amet consectetur
-                    </p> 
-                    <a href="games-pages/space.html" >399$</a>
-                </div>
-            </div>
-            <div class="second_card shade border-rad black">    
-                <div class="tag">
-                    <h2>Black</h2>
-                    <a href="games-pages/black.html"  tabindex="0">View more</a>
-                </div>
-                <div class="hidden_tag">
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, cum.
-                        Lorem ipsum, dolor sit
-                    </p> 
-                    <a href="games-pages/black.html" >399$</a>
-                </div>
-            </div>
-            <div class="third_card shade border-rad cyber">
-                <div class="tag">
-                    <h2>Cyberpunch</h2>
-                    <a href="games-pages/cyber.html"  tabindex="0">View more</a>
-                </div>
-                <div class="hidden_tag">
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, cum.
-                        Lorem ipsum, dolor sit amet
-                    </p> 
-                    <a href="games-pages/cyber.html">399$</a>
-                </div>
-            </div>
         </section>
         <!-- WILL BE IMPLEMENTED WITH JS
         <section class="basicBtn">
@@ -154,50 +114,6 @@
         <div class="grid_for_secondary_content">
                 <section class="secondary_game_cards margin_sides">
                     <h2 class="headline_popular_games" id="e_new_pop">Popular</h2>
-                    <div class="text_and_buttons_for_popular shade border-rad">
-                        <div class="imgage_container_popular boxer"></div>
-                        <div class="title_and_price">
-                            <h3 class="">Boxxer</h3>
-                            <p class="">299 $</p> 
-                        </div>
-                        <p class="popular_paragraf">
-                            Lorem ipsum dolor sit amet consectetur.
-                        </p>
-                        <a href="games-pages/boxxer.html"  tabindex="0">View more</a>
-                    </div>
-                    <div class="text_and_buttons_for_popular shade border-rad">
-                        <div class="imgage_container_popular furious"></div>
-                        <div class="title_and_price">
-                            <h3 class="">Furious</h3>
-                            <p class="">299 $</p> 
-                        </div>
-                        <p class="popular_paragraf">
-                            Lorem ipsum dolor sit amet consectetur.
-                        </p>
-                        <a href="games-pages/furious.html"  tabindex="0">View more</a>
-                    </div>
-                    <div class="text_and_buttons_for_popular shade border-rad">
-                        <div class="imgage_container_popular cyber"></div>
-                        <div class="title_and_price">
-                            <h3 class="">Cyberpunch</h3>
-                            <p class="">299 $</p> 
-                        </div>
-                        <p class="popular_paragraf">
-                            Lorem ipsum dolor sit amet consectetur.
-                        </p>
-                        <a href="games-pages/cyber.html"  tabindex="0">View more</a>
-                    </div>
-                    <div class="text_and_buttons_for_popular shade border-rad">
-                        <div class="imgage_container_popular assassin"></div>
-                        <div class="title_and_price">
-                            <h3 class="">Assassin</h3>
-                            <p class="">299 $</p> 
-                        </div>
-                        <p class="popular_paragraf">
-                            Lorem ipsum dolor sit amet consectetur.
-                        </p>
-                        <a href="games-pages/assassin.html"  tabindex="0">View more</a>
-                    </div>
                 </section>
                 <!--WILL BE IMPLEMENTED WITH JS
                 <section class="">
@@ -208,61 +124,6 @@
                 -->
                 <section class="community_section margin_sides pos_content">
                     <h2 class="watermark_headline">Community</h2>
-                    <div class="community_game_cards shade border-rad">
-                        <div class="imgage_container_community black">
-                            <p class="price_tag_community_games shade">299$</p>
-                        </div>
-                        <div class="community_game_name_and_link">
-                            <h3>Black</h3>
-                            <a href="games-pages/black.html">view more</a>
-                        </div>
-
-                    </div>
-                    <div class="community_game_cards shade border-rad">
-                        <div class="imgage_container_community cyber">                           
-                            <p class="price_tag_community_games shade">299$</p>
-                        </div>
-                        <div class="community_game_name_and_link">
-                            <h3>Cyberpunch</h3>
-                            <a href="games-pages/cyber.html">view more</a>
-                        </div>
-                    </div>
-                    <div class="community_game_cards shade border-rad">
-                        <div class="imgage_container_community forge">
-                            <p class="price_tag_community_games shade">299$</p>
-                        </div>
-                        <div class="community_game_name_and_link">
-                            <h3>Forge</h3>
-                            <a href="games-pages/forge.html">view more</a>
-                        </div>
-                    </div>
-                    <div class="community_game_cards shade border-rad">
-                        <div class="imgage_container_community pingpong">
-                            <p class="price_tag_community_games shade">299$</p>
-                        </div>
-                        <div class="community_game_name_and_link">
-                            <h3>Ping Pong</h3>
-                            <a href="games-pages/ping-pong.html">view more</a>
-                        </div>
-                    </div>
-                    <div class="community_game_cards shade border-rad">
-                        <div class="imgage_container_community spacewar">
-                            <p class="price_tag_community_games shade">299$</p>
-                        </div>
-                        <div class="community_game_name_and_link">
-                            <h3>Spacewar</h3>
-                            <a href="games-pages/space.html">view more</a>
-                        </div>
-                    </div>
-                    <div class="community_game_cards shade border-rad">
-                        <div class="imgage_container_community racing">
-                            <p class="price_tag_community_games shade">299$</p>
-                        </div>
-                        <div class="community_game_name_and_link">
-                            <h3>Racing</h3>
-                            <a href="games-pages/racing.html">view more</a>
-                        </div>
-                    </div>
                 </section>
                 <!--WILL BE IMPLEMENTED WITH JS
                 <section class="basicBtn">
@@ -357,5 +218,7 @@
         </section>
         </div>
     </footer>
+    <script src="js/var.js"></script>
+    <script src="js/wc.js"></script>
 </body>
 </html>

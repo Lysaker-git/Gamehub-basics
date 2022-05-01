@@ -94,98 +94,22 @@
                         </li>
                     </ul>
                 </nav>
-                <div class="searchbar">
-                    <input type="text" id="search" class="search" aria-label="Search Games" required>
-                    <a href="search.html">
-                        <img src="assets/menu-icons/search.png" alt="search button">
-                    </a>
-                </div>
+                <form class="searchbar" action="POST">
+                    <input type="text" id="search" class="search" aria-label="Search Games">
+                    <button type="submit"><img src="assets/menu-icons/search.png" alt="search button"></button>
+                </form>
             </div>
         </section>
     </header>
     <main class="margin_sides">
         <section class="search_results">
             <h2 class="watermark_search">Search Results</h2>
-            <div class="search_cards shade border-rad">
-                <div class="stars">
-                    <div class="small_number">4</div>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
-                </div>
-                <div class="search_image spacewar"></div>
-                <div class="search_info">
-                    <h3>Space War</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur... </p>
-                    <p class="hidden_content_small">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi dolorum illo voluptate repudiandae magni, dolores libero accusamus? Provident eius iste, consequatur eligendi laboriosam laudantium vero omnis accusamus delectus ipsum est. </p>
-                </div>
-                <div class="search_bar">
-                    <p>16</p>
-                    <a href="games-pages/space.html">view more</a>
-                </div>
-            </div>
-            <div class="search_cards shade border-rad">
-                <div class="stars">
-                    <div class="small_number">5</div>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <div class="search_image assassin"></div>
-                <div class="search_info">
-                    <h3>Assassin</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur... </p>
-                    <p class="hidden_content_small">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi dolorum illo voluptate repudiandae magni, dolores libero accusamus? Provident eius iste, consequatur eligendi laboriosam laudantium vero omnis accusamus delectus ipsum est. </p>
-                </div>
-                <div class="search_bar">
-                    <p>16</p>
-                    <a href="games-pages/assassin.html">view more</a>
-                </div>
-            </div>
-            <div class="search_cards shade border-rad">
-                <div class="stars">
-                    <div class="small_number">3</div>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
-                    <i class="far fa-star"></i>
-                </div>
-                <div class="search_image black"></div>
-                <div class="search_info">
-                    <h3>Black</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur... </p>
-                    <p class="hidden_content_small">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi dolorum illo voluptate repudiandae magni, dolores libero accusamus? Provident eius iste, consequatur eligendi laboriosam laudantium vero omnis accusamus delectus ipsum est. </p>
-                </div>
-                <div class="search_bar">
-                    <p>16</p>
-                    <a href="games-pages/black.html">view more</a>
-                </div>
-            </div>
-            <div class="search_cards shade border-rad">
-                <div class="stars">
-                    <div class="small_number">2</div>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
-                    <i class="far fa-star"></i>
-                    <i class="far fa-star"></i>
-                </div>
-                <div class="search_image cyber"></div>
-                <div class="search_info">
-                    <h3>Cyberpunch</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur... </p>
-                    <p class="hidden_content_small">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi dolorum illo voluptate repudiandae magni, dolores libero accusamus? Provident eius iste, consequatur eligendi laboriosam laudantium vero omnis accusamus delectus ipsum est. </p>
-                </div>
-                <div class="search_bar">
-                    <p>16</p>
-                    <a href="games-pages/cyber.html">view more</a>
-                </div>
-            </div>
+            <details>
+                <summary>Filter</summary>
+                <form class="tag-selection">
+                    <label for="tags">Tags:</label>
+                </form>
+            </details>
         </section>
     </main>
     <footer>
@@ -232,5 +156,6 @@
         </section>
         </div>
     </footer>
+    <script src="js/search.js"></script>
 </body>
 </html>

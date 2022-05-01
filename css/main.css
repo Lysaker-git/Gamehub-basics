@@ -72,7 +72,7 @@ a {
   color: white;
 }
 a:hover {
-  color:var(--red-color-hover);
+  color:var(--light-color);
   text-decoration: underline;
 }
 /*universal position*/
@@ -192,10 +192,12 @@ h1 {
   border: none;
 }
 
-.searchbar a {
+.searchbar button {
   padding: 6px 15px;
   background-color: var(--red-color);
   border-radius: 0 5px 5px 0;
+  border: none;
+  cursor: pointer;
 }
 
 .margin_sides {
@@ -208,124 +210,64 @@ h1 {
   ones i have*/
 
 .primary_game_cards {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
-.second_card, .third_card {
-  display: none;
-}
-.main_card,
-.second_card,
-.third_card {
-  position: relative;
+.primary_game_cards > div {
+  flex: 1 1 305px;
   background-size: cover;
   background-position: left center;
-  height: 340px;
+  display: grid;
+  overflow: hidden;
+  min-height: 300px;
 }
 .tag {
-  display: flex;
-  align-items: flex-end;
-  height: 100%;
-  z-index: 5;
-  transition: 1s;
-}
-.tag a,
-.tag h2{
-  display: flex;
+  position: relative;
   background-color: var(--card-background);
-  height: 40px;
-  margin: 0;
-  align-items: center;
-  padding: 5px 0 5px 15px;
-  z-index: 10;
-  text-align: center;
+  margin-top: auto;
+  padding: 1rem;
 }
 .tag a {
-  text-transform: uppercase;
-  min-width: 155px;
-  border-bottom-right-radius: 5px;
-  justify-content: center;
-  font-weight: 700;
-  color: var(--dark-color);
-}
-.tag h2 {
-  width: 100%;
-  border-bottom-left-radius: 5px;
-}
-/*figured i would add some flair to my main cards. make them a little fun
-  learning process for sure!*/
-.hidden_tag {
+  background-color: var(--dark-color);
+  padding: 1rem;
   position: absolute;
-  display: flex;
-  bottom: 0;
-  left: 0;
   right: 0;
-  padding: 10px;
-  height: 0px;
-  background: var(--light-color);
-  margin: 0;
-  border-radius: 0 0 5px 5px;
-  z-index: -1;
-  opacity: 0;
+  bottom: 0;
+  top: 0;
+  display: grid;
+  place-items: center;
 }
-.tag:hover+ .hidden_tag,
-.tag:focus+ .hidden_tag,
-.hidden_tag:hover {
-  transition: ease-in-out 500ms;
-  z-index: 1;
-  bottom: 45px;
-  height: auto;
-  opacity: 1;
+.tag h2, .tag p {
+  margin: 0;
+}
+.secondary_game_cards > div {
+  background-size: cover;
+  background-position: center;
+  display: grid;
   overflow: hidden;
+  min-height: 370px;
 }
-.hidden_tag a {
-  color: var(--light-color);
-  font-family: 'lato', sans-serif;
-  font-weight: 700;
-  margin: 15px 0 15px auto;
-  height: 20px;
-  padding: 10px;
-  background-color:var(--dark-color);
-  border-radius: 5px;
+.second_game_box {
+  background-color: var(--card-background);
+  margin: auto 0 0 0;
+  
 }
-.hidden_tag p{
-  padding: 10px 40px 10px 10px;
+.title_and_price {
+  padding: .5rem;
+}
+.title_and_price * {
   margin: 0;
 }
-
+.second_game_box a {
+  width: 100%;
+  display: block;
+  background-color: var(--dark-color);
+  padding: .2rem;
+  text-align: center;
+}
 /* All game card backgrounds so i have them grouped in my CSS */
 
-.black {
-  background-image: url(/assets/game-covers/gamehub_black.jpg);
-}
-.furious {
-  background-image: url(/assets/game-covers/gamehub_furious.jpg);
-}
-.assassin {
-  background-image: url(/assets/game-covers/gamehub_assassin.jpg);
-}
-.cyber {
-  background-image: url(/assets/game-covers/gamehub_cyber.jpg);
-}
-.forge {
-  background-image: url(/assets/game-covers/gamehub_forge.jpg);
-}
-.boxer {
-  background-image: url(/assets/game-covers/gamehub_boxxer.jpg);
-}
-.racing {
-  background-image: url(/assets/game-covers/gamehub_racing.jpg);
-}
-.pingpong {
-  background-image: url(/assets/game-covers/gamehub_pingpong.jpg);
-}
-.spacewar {
-  background-image: url(/assets/game-covers/gamehub_space.jpg); 
-}
-.super {
-  background-image: url(/assets/game-covers/super.jpg); 
-}
 
 /*grid for more layout reasons. I find grid to be one of the most
   helpful tools to place larger objects. And some small ones*/
@@ -357,63 +299,6 @@ h1 {
   margin: 20px 0 5px 0;
 }
 
-.imgage_container_popular {
-  position: relative;
-  height: 206px;
-  width: 100%;
-  background-size: cover;
-  background-position: left center;
-  border-radius: 5px 5px 0 0;
-}
-.text_and_buttons_for_popular {
-  position: relative;
-  margin-bottom: 30px; 
-  height: 100%;
-  background-color: var(--card-background);
-}
-.title_and_price {
-  display: flex;
-  align-items: center;
-  margin: 0;
-  padding: 10px;
-  height: 30px;
-}
-.title_and_price h3 {
-  width: auto;
-  font-size: 0.8em;
-}
-.title_and_price p {
-  margin: 0 0 0 auto;
-  font-size: 0.7em;
-  font-family: 'lato', sans-serif;
-}
-
-.popular_paragraf {
-  margin: 0;
-  padding: 0 10px 46px;
-}
-.text_and_buttons_for_popular h3 {
-  font-family: 'lato', sans-serif;
-  margin: 0;
-}
-.text_and_buttons_for_popular a {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: none;
-  height: 46px;
-  background-color: var(--dark-color);
-  color: var(--light-color);
-  border-radius: 0 0 5px 5px;
-  cursor: pointer;
-}
-.text_and_buttons_for_popular a:hover {
-  background-color: var(--dark-color-hover);
-}
 /*grids, grids, grids  - i find them easier to work with
   placing content on my site.*/
 .community_section{
