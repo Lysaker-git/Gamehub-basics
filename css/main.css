@@ -814,6 +814,27 @@ footer {
 .recommends h2 {
   width: 100%;
 }
+.recommends > div {
+  min-height: 200px;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  overflow: hidden;
+}
+.bottom_line_recommend {
+  background-color: var(--card-background);
+  display: flex;
+  margin-top: auto;
+  width: 100%;
+  justify-content: space-between;
+}
+.bottom_line_recommend > a {
+  background-color: var(--dark-color);
+  display: grid;
+  place-items: center;
+  padding: .5rem;
+}
+
 /*contact us page - placeholder for integrated JS style in footer*/
 .contact_container {
   padding: 20px;
