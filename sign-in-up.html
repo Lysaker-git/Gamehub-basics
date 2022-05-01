@@ -92,12 +92,10 @@
                         </li>
                     </ul>
                 </nav>
-                <div class="searchbar">
-                    <input type="text" id="search" class="search" aria-label="Search Games" required>
-                    <a href="search.html">
-                        <img src="assets/menu-icons/search.png" alt="search button">
-                    </a>
-                </div>
+                <form class="searchbar" action="POST">
+                    <input type="text" id="search" class="search" aria-label="Search Games">
+                    <button type="submit"><img src="assets/menu-icons/search.png" alt="search button"></button>
+                </form>
             </div>
         </section>
     </header>
@@ -172,5 +170,14 @@
         </div>
     </footer>
     <script src="js/log-sign_check.js"></script>
+    <script>
+        const searchForm = document.querySelector(".searchbar");
+        const searchInput = document.querySelector("#search");
+        searchForm.addEventListener ('submit', (event) => {
+        event.preventDefault();
+        const searchValue = searchInput.value;
+        location.href = `search.html?searchValue=${searchValue}`;
+        });
+    </script>
 </body>
 </html>
