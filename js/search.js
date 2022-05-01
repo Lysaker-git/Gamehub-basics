@@ -42,16 +42,13 @@ async function searchResults(url) {
                 </div>
                 <div class="search_bar">
                     <p>16</p>
-                    <a href="games-pages/game.html?id=${game.id}">view more</a>
+                    <a href="game.html?id=${game.id}">view more</a>
                 </div>
             </div>
             `
 
         }
     })
-    if (searchCont.innerHTML === "") {
-        searchCont.innerHTML = "<h2>No Results</h2>"
-    }
 }
 
 searchForm.addEventListener ('submit', (event) => {

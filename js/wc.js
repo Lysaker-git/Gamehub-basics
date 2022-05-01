@@ -19,11 +19,11 @@ async function featuredGames(url) {
         tags.forEach(tag => {
             if (tag.name === "feature") {
                 primaryCont.innerHTML += `
-                <div href="games-pages/game.html?id=${game.id}" class="shade border-rad" style="background-image: url(${image})">
+                <div href="game.html?id=${game.id}" class="shade border-rad" style="background-image: url(${image})">
                     <div class="tag">
                         <h2>${game.name}</h2>
                         <p>Price: ${game.price_html}</p>
-                        <a href="games-pages/game.html?id=${game.id}" tabindex="0">View more</a>
+                        <a href="game.html?id=${game.id}" tabindex="0">View more</a>
                     </div>
                 </div>
                 `
@@ -35,7 +35,7 @@ async function featuredGames(url) {
                             <h3 class="">${game.name}</h3>
                             <p class="">Price: ${game.price_html}</p> 
                         </div>
-                        <a href="games-pages/game.html?id=${game.id}" tabindex="0">View more</a>
+                        <a href="game.html?id=${game.id}" tabindex="0">View more</a>
                     </div>
                 </div>
                 `
@@ -47,7 +47,7 @@ async function featuredGames(url) {
                     </div>
                     <div class="community_game_name_and_link">
                         <h3>${game.name}</h3>
-                        <a href="games-pages/game.html?id=${game.id}">view more</a>
+                        <a href="game.html?id=${game.id}">view more</a>
                     </div>
 
                 </div>
