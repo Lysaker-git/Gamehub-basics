@@ -1,5 +1,5 @@
-const key = "ck_6e7b5ccf3b139c63b449b01df71f6cfe0fee9158";
-const secret = "cs_ff5de18d18fb9e3c4ec80432bf4cb64a979b12b8";
+const key = "ck_91e7e8ce0e372ca5b386b3efd76474aab57c6e07";
+const secret = "cs_a591cc5b3b754afa5f0edb0a8e6ac438e98ed097";
 const url = "https://lysakerdesign.store/api/wp-json/wc/v3/products";
 const authKEY = `consumer_key=${key}&consumer_secret=${secret}`;
 
@@ -10,24 +10,30 @@ const communityCont = document.querySelector(".community_section");
 const searchForm = document.querySelector(".searchbar");
 const searchInput = document.querySelector("#search");
 
+
+
 async function featuredGames(url) {
     const response = await fetch(url);
     const games = await response.json();
+    // console.log(games)
     games.forEach(game => {
         const tags = game.tags;
         const image = game.images[0].src;
-        tags.forEach(tag => {
-            if (tag.name === "feature") {
-                primaryCont.innerHTML += `
-                <div href="game.html?id=${game.id}" class="shade border-rad" style="background-image: url(${image})">
-                    <div class="tag">
-                        <h2>${game.name}</h2>
-                        <p>Price: ${game.price_html}</p>
-                        <a href="game.html?id=${game.id}" tabindex="0">View more</a>
-                    </div>
+        console.log(game)
+        if (game.featured) {
+            primaryCont.innerHTML += `
+            <div href="game.html?id=${game.id}" class="shade border-rad" style="background-image: url(${image})">
+                <div class="tag">
+                    <h2>${game.name}</h2>
+                    <p>Price: ${game.price_html}</p>
+                    <a href="game.html?id=${game.id}" tabindex="0">View more</a>
                 </div>
-                `
-            } else if (tag.name === "popular") {
+            </div>
+            `
+        }
+        tags.forEach(tag => {
+            // console.log(tag.name)
+            if (tag.name === "popular") {
                 popularCont.innerHTML += `
                 <div class="shade border-rad" style="background-image: url(${image})">
                     <div class="second_game_box">
