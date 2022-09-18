@@ -1,5 +1,5 @@
-const key = "ck_91e7e8ce0e372ca5b386b3efd76474aab57c6e07";
-const secret = "cs_a591cc5b3b754afa5f0edb0a8e6ac438e98ed097";
+const searchKey = "ck_91e7e8ce0e372ca5b386b3efd76474aab57c6e07";
+const searchSecret = "cs_a591cc5b3b754afa5f0edb0a8e6ac438e98ed097";
 const searchUrl = "https://lysakerdesign.store/api/wp-json/wc/v3/products";
 const searchAuthKEY = `consumer_key=${searchKey}&consumer_secret=${searchSecret}`;
 
