@@ -17,6 +17,7 @@ async function searchResults(url) {
     const response = await fetch(url);
     const games = await response.json();
     games.forEach(game => {
+        console.log(game)
         let gameName = game.name.toLowerCase();
         const image = game.images[0].src;
 
