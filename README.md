@@ -26,14 +26,10 @@ In more depth:
 
 ```bash
 gh repo clone Lysaker-git/Gamehub-basics
+```
 or you can clone it here: 
+```bash
 https://github.com/Lysaker-git/Gamehub-basics.git
-```
-
-2. Install the dependencies:
-
-```
-npm install
 ```
 
 ### Running
