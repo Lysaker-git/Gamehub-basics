@@ -58,3 +58,6 @@ W3Schools for their ginormous database of selectors and
 explanations.
 Fellow students for general feedback and the possibility to
 spar with on different topics.
+
+## Page Location: 
+[Gamehub](peaceful-ritchie-993224.netlify.app/)
