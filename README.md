@@ -1,5 +1,7 @@
 # Gamehub 
 
+![Image of site](https://raw.githubusercontent.com/Lysaker-git/Gamehub-basics/main/Assets/site-preview.jpg)
+
 A simple overview of the use/purpose of the project.
 
 ## This is the Cross course project that was made at Noroff Academy of Technology and Media.
